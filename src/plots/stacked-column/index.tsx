@@ -9,8 +9,8 @@ export type StackedColumnChartProps = Omit<
   StackedColumnConfig
 
 const StackedColumnChart = defineComponent<StackedColumnChartProps>(
-  (_, ctx) => {
-    return <BaseChart chart={StackedColumn} {...ctx.attrs} />
+  (props, ctx) => {
+    return () => <BaseChart chart={StackedColumn} {...ctx.attrs} {...props} />
   }
 )
 

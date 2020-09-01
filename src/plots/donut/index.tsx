@@ -5,8 +5,8 @@ import BaseChart, { BaseChartProps } from '../../components/base'
 export type DonutChartProps = Omit<BaseChartProps<DonutConfig>, 'chart'> &
   DonutConfig
 
-const DonutChart = defineComponent<DonutChartProps>((_, ctx) => {
-  return <BaseChart chart={Donut} {...ctx.attrs} />
+const DonutChart = defineComponent<DonutChartProps>((props, ctx) => {
+  return () => <BaseChart chart={Donut} {...ctx.attrs} {...props} />
 })
 
 export default DonutChart

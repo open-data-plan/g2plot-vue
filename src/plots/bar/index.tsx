@@ -4,8 +4,8 @@ import BaseChart, { BaseChartProps } from '../../components/base'
 
 export type BarChartProps = Omit<BaseChartProps<BarConfig>, 'chart'> & BarConfig
 
-const BarChart = defineComponent<BarChartProps>((_, ctx) => {
-  return <BaseChart chart={Bar} {...ctx.attrs} />
+const BarChart = defineComponent<BarChartProps>((props, ctx) => {
+  return () => <BaseChart chart={Bar} {...ctx.attrs} {...props} />
 })
 
 export default BarChart

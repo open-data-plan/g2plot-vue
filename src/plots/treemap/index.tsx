@@ -5,8 +5,8 @@ import BaseChart, { BaseChartProps } from '../../components/base'
 export type TreemapChartProps = Omit<BaseChartProps<TreemapConfig>, 'chart'> &
   TreemapConfig
 
-const TreemapChart = defineComponent<TreemapChartProps>((_, ctx) => {
-  return <BaseChart chart={Treemap} {...ctx.attrs} />
+const TreemapChart = defineComponent<TreemapChartProps>((props, ctx) => {
+  return () => <BaseChart chart={Treemap} {...ctx.attrs} {...props} />
 })
 
 export default TreemapChart

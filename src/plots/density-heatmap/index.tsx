@@ -9,8 +9,8 @@ export type DensityHeatmapChartProps = Omit<
   DensityHeatmapConfig
 
 const DensityHeatmapChart = defineComponent<DensityHeatmapChartProps>(
-  (_, ctx) => {
-    return <BaseChart chart={DensityHeatmap} {...ctx.attrs} />
+  (props, ctx) => {
+    return () => <BaseChart chart={DensityHeatmap} {...ctx.attrs} {...props} />
   }
 )
 

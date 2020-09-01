@@ -5,8 +5,8 @@ import BaseChart, { BaseChartProps } from '../../components/base'
 export type ProgressChartProps = Omit<BaseChartProps<ProgressConfig>, 'chart'> &
   ProgressConfig
 
-const ProgressChart = defineComponent<ProgressChartProps>((_, ctx) => {
-  return <BaseChart chart={Progress} {...ctx.attrs} />
+const ProgressChart = defineComponent<ProgressChartProps>((props, ctx) => {
+  return () => <BaseChart chart={Progress} {...ctx.attrs} {...props} />
 })
 
 export default ProgressChart

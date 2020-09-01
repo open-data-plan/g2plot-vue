@@ -5,8 +5,8 @@ import BaseChart, { BaseChartProps } from '../../components/base'
 export type AreaChartProps = Omit<BaseChartProps<AreaConfig>, 'chart'> &
   AreaConfig
 
-const AreaChart = defineComponent<AreaChartProps>((_, ctx) => {
-  return <BaseChart chart={Area} {...ctx.attrs} />
+const AreaChart = defineComponent<AreaChartProps>((props, ctx) => {
+  return () => <BaseChart chart={Area} {...ctx.attrs} {...props} />
 })
 
 export default AreaChart

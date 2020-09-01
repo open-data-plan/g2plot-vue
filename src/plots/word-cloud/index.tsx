@@ -8,8 +8,8 @@ export type WordCloudChartProps = Omit<
 > &
   WordCloudConfig
 
-const WordCloudChart = defineComponent<WordCloudChartProps>((_, ctx) => {
-  return <BaseChart chart={WordCloud} {...ctx.attrs} />
+const WordCloudChart = defineComponent<WordCloudChartProps>((props, ctx) => {
+  return () => <BaseChart chart={WordCloud} {...ctx.attrs} {...props} />
 })
 
 export default WordCloudChart

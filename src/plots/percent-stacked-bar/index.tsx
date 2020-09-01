@@ -9,8 +9,10 @@ export type PercentStackedBarChartProps = Omit<
   PercentStackedBarConfig
 
 const PercentStackedBarChart = defineComponent<PercentStackedBarChartProps>(
-  (_, ctx) => {
-    return <BaseChart chart={PercentStackedBar} {...ctx.attrs} />
+  (props, ctx) => {
+    return () => (
+      <BaseChart chart={PercentStackedBar} {...ctx.attrs} {...props} />
+    )
   }
 )
 

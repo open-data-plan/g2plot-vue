@@ -8,8 +8,10 @@ export type RingProgressChartProps = Omit<
 > &
   RingProgressConfig
 
-const RingProgressChart = defineComponent<RingProgressChartProps>((_, ctx) => {
-  return <BaseChart chart={RingProgress} {...ctx.attrs} />
-})
+const RingProgressChart = defineComponent<RingProgressChartProps>(
+  (props, ctx) => {
+    return () => <BaseChart chart={RingProgress} {...ctx.attrs} {...props} />
+  }
+)
 
 export default RingProgressChart

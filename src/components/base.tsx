@@ -27,7 +27,11 @@ export interface BaseChartRawBindings<C extends PlotConfig> {
   getChartConfig: () => ChartOptions
 }
 
-export default defineComponent<BaseChartProps<any>, BaseChartRawBindings<any>>({
+const BaseChart = defineComponent<
+  BaseChartProps<any>,
+  BaseChartRawBindings<any>
+>({
+  inheritAttrs: false,
   name: 'BaseChart',
   mounted() {
     const { chart: Chart } = this.$attrs as Record<string, any>
@@ -35,30 +39,32 @@ export default defineComponent<BaseChartProps<any>, BaseChartRawBindings<any>>({
     this.config = cloneDeep(config)
     const normalizedData = data || []
     this.data = normalizedData
-    const chart = new Chart(this.$el, {
+    this.plot = new Chart(this.$el, {
       data: normalizedData,
       ...config,
     })
-    this.plot = chart
     this.plot.render()
   },
   beforeUpdate() {
     const { data, config } = this.getChartConfig()
     const normalizedData = data || []
+    /* istanbul ignore else */
     if (this.plot) {
       if (!isEqual(config, this.config) || !this.data.length) {
         this.config = cloneDeep(config)
         this.plot.updateConfig({
-          data,
+          data: normalizedData,
           ...config,
         })
         this.plot.render()
       } else {
         this.plot.changeData(normalizedData)
       }
+      this.data = normalizedData
     }
   },
   beforeUnmount() {
+    /* istanbul ignore else */
     if (this.plot) {
       this.plot.destroy()
     }
@@ -80,3 +86,5 @@ export default defineComponent<BaseChartProps<any>, BaseChartRawBindings<any>>({
     return <div />
   },
 })
+
+export default BaseChart

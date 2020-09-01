@@ -10,8 +10,10 @@ export type PercentStackedColumnChartProps = Omit<
 
 const PercentStackedColumnChart = defineComponent<
   PercentStackedColumnChartProps
->((_, ctx) => {
-  return <BaseChart chart={PercentStackedColumn} {...ctx.attrs} />
+>((props, ctx) => {
+  return () => (
+    <BaseChart chart={PercentStackedColumn} {...ctx.attrs} {...props} />
+  )
 })
 
 export default PercentStackedColumnChart

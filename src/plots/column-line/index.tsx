@@ -8,8 +8,8 @@ export type ColumnLineChartProps = Omit<
 > &
   ColumnLineConfig
 
-const ColumnLineChart = defineComponent<ColumnLineChartProps>((_, ctx) => {
-  return <BaseChart chart={ColumnLine} {...ctx.attrs} />
+const ColumnLineChart = defineComponent<ColumnLineChartProps>((props, ctx) => {
+  return () => <BaseChart chart={ColumnLine} {...ctx.attrs} {...props} />
 })
 
 export default ColumnLineChart

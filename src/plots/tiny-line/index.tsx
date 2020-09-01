@@ -5,8 +5,8 @@ import BaseChart, { BaseChartProps } from '../../components/base'
 export type TinyLineChartProps = Omit<BaseChartProps<TinyLineConfig>, 'chart'> &
   TinyLineConfig
 
-const TinyLineChart = defineComponent<TinyLineChartProps>((_, ctx) => {
-  return <BaseChart chart={TinyLine} {...ctx.attrs} />
+const TinyLineChart = defineComponent<TinyLineChartProps>((props, ctx) => {
+  return () => <BaseChart chart={TinyLine} {...ctx.attrs} {...props} />
 })
 
 export default TinyLineChart

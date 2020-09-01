@@ -8,8 +8,8 @@ export type HistogramChartProps = Omit<
 > &
   HistogramConfig
 
-const HistogramChart = defineComponent<HistogramChartProps>((_, ctx) => {
-  return <BaseChart chart={Histogram} {...ctx.attrs} />
+const HistogramChart = defineComponent<HistogramChartProps>((props, ctx) => {
+  return () => <BaseChart chart={Histogram} {...ctx.attrs} {...props} />
 })
 
 export default HistogramChart

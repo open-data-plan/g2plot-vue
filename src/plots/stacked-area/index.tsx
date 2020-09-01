@@ -8,8 +8,10 @@ export type StackedAreaChartProps = Omit<
 > &
   StackedAreaConfig
 
-const StackedAreaChart = defineComponent<StackedAreaChartProps>((_, ctx) => {
-  return <BaseChart chart={StackedArea} {...ctx.attrs} />
-})
+const StackedAreaChart = defineComponent<StackedAreaChartProps>(
+  (props, ctx) => {
+    return () => <BaseChart chart={StackedArea} {...ctx.attrs} {...props} />
+  }
+)
 
 export default StackedAreaChart

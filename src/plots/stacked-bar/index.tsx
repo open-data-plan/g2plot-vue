@@ -8,8 +8,8 @@ export type StackedBarChartProps = Omit<
 > &
   StackedBarConfig
 
-const StackedBarChart = defineComponent<StackedBarChartProps>((_, ctx) => {
-  return <BaseChart chart={StackedBar} {...ctx.attrs} />
+const StackedBarChart = defineComponent<StackedBarChartProps>((props, ctx) => {
+  return () => <BaseChart chart={StackedBar} {...ctx.attrs} {...props} />
 })
 
 export default StackedBarChart

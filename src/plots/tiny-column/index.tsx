@@ -8,8 +8,8 @@ export type TinyColumnChartProps = Omit<
 > &
   TinyColumnConfig
 
-const TinyColumnChart = defineComponent<TinyColumnChartProps>((_, ctx) => {
-  return <BaseChart chart={TinyColumn} {...ctx.attrs} />
+const TinyColumnChart = defineComponent<TinyColumnChartProps>((props, ctx) => {
+  return () => <BaseChart chart={TinyColumn} {...ctx.attrs} {...props} />
 })
 
 export default TinyColumnChart

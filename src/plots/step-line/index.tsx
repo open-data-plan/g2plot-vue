@@ -5,8 +5,8 @@ import BaseChart, { BaseChartProps } from '../../components/base'
 export type StepLineChartProps = Omit<BaseChartProps<StepLineConfig>, 'chart'> &
   StepLineConfig
 
-const StepLineChart = defineComponent<StepLineChartProps>((_, ctx) => {
-  return <BaseChart chart={StepLine} {...ctx.attrs} />
+const StepLineChart = defineComponent<StepLineChartProps>((props, ctx) => {
+  return () => <BaseChart chart={StepLine} {...ctx.attrs} {...props} />
 })
 
 export default StepLineChart

@@ -9,8 +9,10 @@ export type GroupedColumnLineChartProps = Omit<
   GroupedColumnLineConfig
 
 const GroupedColumnLineChart = defineComponent<GroupedColumnLineChartProps>(
-  (_, ctx) => {
-    return <BaseChart chart={GroupedColumnLine} {...ctx.attrs} />
+  (props, ctx) => {
+    return () => (
+      <BaseChart chart={GroupedColumnLine} {...ctx.attrs} {...props} />
+    )
   }
 )
 

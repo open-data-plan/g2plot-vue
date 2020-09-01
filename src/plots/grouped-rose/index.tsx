@@ -8,8 +8,10 @@ export type GroupedRoseChartProps = Omit<
 > &
   GroupedRoseConfig
 
-const GroupedRoseChart = defineComponent<GroupedRoseChartProps>((_, ctx) => {
-  return <BaseChart chart={GroupedRose} {...ctx.attrs} />
-})
+const GroupedRoseChart = defineComponent<GroupedRoseChartProps>(
+  (props, ctx) => {
+    return () => <BaseChart chart={GroupedRose} {...ctx.attrs} {...props} />
+  }
+)
 
 export default GroupedRoseChart

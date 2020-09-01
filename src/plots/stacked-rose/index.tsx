@@ -8,8 +8,10 @@ export type StackedRoseChartProps = Omit<
 > &
   StackedRoseConfig
 
-const StackedRoseChart = defineComponent<StackedRoseChartProps>((_, ctx) => {
-  return <BaseChart chart={StackedRose} {...ctx.attrs} />
-})
+const StackedRoseChart = defineComponent<StackedRoseChartProps>(
+  (props, ctx) => {
+    return () => <BaseChart chart={StackedRose} {...ctx.attrs} {...props} />
+  }
+)
 
 export default StackedRoseChart

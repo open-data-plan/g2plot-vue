@@ -5,8 +5,8 @@ import BaseChart, { BaseChartProps } from '../../components/base'
 export type RadarChartProps = Omit<BaseChartProps<RadarConfig>, 'chart'> &
   RadarConfig
 
-const RadarChart = defineComponent<RadarChartProps>((_, ctx) => {
-  return <BaseChart chart={Radar} {...ctx.attrs} />
+const RadarChart = defineComponent<RadarChartProps>((props, ctx) => {
+  return () => <BaseChart chart={Radar} {...ctx.attrs} {...props} />
 })
 
 export default RadarChart

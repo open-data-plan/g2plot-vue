@@ -8,8 +8,8 @@ export type MeterGaugeChartProps = Omit<
 > &
   MeterGaugeConfig
 
-const MeterGaugeChart = defineComponent<MeterGaugeChartProps>((_, ctx) => {
-  return <BaseChart chart={MeterGauge} {...ctx.attrs} />
+const MeterGaugeChart = defineComponent<MeterGaugeChartProps>((props, ctx) => {
+  return () => <BaseChart chart={MeterGauge} {...ctx.attrs} {...props} />
 })
 
 export default MeterGaugeChart

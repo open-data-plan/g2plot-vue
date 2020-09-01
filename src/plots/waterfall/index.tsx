@@ -8,8 +8,8 @@ export type WaterfallChartProps = Omit<
 > &
   WaterfallConfig
 
-const WaterfallChart = defineComponent<WaterfallChartProps>((_, ctx) => {
-  return <BaseChart chart={Waterfall} {...ctx.attrs} />
+const WaterfallChart = defineComponent<WaterfallChartProps>((props, ctx) => {
+  return () => <BaseChart chart={Waterfall} {...ctx.attrs} {...props} />
 })
 
 export default WaterfallChart

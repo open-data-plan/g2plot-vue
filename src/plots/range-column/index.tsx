@@ -8,8 +8,10 @@ export type RangeColumnChartProps = Omit<
 > &
   RangeColumnConfig
 
-const RangeColumnChart = defineComponent<RangeColumnChartProps>((_, ctx) => {
-  return <BaseChart chart={RangeColumn} {...ctx.attrs} />
-})
+const RangeColumnChart = defineComponent<RangeColumnChartProps>(
+  (props, ctx) => {
+    return () => <BaseChart chart={RangeColumn} {...ctx.attrs} {...props} />
+  }
+)
 
 export default RangeColumnChart

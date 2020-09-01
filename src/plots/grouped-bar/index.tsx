@@ -8,8 +8,8 @@ export type GroupedBarChartProps = Omit<
 > &
   GroupedBarConfig
 
-const GroupedBarChart = defineComponent<GroupedBarChartProps>((_, ctx) => {
-  return <BaseChart chart={GroupedBar} {...ctx.attrs} />
+const GroupedBarChart = defineComponent<GroupedBarChartProps>((props, ctx) => {
+  return () => <BaseChart chart={GroupedBar} {...ctx.attrs} {...props} />
 })
 
 export default GroupedBarChart
