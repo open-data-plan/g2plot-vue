@@ -8,8 +8,8 @@ module.exports = {
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Guide', link: '/guide/' },
-      { text: 'External', link: 'https://google.com' },
+      { text: 'Github', link: 'https://github.com/open-data-plan/g2plot-vue' },
     ],
-    sidebar: ['/', ['/guide/', 'Guide']],
+    sidebar: 'auto',
   },
 }
