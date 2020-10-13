@@ -1,3 +1,9 @@
+# [2.0.0](https://github.com/open-data-plan/g2plot-vue/compare/v1.0.0...v2.0.0) (2020-10-13)
+
+### Features
+
+- compatible with g2plot v2 ([e71643c](https://github.com/open-data-plan/g2plot-vue/commit/e71643c8aaa9d037a8291d99a3e27bb02875e518))
+
 # [1.0.0](https://github.com/open-data-plan/g2plot-vue/compare/c9116e3280cd5c18241cd101aa787063806fe19f...v1.0.0) (2020-09-01)
 
 ### Bug Fixes
