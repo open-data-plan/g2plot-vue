@@ -1,15 +1,22 @@
-import { defineComponent } from 'vue'
-import { Histogram, HistogramConfig } from '@antv/g2plot'
+import { defineComponent, App } from 'vue'
+import { Histogram, HistogramOptions } from '@antv/g2plot'
 import BaseChart, { BaseChartProps } from '../../components/base'
 
 export type HistogramChartProps = Omit<
-  BaseChartProps<HistogramConfig>,
+  BaseChartProps<HistogramOptions>,
   'chart'
 > &
-  HistogramConfig
+  HistogramOptions
 
-const HistogramChart = defineComponent<HistogramChartProps>((props, ctx) => {
-  return () => <BaseChart chart={Histogram} {...ctx.attrs} {...props} />
+const HistogramChart = defineComponent<HistogramChartProps>({
+  name: 'HistogramChart',
+  setup: (props, ctx) => {
+    return () => <BaseChart chart={Histogram} {...ctx.attrs} {...props} />
+  },
 })
+
+HistogramChart.install = (app: App) => {
+  app.component(HistogramChart.name, HistogramChart)
+}
 
 export default HistogramChart

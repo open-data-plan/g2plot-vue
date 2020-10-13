@@ -1,12 +1,22 @@
-import { defineComponent } from 'vue'
-import { Progress, ProgressConfig } from '@antv/g2plot'
+import { defineComponent, App } from 'vue'
+import { Progress, ProgressOptions } from '@antv/g2plot'
 import BaseChart, { BaseChartProps } from '../../components/base'
 
-export type ProgressChartProps = Omit<BaseChartProps<ProgressConfig>, 'chart'> &
-  ProgressConfig
+export type ProgressChartProps = Omit<
+  BaseChartProps<ProgressOptions>,
+  'chart'
+> &
+  ProgressOptions
 
-const ProgressChart = defineComponent<ProgressChartProps>((props, ctx) => {
-  return () => <BaseChart chart={Progress} {...ctx.attrs} {...props} />
+const ProgressChart = defineComponent<ProgressChartProps>({
+  name: 'ProgressChart',
+  setup: (props, ctx) => {
+    return () => <BaseChart chart={Progress} {...ctx.attrs} {...props} />
+  },
 })
+
+ProgressChart.install = (app: App) => {
+  app.component(ProgressChart.name, ProgressChart)
+}
 
 export default ProgressChart

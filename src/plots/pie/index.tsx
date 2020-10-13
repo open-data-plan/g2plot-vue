@@ -1,11 +1,19 @@
-import { defineComponent } from 'vue'
-import { Pie, PieConfig } from '@antv/g2plot'
+import { defineComponent, App } from 'vue'
+import { Pie, PieOptions } from '@antv/g2plot'
 import BaseChart, { BaseChartProps } from '../../components/base'
 
-export type PieChartProps = Omit<BaseChartProps<PieConfig>, 'chart'> & PieConfig
+export type PieChartProps = Omit<BaseChartProps<PieOptions>, 'chart'> &
+  PieOptions
 
-const PieChart = defineComponent<PieChartProps>((props, ctx) => {
-  return () => <BaseChart chart={Pie} {...ctx.attrs} {...props} />
+const PieChart = defineComponent<PieChartProps>({
+  name: 'PieChart',
+  setup: (props, ctx) => {
+    return () => <BaseChart chart={Pie} {...ctx.attrs} {...props} />
+  },
 })
+
+PieChart.install = (app: App) => {
+  app.component(PieChart.name, PieChart)
+}
 
 export default PieChart

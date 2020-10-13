@@ -1,12 +1,19 @@
-import { defineComponent } from 'vue'
-import { Rose, RoseConfig } from '@antv/g2plot'
+import { defineComponent, App } from 'vue'
+import { Rose, RoseOptions } from '@antv/g2plot'
 import BaseChart, { BaseChartProps } from '../../components/base'
 
-export type RoseChartProps = Omit<BaseChartProps<RoseConfig>, 'chart'> &
-  RoseConfig
+export type RoseChartProps = Omit<BaseChartProps<RoseOptions>, 'chart'> &
+  RoseOptions
 
-const RoseChart = defineComponent<RoseChartProps>((props, ctx) => {
-  return () => <BaseChart chart={Rose} {...ctx.attrs} {...props} />
+const RoseChart = defineComponent<RoseChartProps>({
+  name: 'RoseChart',
+  setup: (props, ctx) => {
+    return () => <BaseChart chart={Rose} {...ctx.attrs} {...props} />
+  },
 })
+
+RoseChart.install = (app: App) => {
+  app.component(RoseChart.name, RoseChart)
+}
 
 export default RoseChart

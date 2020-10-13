@@ -1,12 +1,19 @@
-import { defineComponent } from 'vue'
-import { Line, LineConfig } from '@antv/g2plot'
+import { defineComponent, App } from 'vue'
+import { Line, LineOptions } from '@antv/g2plot'
 import BaseChart, { BaseChartProps } from '../../components/base'
 
-export type LineChartProps = Omit<BaseChartProps<LineConfig>, 'chart'> &
-  LineConfig
+export type LineChartProps = Omit<BaseChartProps<LineOptions>, 'chart'> &
+  LineOptions
 
-const LineChart = defineComponent<LineChartProps>((props, ctx) => {
-  return () => <BaseChart chart={Line} {...ctx.attrs} {...props} />
+const LineChart = defineComponent<LineChartProps>({
+  name: 'LineChart',
+  setup: (props, ctx) => {
+    return () => <BaseChart chart={Line} {...ctx.attrs} {...props} />
+  },
 })
+
+LineChart.install = (app: App) => {
+  app.component(LineChart.name, LineChart)
+}
 
 export default LineChart
