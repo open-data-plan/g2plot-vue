@@ -15,6 +15,7 @@ const TinyColumnChart = defineComponent<TinyColumnChartProps>({
   },
 })
 
+/* istanbul ignore next */
 TinyColumnChart.install = (app: App) => {
   app.component(TinyColumnChart.name, TinyColumnChart)
 }

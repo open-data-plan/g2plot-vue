@@ -15,6 +15,7 @@ const RingProgressChart = defineComponent<RingProgressChartProps>({
   },
 })
 
+/* istanbul ignore next */
 RingProgressChart.install = (app: App) => {
   app.component(RingProgressChart.name, RingProgressChart)
 }

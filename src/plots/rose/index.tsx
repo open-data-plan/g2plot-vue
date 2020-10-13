@@ -12,6 +12,7 @@ const RoseChart = defineComponent<RoseChartProps>({
   },
 })
 
+/* istanbul ignore next */
 RoseChart.install = (app: App) => {
   app.component(RoseChart.name, RoseChart)
 }

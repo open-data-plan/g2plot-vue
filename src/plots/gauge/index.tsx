@@ -12,6 +12,7 @@ const GaugeChart = defineComponent<GaugeChartProps>({
   },
 })
 
+/* istanbul ignore next */
 GaugeChart.install = (app: App) => {
   app.component(GaugeChart.name, GaugeChart)
 }

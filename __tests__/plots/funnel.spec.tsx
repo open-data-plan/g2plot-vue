@@ -1,10 +1,8 @@
 import { mount } from '@vue/test-utils'
-import Chart from '../../src/plots/funnel'
+import FunnelChart from '../../src/plots/funnel'
 
-describe('Chart', () => {
+describe('FunnelChart', () => {
   test('should render without crashed', () => {
-    mount(Chart, {
-      props: {},
-    })
+    mount(() => <FunnelChart data={[{ x: 'a', y: 1 }]} xField="x" yField="y" />)
   })
 })

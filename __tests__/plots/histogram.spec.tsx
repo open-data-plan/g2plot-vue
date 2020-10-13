@@ -3,8 +3,11 @@ import Chart from '../../src/plots/histogram'
 
 describe('Chart', () => {
   test('should render without crashed', () => {
-    mount(Chart, {
-      props: {},
-    })
+    const config = {
+      data: [],
+      binField: 'value',
+      binWidth: 2,
+    }
+    mount(<Chart {...config} />)
   })
 })

@@ -15,6 +15,7 @@ const ProgressChart = defineComponent<ProgressChartProps>({
   },
 })
 
+/* istanbul ignore next */
 ProgressChart.install = (app: App) => {
   app.component(ProgressChart.name, ProgressChart)
 }

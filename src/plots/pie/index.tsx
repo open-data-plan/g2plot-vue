@@ -12,6 +12,7 @@ const PieChart = defineComponent<PieChartProps>({
   },
 })
 
+/* istanbul ignore next */
 PieChart.install = (app: App) => {
   app.component(PieChart.name, PieChart)
 }

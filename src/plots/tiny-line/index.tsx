@@ -15,6 +15,7 @@ const TinyLineChart = defineComponent<TinyLineChartProps>({
   },
 })
 
+/* istanbul ignore next */
 TinyLineChart.install = (app: App) => {
   app.component(TinyLineChart.name, TinyLineChart)
 }

@@ -15,6 +15,7 @@ const TinyAreaChart = defineComponent<TinyAreaChartProps>({
   },
 })
 
+/* istanbul ignore next */
 TinyAreaChart.install = (app: App) => {
   app.component(TinyAreaChart.name, TinyAreaChart)
 }

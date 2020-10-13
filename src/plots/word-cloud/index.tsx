@@ -15,6 +15,7 @@ const WordCloudChart = defineComponent<WordCloudChartProps>({
   },
 }) as any
 
+/* istanbul ignore next */
 WordCloudChart.install = (app: App) => {
   app.component(WordCloudChart.name, WordCloudChart)
 }

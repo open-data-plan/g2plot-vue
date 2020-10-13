@@ -12,6 +12,7 @@ const FunnelChart = defineComponent<FunnelChartProps>({
   },
 })
 
+/* istanbul ignore next */
 FunnelChart.install = (app: App) => {
   app.component(FunnelChart.name, FunnelChart)
 }

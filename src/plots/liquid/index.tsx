@@ -12,6 +12,7 @@ const LiquidChart = defineComponent<LiquidChartProps>({
   },
 })
 
+/* istanbul ignore next */
 LiquidChart.install = (app: App) => {
   app.component(LiquidChart.name, LiquidChart)
 }

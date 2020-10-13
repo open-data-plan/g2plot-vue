@@ -12,6 +12,7 @@ const ScatterChart = defineComponent<ScatterChartProps>({
   },
 }) as any
 
+/* istanbul ignore next */
 ScatterChart.install = (app: App) => {
   app.component(ScatterChart.name, ScatterChart)
 }

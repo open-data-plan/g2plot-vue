@@ -12,6 +12,7 @@ const LineChart = defineComponent<LineChartProps>({
   },
 })
 
+/* istanbul ignore next */
 LineChart.install = (app: App) => {
   app.component(LineChart.name, LineChart)
 }

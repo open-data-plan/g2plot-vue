@@ -12,6 +12,7 @@ const RadarChart = defineComponent<RadarChartProps>({
   },
 })
 
+/* istanbul ignore next */
 RadarChart.install = (app: App) => {
   app.component(RadarChart.name, RadarChart)
 }

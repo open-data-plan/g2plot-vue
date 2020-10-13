@@ -12,6 +12,7 @@ const ColumnChart = defineComponent<ColumnChartProps>({
   },
 })
 
+/* istanbul ignore next */
 ColumnChart.install = (app: App) => {
   app.component(ColumnChart.name, ColumnChart)
 }

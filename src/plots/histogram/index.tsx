@@ -15,6 +15,7 @@ const HistogramChart = defineComponent<HistogramChartProps>({
   },
 })
 
+/* istanbul ignore next */
 HistogramChart.install = (app: App) => {
   app.component(HistogramChart.name, HistogramChart)
 }

@@ -12,6 +12,7 @@ const BulletChart = defineComponent<BulletChartProps>({
   },
 })
 
+/* istanbul ignore next */
 BulletChart.install = (app: App) => {
   app.component(BulletChart.name, BulletChart)
 }

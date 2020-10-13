@@ -77,7 +77,10 @@ const BaseChart = defineComponent<
   },
   methods: {
     getChartConfig(): ChartOptions {
-      const { chartRef, ...restProps } = this.$attrs as Record<string, any>
+      const { chart, chartRef, ...restProps } = this.$attrs as Record<
+        string,
+        any
+      >
       const { data, ...config } = restProps
       return {
         data,

@@ -12,6 +12,7 @@ const HeatmapChart = defineComponent<HeatmapChartProps>({
   },
 })
 
+/* istanbul ignore next */
 HeatmapChart.install = (app: App) => {
   app.component(HeatmapChart.name, HeatmapChart)
 }
