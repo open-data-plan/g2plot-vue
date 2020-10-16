@@ -1,3 +1,9 @@
+# [2.1.0](https://github.com/open-data-plan/g2plot-vue/compare/v2.0.0...v2.1.0) (2020-10-16)
+
+### Features
+
+- add waterfall chart suport ([902ccd1](https://github.com/open-data-plan/g2plot-vue/commit/902ccd1c8d2344871335c888b20192eae6cda057))
+
 # [2.0.0](https://github.com/open-data-plan/g2plot-vue/compare/v1.0.0...v2.0.0) (2020-10-13)
 
 ### Features
