@@ -23,6 +23,14 @@ import { TinyAreaChartProps as _TinyAreaChartProps } from './plots/tiny-area'
 import { TinyColumnChartProps as _TinyColumnChartProps } from './plots/tiny-column'
 import { TinyLineChartProps as _TinyLineChartProps } from './plots/tiny-line'
 
+import { DualAxesChartProps as _DualAxesChartProps } from './plots/dual-axes'
+
+import { BoxChartProps as _BoxChartProps } from './plots/box'
+
+import { StockChartProps as _StockChartProps } from './plots/stock'
+
+import { SunburstChartProps as _SunburstChartProps } from './plots/sunburst'
+
 export { default as AreaChart } from './plots/area'
 export type AreaChartProps = _AreaChartProps
 
@@ -85,3 +93,11 @@ export type TinyColumnChartProps = _TinyColumnChartProps
 
 export { default as TinyLineChart } from './plots/tiny-line'
 export type TinyLineChartProps = _TinyLineChartProps
+export { default as DualAxesChart } from './plots/dual-axes'
+export type DualAxesChartProps = _DualAxesChartProps
+export { default as BoxChart } from './plots/box'
+export type BoxChartProps = _BoxChartProps
+export { default as StockChart } from './plots/stock'
+export type StockChartProps = _StockChartProps
+export { default as SunburstChart } from './plots/sunburst'
+export type SunburstChartProps = _SunburstChartProps

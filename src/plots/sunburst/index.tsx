@@ -1,0 +1,23 @@
+import { App, defineComponent } from 'vue'
+import { Sunburst, SunburstOptions } from '@antv/g2plot'
+import BaseChart, { BaseChartProps } from '../../components/base'
+
+export type SunburstChartProps = Omit<
+  BaseChartProps<SunburstOptions>,
+  'chart'
+> &
+  SunburstOptions
+
+const SunburstChart = defineComponent<SunburstChartProps>({
+  name: 'SunburstChart',
+  setup(props, ctx) {
+    return () => <BaseChart chart={Sunburst} {...ctx.attrs} {...props} />
+  },
+})
+
+/* istanbul ignore next */
+SunburstChart.install = (app: App) => {
+  app.component(SunburstChart.name, SunburstChart)
+}
+
+export default SunburstChart

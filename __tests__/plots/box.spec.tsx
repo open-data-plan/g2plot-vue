@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils'
-import AreaChart from '../../src/plots/area'
+import BoxChart from '../../src/plots/box'
 
 const config = {
   data: [],
@@ -7,8 +7,8 @@ const config = {
   yField: 'b',
 }
 
-describe('AreaChart', () => {
+describe('BoxChart', () => {
   test('should render without crashed', () => {
-    mount(() => <AreaChart {...config} />)
+    mount(() => <BoxChart {...config} />)
   })
 })
