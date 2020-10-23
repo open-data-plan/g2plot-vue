@@ -1,3 +1,9 @@
+# [2.2.0](https://github.com/open-data-plan/g2plot-vue/compare/v2.1.0...v2.2.0) (2020-10-23)
+
+### Features
+
+- add new chart ([43c0882](https://github.com/open-data-plan/g2plot-vue/commit/43c08825b4cfa4134eca425a5507b3dfed474c5f))
+
 # [2.1.0](https://github.com/open-data-plan/g2plot-vue/compare/v2.0.0...v2.1.0) (2020-10-16)
 
 ### Features
