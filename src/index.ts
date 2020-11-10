@@ -31,6 +31,10 @@ import { StockChartProps as _StockChartProps } from './plots/stock'
 
 import { SunburstChartProps as _SunburstChartProps } from './plots/sunburst'
 
+import { RadialBarChartProps as _RadialBarChartProps } from './plots/radial-bar'
+
+import { BidirectionalBarChartProps as _BidirectionalBarChartProps } from './plots/bidirectional-bar'
+
 export { default as AreaChart } from './plots/area'
 export type AreaChartProps = _AreaChartProps
 
@@ -101,3 +105,7 @@ export { default as StockChart } from './plots/stock'
 export type StockChartProps = _StockChartProps
 export { default as SunburstChart } from './plots/sunburst'
 export type SunburstChartProps = _SunburstChartProps
+export { default as RadialBarChart } from './plots/radial-bar'
+export type RadialBarChartProps = _RadialBarChartProps
+export { default as BidirectionalBarChart } from './plots/bidirectional-bar'
+export type BidirectionalBarChartProps = _BidirectionalBarChartProps
