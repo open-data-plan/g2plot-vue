@@ -1,3 +1,5 @@
+## [2.3.1](https://github.com/open-data-plan/g2plot-vue/compare/v2.3.0...v2.3.1) (2020-11-24)
+
 # [2.3.0](https://github.com/open-data-plan/g2plot-vue/compare/v2.2.0...v2.3.0) (2020-11-10)
 
 ### Features
