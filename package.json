@@ -4,7 +4,6 @@
   "description": "G2Plot for vue 3",
   "main": "lib/index.js",
   "module": "es/index.js",
-  "types": "typings",
   "directories": {
     "lib": "lib",
     "test": "__tests__"
@@ -12,7 +11,6 @@
   "files": [
     "lib",
     "es",
-    "typings",
     "*.d.ts"
   ],
   "publishConfig": {
@@ -27,7 +25,7 @@
     "build": "npm run build:es & npm run build:commonjs & npm run build:types",
     "build:es": "babel src -d es --extensions .ts,.tsx --delete-dir-on-start",
     "build:commonjs": "cross-env BABEL_ENV=commonjs babel src -d lib --extensions .ts,.tsx --delete-dir-on-start",
-    "build:types": "tsc",
+    "build:types": "tsc & tsc --declarationDir ./es",
     "build:docs": "vitepress build --root ./docs",
     "preversion": "npm run build",
     "version": "conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md",
@@ -77,7 +75,6 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-standard": "^4.0.2",
     "eslint-plugin-vue": "^7.1.0",
     "husky": "^4.3.0",
     "jest-canvas-mock": "^2.3.0",
@@ -85,7 +82,7 @@
     "lodash": "^4.17.20",
     "ts-node": "^9.0.0",
     "typescript": "^4.0.5",
-    "vitepress": "^0.7.0",
+    "vitepress": "^0.8.1",
     "vue": "^3.0.2"
   },
   "browserslist": [
