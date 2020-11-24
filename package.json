@@ -31,7 +31,8 @@
     "build:docs": "vitepress build --root ./docs",
     "preversion": "npm run build",
     "version": "conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md",
-    "postversion": "npm publish"
+    "postversion": "npm publish",
+    "sync": "ts-node ./scripts/sync.ts"
   },
   "repository": {
     "type": "git",
