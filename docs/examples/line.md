@@ -1,7 +1,0 @@
----
-title: LineChart
----
-
-## Demos
-
-## API
