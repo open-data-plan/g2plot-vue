@@ -1,7 +1,6 @@
 const path = require('path')
 
 module.exports = {
-  root: path.resolve(process.cwd(), './docs'),
   title: 'G2Plot Vue',
   description: 'G2Plot for Vue',
   themeConfig: {
@@ -15,6 +14,5 @@ module.exports = {
       },
       { text: 'G2Plot', link: 'https://g2plot.antv.vision' },
     ],
-    sidebar: 'auto',
   },
 }

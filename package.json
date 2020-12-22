@@ -17,7 +17,7 @@
     "access": "public"
   },
   "scripts": {
-    "dev": "vitepress --root ./docs",
+    "dev": "vitepress dev docs",
     "lint": "eslint . --ext=.ts,.tsx",
     "lint:fix": "eslint . --ext=.ts,.tsx --fix",
     "test": "jest",
@@ -26,7 +26,7 @@
     "build:es": "babel src -d es --extensions .ts,.tsx --delete-dir-on-start",
     "build:commonjs": "cross-env BABEL_ENV=commonjs babel src -d lib --extensions .ts,.tsx --delete-dir-on-start",
     "build:types": "tsc & tsc --declarationDir ./es",
-    "build:docs": "vitepress build --root ./docs",
+    "build:docs": "vitepress build docs",
     "preversion": "npm run build",
     "version": "conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md",
     "postversion": "npm publish",
