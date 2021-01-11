@@ -67,7 +67,7 @@
     "canvas": "^2.6.1",
     "conventional-changelog-cli": "^2.1.0",
     "cross-env": "^7.0.2",
-    "decamelize": "^4.0.0",
+    "decamelize": "^5.0.0",
     "eslint": "^7.12.1",
     "eslint-config-prettier": "^7.0.0",
     "eslint-config-standard": "^16.0.1",
