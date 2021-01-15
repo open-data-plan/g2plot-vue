@@ -30,7 +30,7 @@
     "preversion": "npm run build",
     "version": "conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md",
     "postversion": "npm publish",
-    "sync": "ts-node ./scripts/sync.ts"
+    "sync": "ts-node --project tsconfig.sync.json ./scripts/sync.ts"
   },
   "repository": {
     "type": "git",

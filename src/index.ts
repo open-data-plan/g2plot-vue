@@ -35,6 +35,12 @@ import { RadialBarChartProps as _RadialBarChartProps } from './plots/radial-bar'
 
 import { BidirectionalBarChartProps as _BidirectionalBarChartProps } from './plots/bidirectional-bar'
 
+import { TreemapChartProps as _TreemapChartProps } from './plots/treemap'
+
+import { SankeyChartProps as _SankeyChartProps } from './plots/sankey'
+
+import { ChordChartProps as _ChordChartProps } from './plots/chord'
+
 export { default as AreaChart } from './plots/area'
 export type AreaChartProps = _AreaChartProps
 
@@ -109,3 +115,9 @@ export { default as RadialBarChart } from './plots/radial-bar'
 export type RadialBarChartProps = _RadialBarChartProps
 export { default as BidirectionalBarChart } from './plots/bidirectional-bar'
 export type BidirectionalBarChartProps = _BidirectionalBarChartProps
+export { default as TreemapChart } from './plots/treemap'
+export type TreemapChartProps = _TreemapChartProps
+export { default as SankeyChart } from './plots/sankey'
+export type SankeyChartProps = _SankeyChartProps
+export { default as ChordChart } from './plots/chord'
+export type ChordChartProps = _ChordChartProps

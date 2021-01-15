@@ -13,7 +13,7 @@ const WordCloudChart = defineComponent<WordCloudChartProps>({
   setup: (props, ctx) => {
     return () => <BaseChart chart={WordCloud} {...ctx.attrs} {...props} />
   },
-}) as any
+})
 
 /* istanbul ignore next */
 WordCloudChart.install = (app: App) => {
