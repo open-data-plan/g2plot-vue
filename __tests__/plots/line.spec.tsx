@@ -3,11 +3,7 @@ import LineChart from '../../src/plots/line'
 
 describe('LineChart', () => {
   test('render without crashed', () => {
-    mount(LineChart, {
-      props: {
-        data: [],
-      },
-    })
+    mount(<LineChart data={[]} />)
   })
 
   test('test update config and data', async () => {
@@ -17,41 +13,49 @@ describe('LineChart', () => {
     const handleLineClick2 = () => {
       console.log(2)
     }
-    const wrapper = mount(LineChart, {
-      props: {
-        data: null,
-      },
-    })
+    const wrapper = mount(<LineChart data={null} />)
 
     await wrapper.setProps({
-      forceFit: true,
+      autoFit: true,
       data: [],
+      xField: 'x',
+      yField: 'y',
     })
     await wrapper.setProps({
-      forceFit: true,
+      autoFit: true,
       data: null,
+      xField: 'x',
+      yField: 'y',
     })
 
     await wrapper.setProps({
-      forceFit: true,
+      autoFit: true,
       data: [{ x: 1 }],
+      xField: 'x',
+      yField: 'y',
     })
 
     await wrapper.setProps({
-      forceFit: true,
+      autoFit: true,
       data: [{ x: 2 }],
+      xField: 'x',
+      yField: 'y',
     })
 
     await wrapper.setProps({
-      forceFit: true,
+      autoFit: true,
+      xField: 'x',
+      yField: 'y',
     })
 
     await wrapper.setProps({
       data: [],
-      forceFit: true,
+      autoFit: true,
       xAxis: {
-        visible: true,
+        nice: true,
       },
+      xField: 'x',
+      yField: 'y',
       events: {
         onLineClick: handleLineClick1,
       },
@@ -59,10 +63,12 @@ describe('LineChart', () => {
 
     await wrapper.setProps({
       data: [],
-      forceFit: true,
+      autoFit: true,
       xAxis: {
-        visible: true,
+        nice: true,
       },
+      xField: 'x',
+      yField: 'y',
       events: {
         onLineClick: handleLineClick2,
       },
@@ -70,10 +76,12 @@ describe('LineChart', () => {
 
     await wrapper.setProps({
       data: [],
-      forceFit: true,
+      autoFit: true,
       xAxis: {
-        visible: true,
+        nice: true,
       },
+      xField: 'x',
+      yField: 'y',
       events: {
         onLineClick: handleLineClick2,
       },
