@@ -6,6 +6,7 @@ module.exports = {
   themeConfig: {
     nav: [
       { text: 'Guide', link: '/guide/' },
+      { text: 'Demo', link: '/demo/' },
       { text: 'Github', link: 'https://github.com/open-data-plan/g2plot-vue' },
       {
         text: 'Changelog',
