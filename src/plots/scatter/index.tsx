@@ -1,9 +1,11 @@
 import { defineComponent, App } from 'vue'
 import { Scatter, ScatterOptions } from '@antv/g2plot'
 import BaseChart, { BaseChartProps } from '../../components/base'
+import { Writeable } from '../../types'
 
-export type ScatterChartProps = Omit<BaseChartProps<ScatterOptions>, 'chart'> &
-  ScatterOptions
+export type ScatterChartProps = Writeable<
+  Omit<BaseChartProps<ScatterOptions>, 'chart'> & ScatterOptions
+>
 
 const ScatterChart = defineComponent<ScatterChartProps>({
   name: 'ScatterChart',

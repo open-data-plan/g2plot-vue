@@ -1,9 +1,11 @@
 import { App, defineComponent } from 'vue'
 import { Chord, ChordOptions } from '@antv/g2plot'
 import BaseChart, { BaseChartProps } from '../../components/base'
+import { Writeable } from '../../types'
 
-export type ChordChartProps = Omit<BaseChartProps<ChordOptions>, 'chart'> &
-  ChordOptions
+export type ChordChartProps = Writeable<
+  Omit<BaseChartProps<ChordOptions>, 'chart'> & ChordOptions
+>
 
 const ChordChart = defineComponent<ChordChartProps>({
   name: 'ChordChart',

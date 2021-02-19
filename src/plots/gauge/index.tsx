@@ -1,9 +1,11 @@
 import { defineComponent, App } from 'vue'
 import { Gauge, GaugeOptions } from '@antv/g2plot'
 import BaseChart, { BaseChartProps } from '../../components/base'
+import { Writeable } from '../../types'
 
-export type GaugeChartProps = Omit<BaseChartProps<GaugeOptions>, 'chart'> &
-  GaugeOptions
+export type GaugeChartProps = Writeable<
+  Omit<BaseChartProps<GaugeOptions>, 'chart'> & GaugeOptions
+>
 
 const GaugeChart = defineComponent<GaugeChartProps>({
   name: 'GaugeChart',

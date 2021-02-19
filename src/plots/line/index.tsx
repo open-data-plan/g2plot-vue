@@ -1,9 +1,11 @@
 import { defineComponent, App } from 'vue'
 import { Line, LineOptions } from '@antv/g2plot'
 import BaseChart, { BaseChartProps } from '../../components/base'
+import { Writeable } from '../../types'
 
-export type LineChartProps = Omit<BaseChartProps<LineOptions>, 'chart'> &
-  LineOptions
+export type LineChartProps = Writeable<
+  Omit<BaseChartProps<LineOptions>, 'chart'> & LineOptions
+>
 
 const LineChart = defineComponent<LineChartProps>({
   name: 'LineChart',

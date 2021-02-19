@@ -1,9 +1,11 @@
 import { App, defineComponent } from 'vue'
 import { Treemap, TreemapOptions } from '@antv/g2plot'
 import BaseChart, { BaseChartProps } from '../../components/base'
+import { Writeable } from '../../types'
 
-export type TreemapChartProps = Omit<BaseChartProps<TreemapOptions>, 'chart'> &
-  TreemapOptions
+export type TreemapChartProps = Writeable<
+  Omit<BaseChartProps<TreemapOptions>, 'chart'> & TreemapOptions
+>
 
 const TreemapChart = defineComponent<TreemapChartProps>({
   name: 'TreemapChart',

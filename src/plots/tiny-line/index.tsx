@@ -1,12 +1,11 @@
 import { defineComponent, App } from 'vue'
 import { TinyLine, TinyLineOptions } from '@antv/g2plot'
 import BaseChart, { BaseChartProps } from '../../components/base'
+import { Writeable } from '../../types'
 
-export type TinyLineChartProps = Omit<
-  BaseChartProps<TinyLineOptions>,
-  'chart'
-> &
-  TinyLineOptions
+export type TinyLineChartProps = Writeable<
+  Omit<BaseChartProps<TinyLineOptions>, 'chart'> & TinyLineOptions
+>
 
 const TinyLineChart = defineComponent<TinyLineChartProps>({
   name: 'TinyLineChart',

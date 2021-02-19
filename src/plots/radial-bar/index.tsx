@@ -1,12 +1,11 @@
 import { App, defineComponent } from 'vue'
 import { RadialBar, RadialBarOptions } from '@antv/g2plot'
 import BaseChart, { BaseChartProps } from '../../components/base'
+import { Writeable } from '../../types'
 
-export type RadialBarChartProps = Omit<
-  BaseChartProps<RadialBarOptions>,
-  'chart'
-> &
-  RadialBarOptions
+export type RadialBarChartProps = Writeable<
+  Omit<BaseChartProps<RadialBarOptions>, 'chart'> & RadialBarOptions
+>
 
 const RadialBarChart = defineComponent<RadialBarChartProps>({
   name: 'RadialBarChart',

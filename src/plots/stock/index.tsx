@@ -1,9 +1,11 @@
 import { App, defineComponent } from 'vue'
 import { Stock, StockOptions } from '@antv/g2plot'
 import BaseChart, { BaseChartProps } from '../../components/base'
+import { Writeable } from '../../types'
 
-export type StockChartProps = Omit<BaseChartProps<StockOptions>, 'chart'> &
-  StockOptions
+export type StockChartProps = Writeable<
+  Omit<BaseChartProps<StockOptions>, 'chart'> & StockOptions
+>
 
 const StockChart = defineComponent<StockChartProps>({
   name: 'StockChart',

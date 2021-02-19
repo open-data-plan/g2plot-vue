@@ -1,9 +1,11 @@
 import { App, defineComponent } from 'vue'
 import { Area, AreaOptions } from '@antv/g2plot'
 import BaseChart, { BaseChartProps } from '../../components/base'
+import { Writeable } from '../../types'
 
-export type AreaChartProps = Omit<BaseChartProps<AreaOptions>, 'chart'> &
-  AreaOptions
+export type AreaChartProps = Writeable<
+  Omit<BaseChartProps<AreaOptions>, 'chart'> & AreaOptions
+>
 
 const AreaChart = defineComponent<AreaChartProps>({
   name: 'AreaChart',

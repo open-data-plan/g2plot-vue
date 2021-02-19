@@ -1,9 +1,11 @@
 import { defineComponent, App } from 'vue'
 import { Heatmap, HeatmapOptions } from '@antv/g2plot'
 import BaseChart, { BaseChartProps } from '../../components/base'
+import { Writeable } from '../../types'
 
-export type HeatmapChartProps = Omit<BaseChartProps<HeatmapOptions>, 'chart'> &
-  HeatmapOptions
+export type HeatmapChartProps = Writeable<
+  Omit<BaseChartProps<HeatmapOptions>, 'chart'> & HeatmapOptions
+>
 
 const HeatmapChart = defineComponent<HeatmapChartProps>({
   name: 'HeatmapChart',

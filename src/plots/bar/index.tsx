@@ -1,9 +1,11 @@
 import { App, defineComponent } from 'vue'
 import { Bar, BarOptions } from '@antv/g2plot'
 import BaseChart, { BaseChartProps } from '../../components/base'
+import { Writeable } from '../../types'
 
-export type BarChartProps = Omit<BaseChartProps<BarOptions>, 'chart'> &
-  BarOptions
+export type BarChartProps = Writeable<
+  Omit<BaseChartProps<BarOptions>, 'chart'> & BarOptions
+>
 
 const BarChart = defineComponent<BarChartProps>({
   name: 'BarChart',

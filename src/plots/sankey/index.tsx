@@ -1,9 +1,11 @@
 import { App, defineComponent } from 'vue'
 import { Sankey, SankeyOptions } from '@antv/g2plot'
 import BaseChart, { BaseChartProps } from '../../components/base'
+import { Writeable } from '../../types'
 
-export type SankeyChartProps = Omit<BaseChartProps<SankeyOptions>, 'chart'> &
-  SankeyOptions
+export type SankeyChartProps = Writeable<
+  Omit<BaseChartProps<SankeyOptions>, 'chart'> & SankeyOptions
+>
 
 const SankeyChart = defineComponent<SankeyChartProps>({
   name: 'SankeyChart',

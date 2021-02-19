@@ -61,9 +61,10 @@ const createComponents = async () => {
 import { App, defineComponent } from 'vue'
 import { ${chart}, ${chart}Options } from '@antv/g2plot'
 import BaseChart, { BaseChartProps } from '../../components/base'
+import { Writeable } from '../../types'
 
-export type ${chart}ChartProps = Omit<BaseChartProps<${chart}Options>, 'chart'> &
-  ${chart}Options
+export type ${chart}ChartProps = Writeable<Omit<BaseChartProps<${chart}Options>, 'chart'> &
+  ${chart}Options>
 
 const ${chart}Chart = defineComponent<${chart}ChartProps>({
   name: '${chart}Chart',

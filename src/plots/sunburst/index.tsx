@@ -1,12 +1,11 @@
 import { App, defineComponent } from 'vue'
 import { Sunburst, SunburstOptions } from '@antv/g2plot'
 import BaseChart, { BaseChartProps } from '../../components/base'
+import { Writeable } from '../../types'
 
-export type SunburstChartProps = Omit<
-  BaseChartProps<SunburstOptions>,
-  'chart'
-> &
-  SunburstOptions
+export type SunburstChartProps = Writeable<
+  Omit<BaseChartProps<SunburstOptions>, 'chart'> & SunburstOptions
+>
 
 const SunburstChart = defineComponent<SunburstChartProps>({
   name: 'SunburstChart',

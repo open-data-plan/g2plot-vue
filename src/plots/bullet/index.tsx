@@ -1,9 +1,11 @@
 import { App, defineComponent } from 'vue'
 import { Bullet, BulletOptions } from '@antv/g2plot'
 import BaseChart, { BaseChartProps } from '../../components/base'
+import { Writeable } from '../../types'
 
-export type BulletChartProps = Omit<BaseChartProps<BulletOptions>, 'chart'> &
-  BulletOptions
+export type BulletChartProps = Writeable<
+  Omit<BaseChartProps<BulletOptions>, 'chart'> & BulletOptions
+>
 
 const BulletChart = defineComponent<BulletChartProps>({
   name: 'BulletChart',

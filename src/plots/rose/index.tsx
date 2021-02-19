@@ -1,9 +1,11 @@
 import { defineComponent, App } from 'vue'
 import { Rose, RoseOptions } from '@antv/g2plot'
 import BaseChart, { BaseChartProps } from '../../components/base'
+import { Writeable } from '../../types'
 
-export type RoseChartProps = Omit<BaseChartProps<RoseOptions>, 'chart'> &
-  RoseOptions
+export type RoseChartProps = Writeable<
+  Omit<BaseChartProps<RoseOptions>, 'chart'> & RoseOptions
+>
 
 const RoseChart = defineComponent<RoseChartProps>({
   name: 'RoseChart',

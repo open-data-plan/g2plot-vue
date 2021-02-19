@@ -1,9 +1,11 @@
 import { defineComponent, App } from 'vue'
 import { Funnel, FunnelOptions } from '@antv/g2plot'
 import BaseChart, { BaseChartProps } from '../../components/base'
+import { Writeable } from '../../types'
 
-export type FunnelChartProps = Omit<BaseChartProps<FunnelOptions>, 'chart'> &
-  FunnelOptions
+export type FunnelChartProps = Writeable<
+  Omit<BaseChartProps<FunnelOptions>, 'chart'> & FunnelOptions
+>
 
 const FunnelChart = defineComponent<FunnelChartProps>({
   name: 'FunnelChart',

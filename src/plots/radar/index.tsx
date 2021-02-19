@@ -1,9 +1,11 @@
 import { defineComponent, App } from 'vue'
 import { Radar, RadarOptions } from '@antv/g2plot'
 import BaseChart, { BaseChartProps } from '../../components/base'
+import { Writeable } from '../../types'
 
-export type RadarChartProps = Omit<BaseChartProps<RadarOptions>, 'chart'> &
-  RadarOptions
+export type RadarChartProps = Writeable<
+  Omit<BaseChartProps<RadarOptions>, 'chart'> & RadarOptions
+>
 
 const RadarChart = defineComponent<RadarChartProps>({
   name: 'RadarChart',

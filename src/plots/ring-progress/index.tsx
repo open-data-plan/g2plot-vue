@@ -1,12 +1,11 @@
 import { defineComponent, App } from 'vue'
 import { RingProgress, RingProgressOptions } from '@antv/g2plot'
 import BaseChart, { BaseChartProps } from '../../components/base'
+import { Writeable } from '../../types'
 
-export type RingProgressChartProps = Omit<
-  BaseChartProps<RingProgressOptions>,
-  'chart'
-> &
-  RingProgressOptions
+export type RingProgressChartProps = Writeable<
+  Omit<BaseChartProps<RingProgressOptions>, 'chart'> & RingProgressOptions
+>
 
 const RingProgressChart = defineComponent<RingProgressChartProps>({
   name: 'RingProgressChart',

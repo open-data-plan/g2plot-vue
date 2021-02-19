@@ -1,12 +1,11 @@
 import { defineComponent, App } from 'vue'
 import { Progress, ProgressOptions } from '@antv/g2plot'
 import BaseChart, { BaseChartProps } from '../../components/base'
+import { Writeable } from '../../types'
 
-export type ProgressChartProps = Omit<
-  BaseChartProps<ProgressOptions>,
-  'chart'
-> &
-  ProgressOptions
+export type ProgressChartProps = Writeable<
+  Omit<BaseChartProps<ProgressOptions>, 'chart'> & ProgressOptions
+>
 
 const ProgressChart = defineComponent<ProgressChartProps>({
   name: 'ProgressChart',

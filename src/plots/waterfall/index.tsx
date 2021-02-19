@@ -1,12 +1,11 @@
 import { defineComponent, App } from 'vue'
 import { Waterfall, WaterfallOptions } from '@antv/g2plot'
 import BaseChart, { BaseChartProps } from '../../components/base'
+import { Writeable } from '../../types'
 
-export type WaterfallChartProps = Omit<
-  BaseChartProps<WaterfallOptions>,
-  'chart'
-> &
-  WaterfallOptions
+export type WaterfallChartProps = Writeable<
+  Omit<BaseChartProps<WaterfallOptions>, 'chart'> & WaterfallOptions
+>
 
 const WaterfallChart = defineComponent<WaterfallChartProps>({
   name: 'WaterfallChart',

@@ -1,12 +1,12 @@
 import { App, defineComponent } from 'vue'
 import { BidirectionalBar, BidirectionalBarOptions } from '@antv/g2plot'
 import BaseChart, { BaseChartProps } from '../../components/base'
+import { Writeable } from '../../types'
 
-export type BidirectionalBarChartProps = Omit<
-  BaseChartProps<BidirectionalBarOptions>,
-  'chart'
-> &
-  BidirectionalBarOptions
+export type BidirectionalBarChartProps = Writeable<
+  Omit<BaseChartProps<BidirectionalBarOptions>, 'chart'> &
+    BidirectionalBarOptions
+>
 
 const BidirectionalBarChart = defineComponent<BidirectionalBarChartProps>({
   name: 'BidirectionalBarChart',
