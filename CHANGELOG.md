@@ -1,3 +1,13 @@
+## [2.4.2](https://github.com/open-data-plan/g2plot-vue/compare/v2.4.0...v2.4.2) (2021-02-22)
+
+
+### Bug Fixes
+
+* fix types definitions ([39badf2](https://github.com/open-data-plan/g2plot-vue/commit/39badf2ea51a833185a915af29baf152f30dd939)), closes [#141](https://github.com/open-data-plan/g2plot-vue/issues/141)
+* mark props as writeable ([ae73878](https://github.com/open-data-plan/g2plot-vue/commit/ae738782b5b43c9ec75a35fd6e566367bf007481)), closes [#138](https://github.com/open-data-plan/g2plot-vue/issues/138)
+
+
+
 ## [2.4.1](https://github.com/open-data-plan/g2plot-vue/compare/v2.4.0...v2.4.1) (2021-02-19)
 
 
