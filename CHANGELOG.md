@@ -1,3 +1,12 @@
+# [3.0.0](https://github.com/open-data-plan/g2plot-vue/compare/v2.4.2...v3.0.0) (2021-03-03)
+
+
+### Features
+
+* support vue 2 ([67a657b](https://github.com/open-data-plan/g2plot-vue/commit/67a657bc61f3f13b2f05c3014371518128cbc035))
+
+
+
 ## [2.4.2](https://github.com/open-data-plan/g2plot-vue/compare/v2.4.0...v2.4.2) (2021-02-22)
 
 
