@@ -52,7 +52,7 @@
   },
   "homepage": "https://github.com/open-data-plan/g2plot-vue#readme",
   "devDependencies": {
-    "@antv/g2plot": "^2.0.5",
+    "@antv/g2plot": "^2.3.13",
     "@babel/cli": "^7.12.1",
     "@babel/preset-typescript": "^7.12.1",
     "@commitlint/cli": "^12.0.0",
@@ -113,6 +113,7 @@
     "vue-demi": "^0.7.1"
   },
   "peerDependencies": {
+    "@antv/g2plot": "^2.3.0",
     "@vue/composition-api": "^1.0.0-rc.2",
     "vue": "^2.0.0 || >=3.0.0-rc.0"
   },
