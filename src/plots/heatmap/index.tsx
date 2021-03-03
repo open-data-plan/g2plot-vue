@@ -9,7 +9,7 @@ export type HeatmapChartProps = Writeable<
 
 const HeatmapChart = defineComponent<HeatmapChartProps>({
   name: 'HeatmapChart',
-  setup(props, ctx) {
+  setup: (props, ctx) => {
     return () => <BaseChart chart={Heatmap} {...ctx.attrs} {...props} />
   },
 })

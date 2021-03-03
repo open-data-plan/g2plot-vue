@@ -9,7 +9,7 @@ export type LineChartProps = Writeable<
 
 const LineChart = defineComponent<LineChartProps>({
   name: 'LineChart',
-  setup(props, ctx) {
+  setup: (props, ctx) => {
     return () => <BaseChart chart={Line} {...ctx.attrs} {...props} />
   },
 })

@@ -9,7 +9,7 @@ export type SunburstChartProps = Writeable<
 
 const SunburstChart = defineComponent<SunburstChartProps>({
   name: 'SunburstChart',
-  setup(props, ctx) {
+  setup: (props, ctx) => {
     return () => <BaseChart chart={Sunburst} {...ctx.attrs} {...props} />
   },
 })

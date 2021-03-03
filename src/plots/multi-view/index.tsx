@@ -9,7 +9,7 @@ export type MultiViewChartProps = Writeable<
 
 const MultiViewChart = defineComponent<MultiViewChartProps>({
   name: 'MultiViewChart',
-  setup(props, ctx) {
+  setup: (props, ctx) => {
     return () => <BaseChart chart={MultiView} {...ctx.attrs} {...props} />
   },
 })

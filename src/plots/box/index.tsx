@@ -9,7 +9,7 @@ export type BoxChartProps = Writeable<
 
 const BoxChart = defineComponent<BoxChartProps>({
   name: 'BoxChart',
-  setup(props, ctx) {
+  setup: (props, ctx) => {
     return () => <BaseChart chart={Box} {...ctx.attrs} {...props} />
   },
 })

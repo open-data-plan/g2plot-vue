@@ -9,7 +9,7 @@ export type StockChartProps = Writeable<
 
 const StockChart = defineComponent<StockChartProps>({
   name: 'StockChart',
-  setup(props, ctx) {
+  setup: (props, ctx) => {
     return () => <BaseChart chart={Stock} {...ctx.attrs} {...props} />
   },
 })

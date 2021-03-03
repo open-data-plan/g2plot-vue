@@ -9,7 +9,7 @@ export type RoseChartProps = Writeable<
 
 const RoseChart = defineComponent<RoseChartProps>({
   name: 'RoseChart',
-  setup(props, ctx) {
+  setup: (props, ctx) => {
     return () => <BaseChart chart={Rose} {...ctx.attrs} {...props} />
   },
 })

@@ -9,7 +9,7 @@ export type DualAxesChartProps = Writeable<
 
 const DualAxesChart = defineComponent<DualAxesChartProps>({
   name: 'DualAxesChart',
-  setup(props, ctx) {
+  setup: (props, ctx) => {
     return () => <BaseChart chart={DualAxes} {...ctx.attrs} {...props} />
   },
 })

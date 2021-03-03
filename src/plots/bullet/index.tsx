@@ -9,7 +9,7 @@ export type BulletChartProps = Writeable<
 
 const BulletChart = defineComponent<BulletChartProps>({
   name: 'BulletChart',
-  setup(props, ctx) {
+  setup: (props, ctx) => {
     return () => <BaseChart chart={Bullet} {...ctx.attrs} {...props} />
   },
 })

@@ -10,7 +10,7 @@ export type BidirectionalBarChartProps = Writeable<
 
 const BidirectionalBarChart = defineComponent<BidirectionalBarChartProps>({
   name: 'BidirectionalBarChart',
-  setup(props, ctx) {
+  setup: (props, ctx) => {
     return () => (
       <BaseChart chart={BidirectionalBar} {...ctx.attrs} {...props} />
     )

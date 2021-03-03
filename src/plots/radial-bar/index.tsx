@@ -9,7 +9,7 @@ export type RadialBarChartProps = Writeable<
 
 const RadialBarChart = defineComponent<RadialBarChartProps>({
   name: 'RadialBarChart',
-  setup(props, ctx) {
+  setup: (props, ctx) => {
     return () => <BaseChart chart={RadialBar} {...ctx.attrs} {...props} />
   },
 })

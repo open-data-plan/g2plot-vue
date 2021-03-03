@@ -9,7 +9,7 @@ export type ChordChartProps = Writeable<
 
 const ChordChart = defineComponent<ChordChartProps>({
   name: 'ChordChart',
-  setup(props, ctx) {
+  setup: (props, ctx) => {
     return () => <BaseChart chart={Chord} {...ctx.attrs} {...props} />
   },
 })

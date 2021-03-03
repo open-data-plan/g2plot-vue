@@ -9,7 +9,7 @@ export type TreemapChartProps = Writeable<
 
 const TreemapChart = defineComponent<TreemapChartProps>({
   name: 'TreemapChart',
-  setup(props, ctx) {
+  setup: (props, ctx) => {
     return () => <BaseChart chart={Treemap} {...ctx.attrs} {...props} />
   },
 })

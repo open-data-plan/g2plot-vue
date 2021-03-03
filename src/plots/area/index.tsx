@@ -9,7 +9,7 @@ export type AreaChartProps = Writeable<
 
 const AreaChart = defineComponent<AreaChartProps>({
   name: 'AreaChart',
-  setup(props, ctx) {
+  setup: (props, ctx) => {
     return () => <BaseChart chart={Area} {...ctx.attrs} {...props} />
   },
 })

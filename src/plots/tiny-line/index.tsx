@@ -9,7 +9,7 @@ export type TinyLineChartProps = Writeable<
 
 const TinyLineChart = defineComponent<TinyLineChartProps>({
   name: 'TinyLineChart',
-  setup(props, ctx) {
+  setup: (props, ctx) => {
     return () => <BaseChart chart={TinyLine} {...ctx.attrs} {...props} />
   },
 })

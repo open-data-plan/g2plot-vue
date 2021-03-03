@@ -9,7 +9,7 @@ export type SankeyChartProps = Writeable<
 
 const SankeyChart = defineComponent<SankeyChartProps>({
   name: 'SankeyChart',
-  setup(props, ctx) {
+  setup: (props, ctx) => {
     return () => <BaseChart chart={Sankey} {...ctx.attrs} {...props} />
   },
 })

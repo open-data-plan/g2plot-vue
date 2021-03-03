@@ -9,7 +9,7 @@ export type GaugeChartProps = Writeable<
 
 const GaugeChart = defineComponent<GaugeChartProps>({
   name: 'GaugeChart',
-  setup(props, ctx) {
+  setup: (props, ctx) => {
     return () => <BaseChart chart={Gauge} {...ctx.attrs} {...props} />
   },
 })
