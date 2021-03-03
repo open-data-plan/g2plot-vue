@@ -11,6 +11,8 @@
   "files": [
     "lib",
     "es",
+    "lib2",
+    "es2",
     "*.d.ts"
   ],
   "publishConfig": {
@@ -20,19 +22,24 @@
     "dev": "vitepress dev docs",
     "lint": "eslint . --ext=.ts,.tsx",
     "lint:fix": "eslint . --ext=.ts,.tsx --fix",
-    "test": "npm run test2 && npm run test3",
+    "test": "npm run test3",
     "test2": "vue-demi-switch 2 vue2 && jest",
     "test3": "vue-demi-switch 3 && jest",
     "prebuild": "npm test",
-    "build": "npm run build:es & npm run build:commonjs & npm run build:types",
-    "build:es": "babel src -d es --extensions .ts,.tsx --delete-dir-on-start",
-    "build:commonjs": "cross-env BABEL_ENV=commonjs babel src -d lib --extensions .ts,.tsx --delete-dir-on-start",
-    "build:types": "tsc & tsc --declarationDir ./es",
+    "build": "npm run build:vue3 && npm run build:vue2",
+    "build:vue3": "npm run build:es & npm run build:commonjs & npm run build:types",
+    "build:vue2": "npm run build:es2 & npm run build:commonjs2",
+    "build:es": "vue-demi-switch 3 && babel src -d es --extensions .ts,.tsx --delete-dir-on-start",
+    "build:commonjs": "cross-env BABEL_ENV=commonjs vue-demi-switch 3 && babel src -d lib --extensions .ts,.tsx --delete-dir-on-start",
+    "build:es2": "vue-demi-switch 2 vue2 && babel src -d es2 --extensions .ts,.tsx --delete-dir-on-start",
+    "build:commonjs2": "cross-env BABEL_ENV=commonjs vue-demi-switch 2 vue2 && babel src -d lib2 --extensions .ts,.tsx --delete-dir-on-start",
+    "build:types": "vue-demi-switch 3 && tsc & tsc --declarationDir ./es",
     "build:docs": "vitepress build docs",
     "preversion": "npm run build",
     "version": "conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md",
     "postversion": "npm publish",
-    "sync": "ts-node --project tsconfig.sync.json ./scripts/sync.ts"
+    "sync": "ts-node --project tsconfig.sync.json ./scripts/sync.ts",
+    "postinstall": "node ./scripts/postinstall.js"
   },
   "repository": {
     "type": "git",

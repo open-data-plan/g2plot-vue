@@ -106,3 +106,7 @@ dist
 # build output
 es/
 lib/
+es2/
+lib2/
+es3/
+lib3/
