@@ -9,7 +9,7 @@ features:
     details: Universal support with vue-demi
   - title: G2Plot
     details: Powered by G2Plot
-  - title: Native TypeScript Support
+  - title: TypeScript
     details: Fully type definitions support
 footer: MIT Licensed | Copyright © 2020-present Open Data Plan
 ---
