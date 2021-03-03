@@ -1,3 +1,12 @@
+## [3.1.3](https://github.com/open-data-plan/g2plot-vue/compare/v3.1.2...v3.1.3) (2021-03-03)
+
+
+### Bug Fixes
+
+* fix render error in vue 2 ([63d9901](https://github.com/open-data-plan/g2plot-vue/commit/63d99016d27f414bbd1ccdb8c0928f5e7ebe74d9))
+
+
+
 ## [3.1.2](https://github.com/open-data-plan/g2plot-vue/compare/v3.1.1...v3.1.2) (2021-03-03)
 
 
