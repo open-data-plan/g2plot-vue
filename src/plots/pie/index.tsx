@@ -9,7 +9,7 @@ export type PieChartProps = Writeable<
 
 const PieChart = defineComponent<PieChartProps>({
   name: 'PieChart',
-  setup: (props, ctx) => {
+  setup(props, ctx) {
     return () => <BaseChart chart={Pie} {...ctx.attrs} {...props} />
   },
 })

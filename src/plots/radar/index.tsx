@@ -9,7 +9,7 @@ export type RadarChartProps = Writeable<
 
 const RadarChart = defineComponent<RadarChartProps>({
   name: 'RadarChart',
-  setup: (props, ctx) => {
+  setup(props, ctx) {
     return () => <BaseChart chart={Radar} {...ctx.attrs} {...props} />
   },
 })

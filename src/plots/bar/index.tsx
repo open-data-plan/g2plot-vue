@@ -9,7 +9,7 @@ export type BarChartProps = Writeable<
 
 const BarChart = defineComponent<BarChartProps>({
   name: 'BarChart',
-  setup: (props, ctx) => {
+  setup(props, ctx) {
     return () => <BaseChart chart={Bar} {...ctx.attrs} {...props} />
   },
 })

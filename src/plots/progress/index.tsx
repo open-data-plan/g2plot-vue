@@ -9,7 +9,7 @@ export type ProgressChartProps = Writeable<
 
 const ProgressChart = defineComponent<ProgressChartProps>({
   name: 'ProgressChart',
-  setup: (props, ctx) => {
+  setup(props, ctx) {
     return () => <BaseChart chart={Progress} {...ctx.attrs} {...props} />
   },
 })

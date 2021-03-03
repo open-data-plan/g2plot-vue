@@ -9,7 +9,7 @@ export type FunnelChartProps = Writeable<
 
 const FunnelChart = defineComponent<FunnelChartProps>({
   name: 'FunnelChart',
-  setup: (props, ctx) => {
+  setup(props, ctx) {
     return () => <BaseChart chart={Funnel} {...ctx.attrs} {...props} />
   },
 })

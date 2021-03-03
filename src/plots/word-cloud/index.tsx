@@ -9,7 +9,7 @@ export type WordCloudChartProps = Writeable<
 
 const WordCloudChart = defineComponent<WordCloudChartProps>({
   name: 'WordCloudChart',
-  setup: (props, ctx) => {
+  setup(props, ctx) {
     return () => <BaseChart chart={WordCloud} {...ctx.attrs} {...props} />
   },
 })

@@ -9,7 +9,7 @@ export type ScatterChartProps = Writeable<
 
 const ScatterChart = defineComponent<ScatterChartProps>({
   name: 'ScatterChart',
-  setup: (props, ctx) => {
+  setup(props, ctx) {
     return () => <BaseChart chart={Scatter} {...ctx.attrs} {...props} />
   },
 }) as any

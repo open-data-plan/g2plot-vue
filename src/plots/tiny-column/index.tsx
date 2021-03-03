@@ -9,7 +9,7 @@ export type TinyColumnChartProps = Writeable<
 
 const TinyColumnChart = defineComponent<TinyColumnChartProps>({
   name: 'TinyColumnChart',
-  setup: (props, ctx) => {
+  setup(props, ctx) {
     return () => <BaseChart chart={TinyColumn} {...ctx.attrs} {...props} />
   },
 })

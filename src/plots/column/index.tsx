@@ -9,7 +9,7 @@ export type ColumnChartProps = Writeable<
 
 const ColumnChart = defineComponent<ColumnChartProps>({
   name: 'ColumnChart',
-  setup: (props, ctx) => {
+  setup(props, ctx) {
     return () => <BaseChart chart={Column} {...ctx.attrs} {...props} />
   },
 })

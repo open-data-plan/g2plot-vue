@@ -9,7 +9,7 @@ export type TinyAreaChartProps = Writeable<
 
 const TinyAreaChart = defineComponent<TinyAreaChartProps>({
   name: 'TinyAreaChart',
-  setup: (props, ctx) => {
+  setup(props, ctx) {
     return () => <BaseChart chart={TinyArea} {...ctx.attrs} {...props} />
   },
 })

@@ -9,7 +9,7 @@ export type LiquidChartProps = Writeable<
 
 const LiquidChart = defineComponent<LiquidChartProps>({
   name: 'LiquidChart',
-  setup: (props, ctx) => {
+  setup(props, ctx) {
     return () => <BaseChart chart={Liquid} {...ctx.attrs} {...props} />
   },
 })

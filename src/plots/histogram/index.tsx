@@ -9,7 +9,7 @@ export type HistogramChartProps = Writeable<
 
 const HistogramChart = defineComponent<HistogramChartProps>({
   name: 'HistogramChart',
-  setup: (props, ctx) => {
+  setup(props, ctx) {
     return () => <BaseChart chart={Histogram} {...ctx.attrs} {...props} />
   },
 })

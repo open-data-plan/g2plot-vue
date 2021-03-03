@@ -9,7 +9,7 @@ export type WaterfallChartProps = Writeable<
 
 const WaterfallChart = defineComponent<WaterfallChartProps>({
   name: 'WaterfallChart',
-  setup: (props, ctx) => {
+  setup(props, ctx) {
     return () => <BaseChart chart={Waterfall} {...ctx.attrs} {...props} />
   },
 })

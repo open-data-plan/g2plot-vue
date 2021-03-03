@@ -9,7 +9,7 @@ export type RingProgressChartProps = Writeable<
 
 const RingProgressChart = defineComponent<RingProgressChartProps>({
   name: 'RingProgressChart',
-  setup: (props, ctx) => {
+  setup(props, ctx) {
     return () => <BaseChart chart={RingProgress} {...ctx.attrs} {...props} />
   },
 })
