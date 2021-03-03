@@ -1,3 +1,12 @@
+## [3.1.4](https://github.com/open-data-plan/g2plot-vue/compare/v3.1.3...v3.1.4) (2021-03-03)
+
+
+### Bug Fixes
+
+* fix vue 2 jsx transform error ([f503530](https://github.com/open-data-plan/g2plot-vue/commit/f503530aba2dd907527c7969d4b0b45a7f1d9d68))
+
+
+
 ## [3.1.3](https://github.com/open-data-plan/g2plot-vue/compare/v3.1.2...v3.1.3) (2021-03-03)
 
 
