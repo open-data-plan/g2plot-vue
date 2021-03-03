@@ -1,3 +1,12 @@
+## [3.0.1](https://github.com/open-data-plan/g2plot-vue/compare/v3.0.0...v3.0.1) (2021-03-03)
+
+
+### Bug Fixes
+
+* add g2plot to peer ([30f8ab3](https://github.com/open-data-plan/g2plot-vue/commit/30f8ab37517698148fb6dd6793b7af69a7ce4191))
+
+
+
 # [3.0.0](https://github.com/open-data-plan/g2plot-vue/compare/v2.4.2...v3.0.0) (2021-03-03)
 
 
