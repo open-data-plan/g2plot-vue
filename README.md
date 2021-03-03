@@ -1,6 +1,6 @@
 # @opd/g2plot-vue
 
-> [G2Plot](https://g2plot.antv.vision/) for **Vue 3**, see [documentation](https://g2plot-vue.opd.cool) for more
+> [G2Plot](https://g2plot.antv.vision/) for `Vue`, both `v2` and `v3`, see [documentation](https://g2plot-vue.opd.cool) for more
 
 [![build](https://github.com/open-data-plan/g2plot-vue/workflows/build/badge.svg)](https://github.com/open-data-plan/g2plot-vue/actions?query=workflow%3Abuild)
 [![npm](https://img.shields.io/npm/v/@opd/g2plot-vue.svg)](https://www.npmjs.com/package/@opd/g2plot-vue)

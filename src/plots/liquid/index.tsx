@@ -1,4 +1,4 @@
-import { defineComponent, App } from 'vue'
+import { defineComponent, App } from 'vue-demi'
 import { Liquid, LiquidOptions } from '@antv/g2plot'
 import BaseChart, { BaseChartProps } from '../../components/base'
 import { Writeable } from '../../types'

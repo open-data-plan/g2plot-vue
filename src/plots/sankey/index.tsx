@@ -1,4 +1,4 @@
-import { App, defineComponent } from 'vue'
+import { App, defineComponent } from 'vue-demi'
 import { Sankey, SankeyOptions } from '@antv/g2plot'
 import BaseChart, { BaseChartProps } from '../../components/base'
 import { Writeable } from '../../types'

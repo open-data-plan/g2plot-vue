@@ -5,8 +5,8 @@ heroImage: /logo.png
 actionText: Get Started
 actionLink: /guide/
 features:
-  - title: Vue 3
-    details: Support Vue 3 Firstly
+  - title: Vue
+    details: Universal support vue version with [`vue-demi`](https://github.com/vueuse/vue-demi)
   - title: G2Plot
     details: Powered by G2Plot
   - title: Native TypeScript Support

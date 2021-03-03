@@ -20,7 +20,9 @@
     "dev": "vitepress dev docs",
     "lint": "eslint . --ext=.ts,.tsx",
     "lint:fix": "eslint . --ext=.ts,.tsx --fix",
-    "test": "jest",
+    "test": "npm run test2 && npm run test3",
+    "test2": "vue-demi-switch 2 vue2 && jest",
+    "test3": "vue-demi-switch 3 && jest",
     "prebuild": "npm test",
     "build": "npm run build:es & npm run build:commonjs & npm run build:types",
     "build:es": "babel src -d es --extensions .ts,.tsx --delete-dir-on-start",
@@ -62,6 +64,7 @@
     "@typescript-eslint/eslint-plugin": "^4.6.0",
     "@typescript-eslint/parser": "^4.6.0",
     "@vue/babel-preset-app": "^4.5.8",
+    "@vue/composition-api": "*",
     "@vue/test-utils": "^2.0.0-beta.7",
     "babel-eslint": "^10.1.0",
     "canvas": "^2.6.1",
@@ -83,7 +86,8 @@
     "ts-node": "^9.0.0",
     "typescript": "^4.0.5",
     "vitepress": "^0.12.0",
-    "vue": "^3.0.2"
+    "vue": "^3.0.2",
+    "vue2": "npm:vue@2"
   },
   "browserslist": [
     "> 1%",
@@ -104,5 +108,17 @@
       "prettier --write"
     ]
   },
-  "prettier": "@opd/prettier-config-pangu"
+  "prettier": "@opd/prettier-config-pangu",
+  "dependencies": {
+    "vue-demi": "^0.7.1"
+  },
+  "peerDependencies": {
+    "@vue/composition-api": "^1.0.0-rc.2",
+    "vue": "^2.0.0 || >=3.0.0-rc.0"
+  },
+  "peerDependenciesMeta": {
+    "@vue/composition-api": {
+      "optional": true
+    }
+  }
 }

@@ -1,4 +1,4 @@
-import { defineComponent, HTMLAttributes, Ref } from 'vue'
+import { defineComponent, HTMLAttributes, Ref } from 'vue-demi'
 import { Plot as BasePlot } from '@antv/g2plot'
 import isEqual from 'lodash/isEqual'
 import cloneDeep from 'lodash/cloneDeep'
