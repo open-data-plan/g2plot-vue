@@ -6,11 +6,9 @@ module.exports = {
   extends: [
     'plugin:vue/vue3-strongly-recommended',
     'standard',
+    'prettier',
     'plugin:prettier/recommended',
-    'prettier/vue',
-    'prettier/@typescript-eslint',
     'plugin:@typescript-eslint/recommended',
-    'prettier/@typescript-eslint',
   ],
   plugins: ['prettier', '@typescript-eslint'],
   parser: 'vue-eslint-parser',
