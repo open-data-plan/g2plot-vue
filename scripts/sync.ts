@@ -65,7 +65,7 @@ const getChartConfig = (chart: string) => {
 const createComponents = async () => {
   const promises = newCharts.map(async (chart) => {
     const cmp = `
-import { App, defineComponent } from 'vue'
+import { App, defineComponent } from 'vue-demi'
 import { ${chart}, ${chart}Options } from '@antv/g2plot'
 import BaseChart, { BaseChartProps } from '../../components/base'
 import { Writeable } from '../../types'
