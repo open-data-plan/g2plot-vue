@@ -6,7 +6,7 @@ actionText: Get Started
 actionLink: /guide/
 features:
   - title: Vue
-    details: Universal support vue version with [`vue-demi`](https://github.com/vueuse/vue-demi)
+    details: Universal support with vue-demi
   - title: G2Plot
     details: Powered by G2Plot
   - title: Native TypeScript Support
