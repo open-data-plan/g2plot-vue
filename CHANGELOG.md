@@ -1,3 +1,12 @@
+# [3.1.0](https://github.com/open-data-plan/g2plot-vue/compare/v3.0.1...v3.1.0) (2021-03-03)
+
+
+### Features
+
+* add MultiViewChart ([c7adfc1](https://github.com/open-data-plan/g2plot-vue/commit/c7adfc16cd911daab89d4511ca4705a8c61409f3))
+
+
+
 ## [3.0.1](https://github.com/open-data-plan/g2plot-vue/compare/v3.0.0...v3.0.1) (2021-03-03)
 
 
