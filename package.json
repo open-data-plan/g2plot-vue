@@ -64,7 +64,7 @@
     "@typescript-eslint/eslint-plugin": "^4.6.0",
     "@typescript-eslint/parser": "^4.6.0",
     "@vue/babel-preset-app": "^4.5.8",
-    "@vue/composition-api": "*",
+    "@vue/composition-api": "^1.0.0-rc.2",
     "@vue/test-utils": "^2.0.0-beta.7",
     "babel-eslint": "^10.1.0",
     "canvas": "^2.6.1",
