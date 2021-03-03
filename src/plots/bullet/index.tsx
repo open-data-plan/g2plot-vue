@@ -2,6 +2,7 @@ import { App, defineComponent } from 'vue-demi'
 import { Bullet, BulletOptions } from '@antv/g2plot'
 import BaseChart, { BaseChartProps } from '../../components/base'
 import { Writeable } from '../../types'
+import { mergeAttrs } from '../../utils'
 
 export type BulletChartProps = Writeable<
   Omit<BaseChartProps<BulletOptions>, 'chart'> & BulletOptions
@@ -10,7 +11,7 @@ export type BulletChartProps = Writeable<
 const BulletChart = defineComponent<BulletChartProps>({
   name: 'BulletChart',
   setup: (props, ctx) => {
-    return () => <BaseChart chart={Bullet} {...ctx.attrs} {...props} />
+    return () => <BaseChart chart={Bullet} {...mergeAttrs(props, ctx.attrs)} />
   },
 })
 

@@ -2,6 +2,7 @@ import { App, defineComponent } from 'vue-demi'
 import { DualAxes, DualAxesOptions } from '@antv/g2plot'
 import BaseChart, { BaseChartProps } from '../../components/base'
 import { Writeable } from '../../types'
+import { mergeAttrs } from '../../utils'
 
 export type DualAxesChartProps = Writeable<
   Omit<BaseChartProps<DualAxesOptions>, 'chart'> & DualAxesOptions
@@ -10,7 +11,9 @@ export type DualAxesChartProps = Writeable<
 const DualAxesChart = defineComponent<DualAxesChartProps>({
   name: 'DualAxesChart',
   setup: (props, ctx) => {
-    return () => <BaseChart chart={DualAxes} {...ctx.attrs} {...props} />
+    return () => (
+      <BaseChart chart={DualAxes} {...mergeAttrs(props, ctx.attrs)} />
+    )
   },
 })
 

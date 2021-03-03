@@ -2,6 +2,7 @@ import { defineComponent, App } from 'vue-demi'
 import { Heatmap, HeatmapOptions } from '@antv/g2plot'
 import BaseChart, { BaseChartProps } from '../../components/base'
 import { Writeable } from '../../types'
+import { mergeAttrs } from '../../utils'
 
 export type HeatmapChartProps = Writeable<
   Omit<BaseChartProps<HeatmapOptions>, 'chart'> & HeatmapOptions
@@ -10,7 +11,7 @@ export type HeatmapChartProps = Writeable<
 const HeatmapChart = defineComponent<HeatmapChartProps>({
   name: 'HeatmapChart',
   setup: (props, ctx) => {
-    return () => <BaseChart chart={Heatmap} {...ctx.attrs} {...props} />
+    return () => <BaseChart chart={Heatmap} {...mergeAttrs(props, ctx.attrs)} />
   },
 })
 

@@ -2,6 +2,7 @@ import { defineComponent, App } from 'vue-demi'
 import { Gauge, GaugeOptions } from '@antv/g2plot'
 import BaseChart, { BaseChartProps } from '../../components/base'
 import { Writeable } from '../../types'
+import { mergeAttrs } from '../../utils'
 
 export type GaugeChartProps = Writeable<
   Omit<BaseChartProps<GaugeOptions>, 'chart'> & GaugeOptions
@@ -10,7 +11,7 @@ export type GaugeChartProps = Writeable<
 const GaugeChart = defineComponent<GaugeChartProps>({
   name: 'GaugeChart',
   setup: (props, ctx) => {
-    return () => <BaseChart chart={Gauge} {...ctx.attrs} {...props} />
+    return () => <BaseChart chart={Gauge} {...mergeAttrs(props, ctx.attrs)} />
   },
 })
 

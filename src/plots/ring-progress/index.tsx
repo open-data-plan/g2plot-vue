@@ -2,6 +2,7 @@ import { defineComponent, App } from 'vue-demi'
 import { RingProgress, RingProgressOptions } from '@antv/g2plot'
 import BaseChart, { BaseChartProps } from '../../components/base'
 import { Writeable } from '../../types'
+import { mergeAttrs } from '../../utils'
 
 export type RingProgressChartProps = Writeable<
   Omit<BaseChartProps<RingProgressOptions>, 'chart'> & RingProgressOptions
@@ -10,7 +11,9 @@ export type RingProgressChartProps = Writeable<
 const RingProgressChart = defineComponent<RingProgressChartProps>({
   name: 'RingProgressChart',
   setup: (props, ctx) => {
-    return () => <BaseChart chart={RingProgress} {...ctx.attrs} {...props} />
+    return () => (
+      <BaseChart chart={RingProgress} {...mergeAttrs(props, ctx.attrs)} />
+    )
   },
 })
 

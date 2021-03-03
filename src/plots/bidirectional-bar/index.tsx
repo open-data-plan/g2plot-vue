@@ -2,6 +2,7 @@ import { App, defineComponent } from 'vue-demi'
 import { BidirectionalBar, BidirectionalBarOptions } from '@antv/g2plot'
 import BaseChart, { BaseChartProps } from '../../components/base'
 import { Writeable } from '../../types'
+import { mergeAttrs } from '../../utils'
 
 export type BidirectionalBarChartProps = Writeable<
   Omit<BaseChartProps<BidirectionalBarOptions>, 'chart'> &
@@ -12,7 +13,7 @@ const BidirectionalBarChart = defineComponent<BidirectionalBarChartProps>({
   name: 'BidirectionalBarChart',
   setup: (props, ctx) => {
     return () => (
-      <BaseChart chart={BidirectionalBar} {...ctx.attrs} {...props} />
+      <BaseChart chart={BidirectionalBar} {...mergeAttrs(props, ctx.attrs)} />
     )
   },
 })

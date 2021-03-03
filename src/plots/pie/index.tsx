@@ -2,6 +2,7 @@ import { defineComponent, App } from 'vue-demi'
 import { Pie, PieOptions } from '@antv/g2plot'
 import BaseChart, { BaseChartProps } from '../../components/base'
 import { Writeable } from '../../types'
+import { mergeAttrs } from '../../utils'
 
 export type PieChartProps = Writeable<
   Omit<BaseChartProps<PieOptions>, 'chart'> & PieOptions
@@ -10,7 +11,7 @@ export type PieChartProps = Writeable<
 const PieChart = defineComponent<PieChartProps>({
   name: 'PieChart',
   setup: (props, ctx) => {
-    return () => <BaseChart chart={Pie} {...ctx.attrs} {...props} />
+    return () => <BaseChart chart={Pie} {...mergeAttrs(props, ctx.attrs)} />
   },
 })
 

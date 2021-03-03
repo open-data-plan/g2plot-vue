@@ -2,6 +2,7 @@ import { App, defineComponent } from 'vue-demi'
 import { Stock, StockOptions } from '@antv/g2plot'
 import BaseChart, { BaseChartProps } from '../../components/base'
 import { Writeable } from '../../types'
+import { mergeAttrs } from '../../utils'
 
 export type StockChartProps = Writeable<
   Omit<BaseChartProps<StockOptions>, 'chart'> & StockOptions
@@ -10,7 +11,7 @@ export type StockChartProps = Writeable<
 const StockChart = defineComponent<StockChartProps>({
   name: 'StockChart',
   setup: (props, ctx) => {
-    return () => <BaseChart chart={Stock} {...ctx.attrs} {...props} />
+    return () => <BaseChart chart={Stock} {...mergeAttrs(props, ctx.attrs)} />
   },
 })
 

@@ -2,6 +2,7 @@ import { defineComponent, App } from 'vue-demi'
 import { Liquid, LiquidOptions } from '@antv/g2plot'
 import BaseChart, { BaseChartProps } from '../../components/base'
 import { Writeable } from '../../types'
+import { mergeAttrs } from '../../utils'
 
 export type LiquidChartProps = Writeable<
   Omit<BaseChartProps<LiquidOptions>, 'chart'> & LiquidOptions
@@ -10,7 +11,7 @@ export type LiquidChartProps = Writeable<
 const LiquidChart = defineComponent<LiquidChartProps>({
   name: 'LiquidChart',
   setup: (props, ctx) => {
-    return () => <BaseChart chart={Liquid} {...ctx.attrs} {...props} />
+    return () => <BaseChart chart={Liquid} {...mergeAttrs(props, ctx.attrs)} />
   },
 })
 

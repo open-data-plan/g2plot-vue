@@ -2,6 +2,7 @@ import { defineComponent, App } from 'vue-demi'
 import { Column, ColumnOptions } from '@antv/g2plot'
 import BaseChart, { BaseChartProps } from '../../components/base'
 import { Writeable } from '../../types'
+import { mergeAttrs } from '../../utils'
 
 export type ColumnChartProps = Writeable<
   Omit<BaseChartProps<ColumnOptions>, 'chart'> & ColumnOptions
@@ -10,7 +11,7 @@ export type ColumnChartProps = Writeable<
 const ColumnChart = defineComponent<ColumnChartProps>({
   name: 'ColumnChart',
   setup: (props, ctx) => {
-    return () => <BaseChart chart={Column} {...ctx.attrs} {...props} />
+    return () => <BaseChart chart={Column} {...mergeAttrs(props, ctx.attrs)} />
   },
 })
 

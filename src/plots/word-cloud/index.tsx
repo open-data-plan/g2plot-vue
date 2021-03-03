@@ -2,6 +2,7 @@ import { defineComponent, App } from 'vue-demi'
 import { WordCloud, WordCloudOptions } from '@antv/g2plot'
 import BaseChart, { BaseChartProps } from '../../components/base'
 import { Writeable } from '../../types'
+import { mergeAttrs } from '../../utils'
 
 export type WordCloudChartProps = Writeable<
   Omit<BaseChartProps<WordCloudOptions>, 'chart'> & WordCloudOptions
@@ -10,7 +11,9 @@ export type WordCloudChartProps = Writeable<
 const WordCloudChart = defineComponent<WordCloudChartProps>({
   name: 'WordCloudChart',
   setup: (props, ctx) => {
-    return () => <BaseChart chart={WordCloud} {...ctx.attrs} {...props} />
+    return () => (
+      <BaseChart chart={WordCloud} {...mergeAttrs(props, ctx.attrs)} />
+    )
   },
 })
 

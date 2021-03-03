@@ -2,6 +2,7 @@ import { defineComponent, App } from 'vue-demi'
 import { TinyColumn, TinyColumnOptions } from '@antv/g2plot'
 import BaseChart, { BaseChartProps } from '../../components/base'
 import { Writeable } from '../../types'
+import { mergeAttrs } from '../../utils'
 
 export type TinyColumnChartProps = Writeable<
   Omit<BaseChartProps<TinyColumnOptions>, 'chart'> & TinyColumnOptions
@@ -10,7 +11,9 @@ export type TinyColumnChartProps = Writeable<
 const TinyColumnChart = defineComponent<TinyColumnChartProps>({
   name: 'TinyColumnChart',
   setup: (props, ctx) => {
-    return () => <BaseChart chart={TinyColumn} {...ctx.attrs} {...props} />
+    return () => (
+      <BaseChart chart={TinyColumn} {...mergeAttrs(props, ctx.attrs)} />
+    )
   },
 })
 

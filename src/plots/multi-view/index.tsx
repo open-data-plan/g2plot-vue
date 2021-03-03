@@ -2,6 +2,7 @@ import { App, defineComponent } from 'vue-demi'
 import { MultiView, MultiViewOptions } from '@antv/g2plot'
 import BaseChart, { BaseChartProps } from '../../components/base'
 import { Writeable } from '../../types'
+import { mergeAttrs } from '../../utils'
 
 export type MultiViewChartProps = Writeable<
   Omit<BaseChartProps<MultiViewOptions>, 'chart'> & MultiViewOptions
@@ -10,7 +11,9 @@ export type MultiViewChartProps = Writeable<
 const MultiViewChart = defineComponent<MultiViewChartProps>({
   name: 'MultiViewChart',
   setup: (props, ctx) => {
-    return () => <BaseChart chart={MultiView} {...ctx.attrs} {...props} />
+    return () => (
+      <BaseChart chart={MultiView} {...mergeAttrs(props, ctx.attrs)} />
+    )
   },
 })
 

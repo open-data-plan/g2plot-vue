@@ -2,6 +2,7 @@ import { App, defineComponent } from 'vue-demi'
 import { Area, AreaOptions } from '@antv/g2plot'
 import BaseChart, { BaseChartProps } from '../../components/base'
 import { Writeable } from '../../types'
+import { mergeAttrs } from '../../utils'
 
 export type AreaChartProps = Writeable<
   Omit<BaseChartProps<AreaOptions>, 'chart'> & AreaOptions
@@ -10,7 +11,7 @@ export type AreaChartProps = Writeable<
 const AreaChart = defineComponent<AreaChartProps>({
   name: 'AreaChart',
   setup: (props, ctx) => {
-    return () => <BaseChart chart={Area} {...ctx.attrs} {...props} />
+    return () => <BaseChart chart={Area} {...mergeAttrs(props, ctx.attrs)} />
   },
 })
 

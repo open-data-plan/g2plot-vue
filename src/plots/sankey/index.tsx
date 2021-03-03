@@ -2,6 +2,7 @@ import { App, defineComponent } from 'vue-demi'
 import { Sankey, SankeyOptions } from '@antv/g2plot'
 import BaseChart, { BaseChartProps } from '../../components/base'
 import { Writeable } from '../../types'
+import { mergeAttrs } from '../../utils'
 
 export type SankeyChartProps = Writeable<
   Omit<BaseChartProps<SankeyOptions>, 'chart'> & SankeyOptions
@@ -10,7 +11,7 @@ export type SankeyChartProps = Writeable<
 const SankeyChart = defineComponent<SankeyChartProps>({
   name: 'SankeyChart',
   setup: (props, ctx) => {
-    return () => <BaseChart chart={Sankey} {...ctx.attrs} {...props} />
+    return () => <BaseChart chart={Sankey} {...mergeAttrs(props, ctx.attrs)} />
   },
 })
 

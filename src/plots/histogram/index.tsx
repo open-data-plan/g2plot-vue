@@ -2,6 +2,7 @@ import { defineComponent, App } from 'vue-demi'
 import { Histogram, HistogramOptions } from '@antv/g2plot'
 import BaseChart, { BaseChartProps } from '../../components/base'
 import { Writeable } from '../../types'
+import { mergeAttrs } from '../../utils'
 
 export type HistogramChartProps = Writeable<
   Omit<BaseChartProps<HistogramOptions>, 'chart'> & HistogramOptions
@@ -10,7 +11,9 @@ export type HistogramChartProps = Writeable<
 const HistogramChart = defineComponent<HistogramChartProps>({
   name: 'HistogramChart',
   setup: (props, ctx) => {
-    return () => <BaseChart chart={Histogram} {...ctx.attrs} {...props} />
+    return () => (
+      <BaseChart chart={Histogram} {...mergeAttrs(props, ctx.attrs)} />
+    )
   },
 })
 

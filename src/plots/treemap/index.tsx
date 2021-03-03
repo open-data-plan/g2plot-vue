@@ -2,6 +2,7 @@ import { App, defineComponent } from 'vue-demi'
 import { Treemap, TreemapOptions } from '@antv/g2plot'
 import BaseChart, { BaseChartProps } from '../../components/base'
 import { Writeable } from '../../types'
+import { mergeAttrs } from '../../utils'
 
 export type TreemapChartProps = Writeable<
   Omit<BaseChartProps<TreemapOptions>, 'chart'> & TreemapOptions
@@ -10,7 +11,7 @@ export type TreemapChartProps = Writeable<
 const TreemapChart = defineComponent<TreemapChartProps>({
   name: 'TreemapChart',
   setup: (props, ctx) => {
-    return () => <BaseChart chart={Treemap} {...ctx.attrs} {...props} />
+    return () => <BaseChart chart={Treemap} {...mergeAttrs(props, ctx.attrs)} />
   },
 })
 

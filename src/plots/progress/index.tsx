@@ -2,6 +2,7 @@ import { defineComponent, App } from 'vue-demi'
 import { Progress, ProgressOptions } from '@antv/g2plot'
 import BaseChart, { BaseChartProps } from '../../components/base'
 import { Writeable } from '../../types'
+import { mergeAttrs } from '../../utils'
 
 export type ProgressChartProps = Writeable<
   Omit<BaseChartProps<ProgressOptions>, 'chart'> & ProgressOptions
@@ -10,7 +11,9 @@ export type ProgressChartProps = Writeable<
 const ProgressChart = defineComponent<ProgressChartProps>({
   name: 'ProgressChart',
   setup: (props, ctx) => {
-    return () => <BaseChart chart={Progress} {...ctx.attrs} {...props} />
+    return () => (
+      <BaseChart chart={Progress} {...mergeAttrs(props, ctx.attrs)} />
+    )
   },
 })
 

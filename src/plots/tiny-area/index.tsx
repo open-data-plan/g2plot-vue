@@ -2,6 +2,7 @@ import { defineComponent, App } from 'vue-demi'
 import { TinyArea, TinyAreaOptions } from '@antv/g2plot'
 import BaseChart, { BaseChartProps } from '../../components/base'
 import { Writeable } from '../../types'
+import { mergeAttrs } from '../../utils'
 
 export type TinyAreaChartProps = Writeable<
   Omit<BaseChartProps<TinyAreaOptions>, 'chart'> & TinyAreaOptions
@@ -10,7 +11,9 @@ export type TinyAreaChartProps = Writeable<
 const TinyAreaChart = defineComponent<TinyAreaChartProps>({
   name: 'TinyAreaChart',
   setup: (props, ctx) => {
-    return () => <BaseChart chart={TinyArea} {...ctx.attrs} {...props} />
+    return () => (
+      <BaseChart chart={TinyArea} {...mergeAttrs(props, ctx.attrs)} />
+    )
   },
 })
 

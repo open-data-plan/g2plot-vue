@@ -2,6 +2,7 @@ import { defineComponent, App } from 'vue-demi'
 import { Line, LineOptions } from '@antv/g2plot'
 import BaseChart, { BaseChartProps } from '../../components/base'
 import { Writeable } from '../../types'
+import { mergeAttrs } from '../../utils'
 
 export type LineChartProps = Writeable<
   Omit<BaseChartProps<LineOptions>, 'chart'> & LineOptions
@@ -10,7 +11,7 @@ export type LineChartProps = Writeable<
 const LineChart = defineComponent<LineChartProps>({
   name: 'LineChart',
   setup: (props, ctx) => {
-    return () => <BaseChart chart={Line} {...ctx.attrs} {...props} />
+    return () => <BaseChart chart={Line} {...mergeAttrs(props, ctx.attrs)} />
   },
 })
 

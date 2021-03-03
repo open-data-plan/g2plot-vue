@@ -2,6 +2,7 @@ import { App, defineComponent } from 'vue-demi'
 import { Box, BoxOptions } from '@antv/g2plot'
 import BaseChart, { BaseChartProps } from '../../components/base'
 import { Writeable } from '../../types'
+import { mergeAttrs } from '../../utils'
 
 export type BoxChartProps = Writeable<
   Omit<BaseChartProps<BoxOptions>, 'chart'> & BoxOptions
@@ -10,7 +11,7 @@ export type BoxChartProps = Writeable<
 const BoxChart = defineComponent<BoxChartProps>({
   name: 'BoxChart',
   setup: (props, ctx) => {
-    return () => <BaseChart chart={Box} {...ctx.attrs} {...props} />
+    return () => <BaseChart chart={Box} {...mergeAttrs(props, ctx.attrs)} />
   },
 })
 

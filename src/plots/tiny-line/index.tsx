@@ -2,6 +2,7 @@ import { defineComponent, App } from 'vue-demi'
 import { TinyLine, TinyLineOptions } from '@antv/g2plot'
 import BaseChart, { BaseChartProps } from '../../components/base'
 import { Writeable } from '../../types'
+import { mergeAttrs } from '../../utils'
 
 export type TinyLineChartProps = Writeable<
   Omit<BaseChartProps<TinyLineOptions>, 'chart'> & TinyLineOptions
@@ -10,7 +11,9 @@ export type TinyLineChartProps = Writeable<
 const TinyLineChart = defineComponent<TinyLineChartProps>({
   name: 'TinyLineChart',
   setup: (props, ctx) => {
-    return () => <BaseChart chart={TinyLine} {...ctx.attrs} {...props} />
+    return () => (
+      <BaseChart chart={TinyLine} {...mergeAttrs(props, ctx.attrs)} />
+    )
   },
 })
 
