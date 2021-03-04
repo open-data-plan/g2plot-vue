@@ -14,6 +14,12 @@
 npm install @opd/g2plot-vue
 ```
 
+`g2plot-vue` will auto switch export version based on your installed `vue` version, if not work, you can switch by follow:
+
+```bash
+node ./node_modules/@opd/g2plot-vue/scripts/postinstall.js
+```
+
 ## Usage
 
 [![Edit g2plot-vue-basic-example](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/g2plot-vue-basic-example-uxde9?fontsize=14&hidenavigation=1&theme=dark)
