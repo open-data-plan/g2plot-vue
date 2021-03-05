@@ -104,6 +104,15 @@ export default {
 </script>
 ```
 
+## DEMO
+
+- Vue 3
+  - [github](https://github.com/open-data-plan/g2plot-vue-demo)
+  - [online](http://g2plot-vue-demo-opd.vercel.app/)
+- Vue 2
+  - [github](https://github.com/open-data-plan/g2plot-vue2-demo)
+  - [online](http://g2plot-vue2-demo-opd.vercel.app/)
+
 ## API
 
 All config defined in `G2Plot` [document](https://g2plot.antv.vision/zh/docs/manual/introduction) can be used as `props` or `attrs`
