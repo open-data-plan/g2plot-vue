@@ -40,7 +40,8 @@
     "version": "conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md",
     "postversion": "npm publish",
     "sync": "ts-node --project tsconfig.sync.json ./scripts/sync.ts",
-    "postinstall": "node ./scripts/postinstall.js"
+    "postinstall": "node ./scripts/postinstall.js",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -102,12 +103,6 @@
     "last 2 versions",
     "not dead"
   ],
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
-  },
   "lint-staged": {
     "*.{vue,js,jsx,ts,tsx}": [
       "eslint --fix"
