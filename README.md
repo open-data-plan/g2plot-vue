@@ -56,7 +56,7 @@ const config: LineChartProps = {
 
 export default defineComponent(() => {
   const chartRef = ref(null)
-  return <LineChart {...config} chartRef={chartRef} />
+  return () => <LineChart {...config} chartRef={chartRef} />
 })
 ```
 
