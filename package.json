@@ -2,8 +2,8 @@
   "name": "@opd/g2plot-vue",
   "version": "3.1.5",
   "description": "G2Plot for vue 3",
-  "main": "lib/index.js",
-  "module": "es/index.js",
+  "main": "lib2/index.js",
+  "module": "es2/index.js",
   "directories": {
     "lib": "lib",
     "test": "__tests__"
@@ -113,7 +113,7 @@
   },
   "prettier": "@opd/prettier-config-pangu",
   "dependencies": {
-    "vue-demi": "^0.7.1"
+    "vue-demi": "^0.7.3"
   },
   "peerDependencies": {
     "@antv/g2plot": "^2.3.0",
