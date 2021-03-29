@@ -1,3 +1,9 @@
+## [3.1.8](https://github.com/open-data-plan/g2plot-vue/compare/v3.1.7...v3.1.8) (2021-03-29)
+
+### Bug Fixes
+
+- add core-js to deps ([64b3333](https://github.com/open-data-plan/g2plot-vue/commit/64b33335a18b4e00c7ea084d894eee3e5fdafc9a))
+
 ## [3.1.7](https://github.com/open-data-plan/g2plot-vue/compare/v3.1.6...v3.1.7) (2021-03-29)
 
 ### Features
