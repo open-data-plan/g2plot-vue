@@ -1,3 +1,9 @@
+## [3.1.7](https://github.com/open-data-plan/g2plot-vue/compare/v3.1.6...v3.1.7) (2021-03-29)
+
+### Features
+
+- bump vue-demi ([25b5757](https://github.com/open-data-plan/g2plot-vue/commit/25b5757fcf74857b9407b63168c45ceb70b851ce))
+
 ## [3.1.6](https://github.com/open-data-plan/g2plot-vue/compare/v3.1.5...v3.1.6) (2021-03-19)
 
 ## [3.1.5](https://github.com/open-data-plan/g2plot-vue/compare/v3.1.4...v3.1.5) (2021-03-03)
