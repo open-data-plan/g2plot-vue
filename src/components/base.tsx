@@ -1,7 +1,8 @@
-import { defineComponent, HTMLAttributes, Ref } from 'vue-demi'
+import { defineComponent, Ref } from 'vue-demi'
 import { Plot as BasePlot } from '@antv/g2plot'
 import isEqual from 'lodash/isEqual'
 import cloneDeep from 'lodash/cloneDeep'
+import { HTMLAttributes } from '@vue/runtime-dom'
 
 interface Options {
   [x: string]: any
@@ -24,6 +25,10 @@ interface ChartOptions {
   config: any
 }
 
+interface ComputedOptions {
+  attrConfig: BaseChartRawBindings<any> & BaseChartProps<any>
+}
+
 export interface BaseChartRawBindings<C extends Options> {
   plot: BasePlot<C>
   config: C
@@ -33,10 +38,16 @@ export interface BaseChartRawBindings<C extends Options> {
 
 const BaseChart = defineComponent<
   BaseChartProps<any>,
-  BaseChartRawBindings<any>
+  BaseChartRawBindings<any>,
+  ComputedOptions
 >({
   inheritAttrs: false,
   name: 'BaseChart',
+  computed: {
+    attrConfig() {
+      return this.$attrs
+    },
+  },
   mounted() {
     const { chart: Chart } = this.$attrs as {
       chart: Plot<Options>
@@ -45,7 +56,7 @@ const BaseChart = defineComponent<
     this.config = cloneDeep(config)
     const normalizedData = data || []
     this.data = normalizedData
-    this.plot = new Chart(this.$el, {
+    this.plot = new Chart(this.$el as HTMLElement, {
       data: normalizedData,
       ...config,
     })
@@ -77,10 +88,7 @@ const BaseChart = defineComponent<
   },
   methods: {
     getChartConfig(): ChartOptions {
-      const { chart, chartRef, ...restProps } = this.$attrs as Record<
-        string,
-        any
-      >
+      const { chart, chartRef, ...restProps } = this.attrConfig
       const { data, ...config } = restProps
       return {
         data,

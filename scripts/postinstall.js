@@ -1,14 +1,16 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
-const { isVue2, isVue3 } = require('vue-demi')
+const vue = require('vue')
 const fs = require('fs')
 const path = require('path')
 const pkg = require('../package.json')
+
+const isVue2 = +vue.version.split('.') === 2
 
 if (isVue2) {
   console.log('[G2Plot-Vue] Switch main field for Vue 2')
   pkg.main = 'lib2/index.js'
   pkg.module = 'es2/index.js'
-} else if (isVue3) {
+} else {
   console.log('[G2Plot-Vue] Switch main field for Vue 3')
   pkg.main = 'lib/index.js'
   pkg.module = 'es/index.js'
