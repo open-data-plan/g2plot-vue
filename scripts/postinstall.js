@@ -4,7 +4,8 @@ const fs = require('fs')
 const path = require('path')
 const pkg = require('../package.json')
 
-const isVue2 = +vue.version.split('.') === 2
+const version = vue.version
+const isVue2 = +version.split('.')[0] === 2
 
 if (isVue2) {
   console.log('[G2Plot-Vue] Switch main field for Vue 2')
