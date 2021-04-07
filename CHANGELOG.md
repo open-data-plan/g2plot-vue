@@ -1,3 +1,9 @@
+## [3.1.12](https://github.com/open-data-plan/g2plot-vue/compare/v3.1.11...v3.1.12) (2021-04-07)
+
+### Bug Fixes
+
+- fix chartRef ([ab4c947](https://github.com/open-data-plan/g2plot-vue/commit/ab4c947c5f0564317f98dbdfec40b91698adb214))
+
 ## [3.1.11](https://github.com/open-data-plan/g2plot-vue/compare/v3.1.10...v3.1.11) (2021-04-07)
 
 ## [3.1.10](https://github.com/open-data-plan/g2plot-vue/compare/v3.1.9...v3.1.10) (2021-04-07)
