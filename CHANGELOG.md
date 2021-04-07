@@ -1,3 +1,9 @@
+## [3.1.9](https://github.com/open-data-plan/g2plot-vue/compare/v3.1.8...v3.1.9) (2021-04-07)
+
+### Bug Fixes
+
+- fix attrs chang not trigger re-render in vue 2 ([58f3bad](https://github.com/open-data-plan/g2plot-vue/commit/58f3bad0de5fce86a08606bbf530ded4b32d0426)), closes [#203](https://github.com/open-data-plan/g2plot-vue/issues/203)
+
 ## [3.1.8](https://github.com/open-data-plan/g2plot-vue/compare/v3.1.7...v3.1.8) (2021-03-29)
 
 ### Bug Fixes
