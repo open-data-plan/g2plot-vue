@@ -42,25 +42,24 @@ const BaseChart = defineComponent<
       return this.$attrs
     },
     chartData() {
-      const { chart, chartRef, ...restProps } = this.attrConfig
-      const { data } = restProps
+      const { data } = this.attrConfig
       return data || []
     },
     chartConfig() {
-      const { chart, chartRef, ...restProps } = this.attrConfig
-      const { data, ...config } = restProps
+      const { chart, chartRef, data, ...config } = this.attrConfig
       return config
     },
   },
   mounted() {
-    const { chart: Chart } = this.$attrs as {
-      chart: Plot<Options>
-    }
+    const { chart: Chart, chartRef } = this.attrConfig
     this.plot = new Chart(this.$el as HTMLElement, {
       data: this.chartData,
       ...this.chartConfig,
     })
     this.plot.render()
+    if (chartRef) {
+      chartRef.value = this.plot
+    }
   },
   beforeUnmount() {
     /* istanbul ignore else */
