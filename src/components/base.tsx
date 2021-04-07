@@ -68,7 +68,7 @@ const BaseChart = defineComponent<
     }
   },
   watch: {
-    chartData(data, oldData) {
+    chartData(data: any[], oldData: any[]) {
       /* istanbul ignore else */
       if (this.plot) {
         if (!oldData.length) {
@@ -82,7 +82,7 @@ const BaseChart = defineComponent<
         }
       }
     },
-    chartConfig(config, oldConfig) {
+    chartConfig(config: any, oldConfig: any) {
       /* istanbul ignore else */
       if (this.plot) {
         if (!isEqual(config, oldConfig)) {

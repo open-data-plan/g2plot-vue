@@ -1,9 +1,10 @@
+import { ref } from 'vue'
 import { mount } from '@vue/test-utils'
 import LineChart from '../../src/plots/line'
 
 describe('LineChart', () => {
   test('render without crashed', () => {
-    mount(<LineChart data={[]} />)
+    mount(<LineChart data={[]} chartRef={ref(null)} />)
   })
 
   test('test update config and data', async () => {
