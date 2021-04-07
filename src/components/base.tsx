@@ -1,7 +1,6 @@
 import { defineComponent, Ref } from 'vue-demi'
 import { Plot as BasePlot } from '@antv/g2plot'
 import isEqual from 'lodash/isEqual'
-import cloneDeep from 'lodash/cloneDeep'
 import { HTMLAttributes } from '@vue/runtime-dom'
 
 interface Options {
@@ -17,29 +16,24 @@ type PickedAttrs = 'class' | 'style'
 export interface BaseChartProps<C extends Options>
   extends Pick<HTMLAttributes, PickedAttrs> {
   chart: any
+  data: any[]
   chartRef?: Ref<BasePlot<C> | null>
 }
 
-interface ChartOptions {
-  data: any[]
-  config: any
-}
-
-interface ComputedOptions {
-  attrConfig: BaseChartRawBindings<any> & BaseChartProps<any>
+interface ComputedOptions<C extends Options> {
+  attrConfig: BaseChartRawBindings<C> & BaseChartProps<C>
+  chartData: any[]
+  chartConfig: C
 }
 
 export interface BaseChartRawBindings<C extends Options> {
   plot: BasePlot<C>
-  config: C
-  data: any[]
-  getChartConfig: () => ChartOptions
 }
 
 const BaseChart = defineComponent<
   BaseChartProps<any>,
   BaseChartRawBindings<any>,
-  ComputedOptions
+  ComputedOptions<any>
 >({
   inheritAttrs: false,
   name: 'BaseChart',
@@ -47,38 +41,26 @@ const BaseChart = defineComponent<
     attrConfig() {
       return this.$attrs
     },
+    chartData() {
+      const { chart, chartRef, ...restProps } = this.attrConfig
+      const { data } = restProps
+      return data || []
+    },
+    chartConfig() {
+      const { chart, chartRef, ...restProps } = this.attrConfig
+      const { data, ...config } = restProps
+      return config
+    },
   },
   mounted() {
     const { chart: Chart } = this.$attrs as {
       chart: Plot<Options>
     }
-    const { data, config } = this.getChartConfig()
-    this.config = cloneDeep(config)
-    const normalizedData = data || []
-    this.data = normalizedData
     this.plot = new Chart(this.$el as HTMLElement, {
-      data: normalizedData,
-      ...config,
+      data: this.chartData,
+      ...this.chartConfig,
     })
     this.plot.render()
-  },
-  beforeUpdate() {
-    const { data, config } = this.getChartConfig()
-    const normalizedData = data || []
-    /* istanbul ignore else */
-    if (this.plot) {
-      if (!isEqual(config, this.config) || !this.data.length) {
-        this.config = cloneDeep(config)
-        this.plot.update({
-          data: normalizedData,
-          ...config,
-        })
-        this.plot.render()
-      } else {
-        this.plot.changeData(normalizedData)
-      }
-      this.data = normalizedData
-    }
   },
   beforeUnmount() {
     /* istanbul ignore else */
@@ -86,13 +68,30 @@ const BaseChart = defineComponent<
       this.plot.destroy()
     }
   },
-  methods: {
-    getChartConfig(): ChartOptions {
-      const { chart, chartRef, ...restProps } = this.attrConfig
-      const { data, ...config } = restProps
-      return {
-        data,
-        config,
+  watch: {
+    chartData(data, oldData) {
+      /* istanbul ignore else */
+      if (this.plot) {
+        if (!oldData.length) {
+          this.plot.update({
+            data: data,
+            ...this.chartConfig,
+          })
+          this.plot.render()
+        } else {
+          this.plot.changeData(data)
+        }
+      }
+    },
+    chartConfig(config, oldConfig) {
+      /* istanbul ignore else */
+      if (this.plot) {
+        if (!isEqual(config, oldConfig)) {
+          this.plot.update({
+            data: this.chartData,
+            ...config,
+          })
+        }
       }
     },
   },
