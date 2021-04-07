@@ -1,3 +1,9 @@
+## [3.1.10](https://github.com/open-data-plan/g2plot-vue/compare/v3.1.9...v3.1.10) (2021-04-07)
+
+### Bug Fixes
+
+- fix postinstall script ([17ec50f](https://github.com/open-data-plan/g2plot-vue/commit/17ec50fad6d670c79e3f37ca5b2646d4394d2627))
+
 ## [3.1.9](https://github.com/open-data-plan/g2plot-vue/compare/v3.1.8...v3.1.9) (2021-04-07)
 
 ### Bug Fixes
