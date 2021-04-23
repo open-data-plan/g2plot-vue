@@ -4,7 +4,10 @@ import LineChart from '../../src/plots/line'
 
 describe('LineChart', () => {
   test('render without crashed', () => {
-    mount(<LineChart data={[]} chartRef={ref(null)} />)
+    const chartRef = ref(null)
+    mount(<LineChart data={[]} chartRef={chartRef} />)
+
+    expect(chartRef.value).toBeDefined()
   })
 
   test('test update config and data', async () => {

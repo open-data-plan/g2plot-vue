@@ -21,7 +21,7 @@ export interface BaseChartProps<C extends Options>
 }
 
 interface ComputedOptions<C extends Options> {
-  attrConfig: BaseChartRawBindings<C> & BaseChartProps<C>
+  attrConfig: BaseChartProps<C>
   chartData: any[]
   chartConfig: C
 }
@@ -46,12 +46,22 @@ const BaseChart = defineComponent<
       return data || []
     },
     chartConfig() {
-      const { chart, chartRef, data, ...config } = this.attrConfig
+      const {
+        chart,
+        chartRef,
+        data,
+        class: className,
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-ignore
+        style,
+        ...config
+      } = this.attrConfig
       return config
     },
   },
   mounted() {
-    const { chart: Chart, chartRef } = this.attrConfig
+    const chartRef = this.$attrs.chartRef as Ref<BasePlot<any> | null>
+    const { chart: Chart } = this.attrConfig
     this.plot = new Chart(this.$el as HTMLElement, {
       data: this.chartData,
       ...this.chartConfig,
@@ -95,7 +105,7 @@ const BaseChart = defineComponent<
     },
   },
   render() {
-    return <div />
+    return <div class={this.attrConfig.class} style={this.attrConfig.style} />
   },
 })
 
