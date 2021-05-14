@@ -1,19 +1,20 @@
 import { App, defineComponent } from 'vue-demi'
-import { MultiView, MultiViewOptions } from '@antv/g2plot'
+import { Mix, MixOptions } from '@antv/g2plot'
 import BaseChart, { BaseChartProps } from '../../components/base'
 import { Writeable } from '../../types'
 import { mergeAttrs } from '../../utils'
 
 export type MultiViewChartProps = Writeable<
-  Omit<BaseChartProps<MultiViewOptions>, 'chart'> & MultiViewOptions
+  Omit<BaseChartProps<MixOptions>, 'chart'> & MixOptions
 >
 
+/**
+ * @deprecated use `MixChart` instead
+ */
 const MultiViewChart = defineComponent<MultiViewChartProps>({
   name: 'MultiViewChart',
   setup: (props, ctx) => {
-    return () => (
-      <BaseChart chart={MultiView} {...mergeAttrs(props, ctx.attrs)} />
-    )
+    return () => <BaseChart chart={Mix} {...mergeAttrs(props, ctx.attrs)} />
   },
 })
 

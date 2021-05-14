@@ -43,6 +43,8 @@ import { ChordChartProps as _ChordChartProps } from './plots/chord'
 
 import { MultiViewChartProps as _MultiViewChartProps } from './plots/multi-view'
 
+import { MixChartProps as _MixChartProps } from './plots/mix'
+
 export { default as AreaChart } from './plots/area'
 export type AreaChartProps = _AreaChartProps
 
@@ -125,3 +127,5 @@ export { default as ChordChart } from './plots/chord'
 export type ChordChartProps = _ChordChartProps
 export { default as MultiViewChart } from './plots/multi-view'
 export type MultiViewChartProps = _MultiViewChartProps
+export { default as MixChart } from './plots/mix'
+export type MixChartProps = _MixChartProps
