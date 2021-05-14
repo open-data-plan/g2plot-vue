@@ -1,3 +1,9 @@
+# [3.2.0](https://github.com/open-data-plan/g2plot-vue/compare/v3.1.13...v3.2.0) (2021-05-14)
+
+### Features
+
+- add MixChart and deprecate MultiViewChart ([81020bf](https://github.com/open-data-plan/g2plot-vue/commit/81020bf0c7aa4e2c69307cbdcc92407d5c9242b1))
+
 ## [3.1.13](https://github.com/open-data-plan/g2plot-vue/compare/v3.1.12...v3.1.13) (2021-04-23)
 
 ### Bug Fixes
