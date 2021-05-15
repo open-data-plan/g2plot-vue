@@ -35,7 +35,7 @@
     "build:es2": "vue-demi-switch 2 vue2 && babel src -d es2 --extensions .ts,.tsx --delete-dir-on-start",
     "build:commonjs2": "cross-env BABEL_ENV=commonjs vue-demi-switch 2 vue2 && babel src -d lib2 --extensions .ts,.tsx --delete-dir-on-start",
     "build:types3": "vue-demi-switch 3 && tsc & tsc --declarationDir ./es",
-    "build:types2": "vue-demi-switch 2 && tsc & tsc --declarationDir ./es2",
+    "build:types2": "vue-demi-switch 2 && tsc --declarationDir ./lib2 & tsc --declarationDir ./es2",
     "build:docs": "vitepress build docs",
     "preversion": "npm run build",
     "version": "conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md",
