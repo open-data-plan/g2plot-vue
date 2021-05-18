@@ -2,6 +2,7 @@ import { App, defineComponent } from 'vue-demi'
 import { Mix, MixOptions } from '@antv/g2plot'
 import BaseChart, { BaseChartProps } from '../../components/base'
 import { Writeable } from '../../types'
+import { mergeAttrs } from '../../utils'
 
 export type MixChartProps = Writeable<
   Omit<BaseChartProps<MixOptions>, 'chart'> & MixOptions
@@ -10,7 +11,7 @@ export type MixChartProps = Writeable<
 const MixChart = defineComponent<MixChartProps>({
   name: 'MixChart',
   setup(props, ctx) {
-    return () => <BaseChart chart={Mix} {...ctx.attrs} {...props} />
+    return () => <BaseChart chart={Mix} {...mergeAttrs(props, ctx.attrs)} />
   },
 })
 

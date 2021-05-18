@@ -76,7 +76,7 @@ export type ${chart}ChartProps = Writeable<Omit<BaseChartProps<${chart}Options>,
 const ${chart}Chart = defineComponent<${chart}ChartProps>({
   name: '${chart}Chart',
   setup(props, ctx) {
-    return () => <BaseChart chart={${chart}} {...ctx.attrs} {...props} />
+    return () => <BaseChart chart={${chart}} {...mergeAttrs(props, ctx.attrs)} />
   },
 })
 
