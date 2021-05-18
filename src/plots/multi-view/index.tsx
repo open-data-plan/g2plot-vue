@@ -5,7 +5,7 @@ import { Writeable } from '../../types'
 import { mergeAttrs } from '../../utils'
 
 export type MultiViewChartProps = Writeable<
-  Omit<BaseChartProps<MixOptions>, 'chart'> & MixOptions
+  Omit<BaseChartProps<MixOptions>, 'chart' | 'data'> & MixOptions
 >
 
 /**
