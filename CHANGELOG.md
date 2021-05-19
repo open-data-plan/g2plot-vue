@@ -1,3 +1,9 @@
+## [3.2.1](https://github.com/open-data-plan/g2plot-vue/compare/v3.2.0...v3.2.1) (2021-05-19)
+
+### Bug Fixes
+
+- fix MixChart and MultiViewChart ([#256](https://github.com/open-data-plan/g2plot-vue/issues/256)) ([98fee07](https://github.com/open-data-plan/g2plot-vue/commit/98fee07704a71b16df535fd6e202f8c8ae94084c))
+
 # [3.2.0](https://github.com/open-data-plan/g2plot-vue/compare/v3.1.13...v3.2.0) (2021-05-14)
 
 ### Features
