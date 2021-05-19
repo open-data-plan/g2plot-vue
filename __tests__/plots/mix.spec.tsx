@@ -2,9 +2,7 @@ import { mount } from '@vue/test-utils'
 import MixChart from '../../src/plots/mix'
 
 const config = {
-  data: [],
-  xField: 'a',
-  yField: 'b',
+  plots: [],
 }
 
 describe('MixChart', () => {
