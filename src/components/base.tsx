@@ -62,14 +62,15 @@ const BaseChart = defineComponent<
   mounted() {
     const chartRef = this.$attrs.chartRef as Ref<BasePlot<any> | null>
     const { chart: Chart } = this.attrConfig
-    this.plot = new Chart(this.$el as HTMLElement, {
+    const plot = new Chart(this.$el as HTMLElement, {
       data: this.chartData,
       ...this.chartConfig,
     })
-    this.plot.render()
+    plot.render()
     if (chartRef) {
-      chartRef.value = this.plot
+      chartRef.value = plot
     }
+    this.plot = plot
   },
   beforeUnmount() {
     /* istanbul ignore else */

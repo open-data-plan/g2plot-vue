@@ -69,6 +69,7 @@ import { App, defineComponent } from 'vue-demi'
 import { ${chart}, ${chart}Options } from '@antv/g2plot'
 import BaseChart, { BaseChartProps } from '../../components/base'
 import { Writeable } from '../../types'
+import { mergeAttrs } from '../../utils'
 
 export type ${chart}ChartProps = Writeable<Omit<BaseChartProps<${chart}Options>, 'chart'> &
   ${chart}Options>
