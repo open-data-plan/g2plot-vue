@@ -1,3 +1,13 @@
+# [3.3.0](https://github.com/open-data-plan/g2plot-vue/compare/v3.2.1...v3.3.0) (2021-06-16)
+
+### Bug Fixes
+
+- add @babel/runtime to peer deps, closes: [#293](https://github.com/open-data-plan/g2plot-vue/issues/293) ([fab140e](https://github.com/open-data-plan/g2plot-vue/commit/fab140ecaa376a65c9496ee43070cbc1b6858999))
+
+### Features
+
+- introduce new charts ([fc7f0f3](https://github.com/open-data-plan/g2plot-vue/commit/fc7f0f3bf3f5ac5c0c8886cd8fde3800a3f57ad6)), closes [#299](https://github.com/open-data-plan/g2plot-vue/issues/299)
+
 ## [3.2.1](https://github.com/open-data-plan/g2plot-vue/compare/v3.2.0...v3.2.1) (2021-05-19)
 
 ### Bug Fixes
