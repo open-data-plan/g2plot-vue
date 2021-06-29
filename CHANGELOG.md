@@ -1,3 +1,9 @@
+## [3.3.1](https://github.com/open-data-plan/g2plot-vue/compare/v3.3.0...v3.3.1) (2021-06-29)
+
+### Bug Fixes
+
+- add sideEffects ([3812d05](https://github.com/open-data-plan/g2plot-vue/commit/3812d05c4774ca6d53c51bcf14be174bd496c43b))
+
 # [3.3.0](https://github.com/open-data-plan/g2plot-vue/compare/v3.2.1...v3.3.0) (2021-06-16)
 
 ### Bug Fixes
