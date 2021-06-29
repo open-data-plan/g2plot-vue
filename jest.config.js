@@ -3,4 +3,5 @@ module.exports = {
   setupFiles: ['jest-canvas-mock'],
   transformIgnorePatterns: ['/node_modules/'],
   collectCoverageFrom: ['./src/**/*.{ts,tsx}', '!./**/*.d.ts'],
+  testEnvironment: 'jsdom',
 }
