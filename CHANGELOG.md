@@ -1,3 +1,9 @@
+# [3.4.0](https://github.com/open-data-plan/g2plot-vue/compare/v3.3.2...v3.4.0) (2021-07-13)
+
+### Features
+
+- introduce CirclePackingChart ([30014a6](https://github.com/open-data-plan/g2plot-vue/commit/30014a6c3ffea03ebaee54146d6a3155410739c7))
+
 ## [3.3.2](https://github.com/open-data-plan/g2plot-vue/compare/v3.3.1...v3.3.2) (2021-07-08)
 
 ### Bug Fixes
