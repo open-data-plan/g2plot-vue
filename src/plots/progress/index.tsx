@@ -5,7 +5,7 @@ import { Writeable } from '../../types'
 import { mergeAttrs } from '../../utils'
 
 export type ProgressChartProps = Writeable<
-  Omit<BaseChartProps<ProgressOptions>, 'chart'> & ProgressOptions
+  Omit<BaseChartProps<ProgressOptions>, 'chart' | 'data'> & ProgressOptions
 >
 
 const ProgressChart = defineComponent<ProgressChartProps>({

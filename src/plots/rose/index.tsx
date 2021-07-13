@@ -5,7 +5,7 @@ import { Writeable } from '../../types'
 import { mergeAttrs } from '../../utils'
 
 export type RoseChartProps = Writeable<
-  Omit<BaseChartProps<RoseOptions>, 'chart'> & RoseOptions
+  Omit<BaseChartProps<RoseOptions>, 'chart' | 'data'> & RoseOptions
 >
 
 const RoseChart = defineComponent<RoseChartProps>({

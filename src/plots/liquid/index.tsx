@@ -5,7 +5,7 @@ import { Writeable } from '../../types'
 import { mergeAttrs } from '../../utils'
 
 export type LiquidChartProps = Writeable<
-  Omit<BaseChartProps<LiquidOptions>, 'chart'> & LiquidOptions
+  Omit<BaseChartProps<LiquidOptions>, 'chart' | 'data'> & LiquidOptions
 >
 
 const LiquidChart = defineComponent<LiquidChartProps>({

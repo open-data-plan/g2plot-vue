@@ -5,7 +5,7 @@ import { Writeable } from '../../types'
 import { mergeAttrs } from '../../utils'
 
 export type BulletChartProps = Writeable<
-  Omit<BaseChartProps<BulletOptions>, 'chart'> & BulletOptions
+  Omit<BaseChartProps<BulletOptions>, 'chart' | 'data'> & BulletOptions
 >
 
 const BulletChart = defineComponent<BulletChartProps>({

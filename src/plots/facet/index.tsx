@@ -5,7 +5,7 @@ import { Writeable } from '../../types'
 import { mergeAttrs } from '../../utils'
 
 export type FacetChartProps = Writeable<
-  Omit<BaseChartProps<FacetOptions>, 'chart'> & FacetOptions
+  Omit<BaseChartProps<FacetOptions>, 'chart' | 'data'> & FacetOptions
 >
 
 const FacetChart = defineComponent<FacetChartProps>({

@@ -5,7 +5,7 @@ import { Writeable } from '../../types'
 import { mergeAttrs } from '../../utils'
 
 export type WaterfallChartProps = Writeable<
-  Omit<BaseChartProps<WaterfallOptions>, 'chart'> & WaterfallOptions
+  Omit<BaseChartProps<WaterfallOptions>, 'chart' | 'data'> & WaterfallOptions
 >
 
 const WaterfallChart = defineComponent<WaterfallChartProps>({

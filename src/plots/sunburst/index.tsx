@@ -5,7 +5,7 @@ import { Writeable } from '../../types'
 import { mergeAttrs } from '../../utils'
 
 export type SunburstChartProps = Writeable<
-  Omit<BaseChartProps<SunburstOptions>, 'chart'> & SunburstOptions
+  Omit<BaseChartProps<SunburstOptions>, 'chart' | 'data'> & SunburstOptions
 >
 
 const SunburstChart = defineComponent<SunburstChartProps>({

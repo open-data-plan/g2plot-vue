@@ -49,6 +49,8 @@ import { ViolinChartProps as _ViolinChartProps } from './plots/violin'
 
 import { FacetChartProps as _FacetChartProps } from './plots/facet'
 
+import { CirclePackingChartProps as _CirclePackingChartProps } from './plots/circle-packing'
+
 export { default as AreaChart } from './plots/area'
 export type AreaChartProps = _AreaChartProps
 
@@ -137,3 +139,5 @@ export { default as ViolinChart } from './plots/violin'
 export type ViolinChartProps = _ViolinChartProps
 export { default as FacetChart } from './plots/facet'
 export type FacetChartProps = _FacetChartProps
+export { default as CirclePackingChart } from './plots/circle-packing'
+export type CirclePackingChartProps = _CirclePackingChartProps

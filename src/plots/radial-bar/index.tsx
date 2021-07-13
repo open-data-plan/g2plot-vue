@@ -5,7 +5,7 @@ import { Writeable } from '../../types'
 import { mergeAttrs } from '../../utils'
 
 export type RadialBarChartProps = Writeable<
-  Omit<BaseChartProps<RadialBarOptions>, 'chart'> & RadialBarOptions
+  Omit<BaseChartProps<RadialBarOptions>, 'chart' | 'data'> & RadialBarOptions
 >
 
 const RadialBarChart = defineComponent<RadialBarChartProps>({

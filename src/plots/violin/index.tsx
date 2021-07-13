@@ -5,7 +5,7 @@ import { Writeable } from '../../types'
 import { mergeAttrs } from '../../utils'
 
 export type ViolinChartProps = Writeable<
-  Omit<BaseChartProps<ViolinOptions>, 'chart'> & ViolinOptions
+  Omit<BaseChartProps<ViolinOptions>, 'chart' | 'data'> & ViolinOptions
 >
 
 const ViolinChart = defineComponent<ViolinChartProps>({

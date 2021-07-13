@@ -5,7 +5,8 @@ import { Writeable } from '../../types'
 import { mergeAttrs } from '../../utils'
 
 export type RingProgressChartProps = Writeable<
-  Omit<BaseChartProps<RingProgressOptions>, 'chart'> & RingProgressOptions
+  Omit<BaseChartProps<RingProgressOptions>, 'chart' | 'data'> &
+    RingProgressOptions
 >
 
 const RingProgressChart = defineComponent<RingProgressChartProps>({

@@ -5,7 +5,7 @@ import { Writeable } from '../../types'
 import { mergeAttrs } from '../../utils'
 
 export type TinyColumnChartProps = Writeable<
-  Omit<BaseChartProps<TinyColumnOptions>, 'chart'> & TinyColumnOptions
+  Omit<BaseChartProps<TinyColumnOptions>, 'chart' | 'data'> & TinyColumnOptions
 >
 
 const TinyColumnChart = defineComponent<TinyColumnChartProps>({

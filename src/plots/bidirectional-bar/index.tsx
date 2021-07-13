@@ -5,7 +5,7 @@ import { Writeable } from '../../types'
 import { mergeAttrs } from '../../utils'
 
 export type BidirectionalBarChartProps = Writeable<
-  Omit<BaseChartProps<BidirectionalBarOptions>, 'chart'> &
+  Omit<BaseChartProps<BidirectionalBarOptions>, 'chart' | 'data'> &
     BidirectionalBarOptions
 >
 

@@ -5,7 +5,7 @@ import { Writeable } from '../../types'
 import { mergeAttrs } from '../../utils'
 
 export type FunnelChartProps = Writeable<
-  Omit<BaseChartProps<FunnelOptions>, 'chart'> & FunnelOptions
+  Omit<BaseChartProps<FunnelOptions>, 'chart' | 'data'> & FunnelOptions
 >
 
 const FunnelChart = defineComponent<FunnelChartProps>({

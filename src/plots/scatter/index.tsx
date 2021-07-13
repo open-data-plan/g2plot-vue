@@ -5,7 +5,7 @@ import { Writeable } from '../../types'
 import { mergeAttrs } from '../../utils'
 
 export type ScatterChartProps = Writeable<
-  Omit<BaseChartProps<ScatterOptions>, 'chart'> & ScatterOptions
+  Omit<BaseChartProps<ScatterOptions>, 'chart' | 'data'> & ScatterOptions
 >
 
 const ScatterChart = defineComponent<ScatterChartProps>({

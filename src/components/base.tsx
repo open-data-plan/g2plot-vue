@@ -1,6 +1,7 @@
 import { defineComponent, Ref } from 'vue-demi'
 import { Plot as BasePlot } from '@antv/g2plot'
 import isEqual from 'lodash/isEqual'
+import isEmpty from 'lodash/isEmpty'
 import { HTMLAttributes } from '@vue/runtime-dom'
 
 interface Options {
@@ -13,10 +14,12 @@ export interface Plot<C extends Options> extends BasePlot<C> {
 
 type PickedAttrs = 'class' | 'style'
 
+type Data = Record<string, any>[] | Record<string, any>
+
 export interface BaseChartProps<C extends Options>
   extends Pick<HTMLAttributes, PickedAttrs> {
   chart: any
-  data: any[]
+  data: Data
   chartRef?: Ref<BasePlot<C> | null>
 }
 
@@ -79,10 +82,10 @@ const BaseChart = defineComponent<
     }
   },
   watch: {
-    chartData(data: any[], oldData: any[]) {
+    chartData(data: Data, oldData: Data) {
       /* istanbul ignore else */
       if (this.plot) {
-        if (!oldData.length) {
+        if (isEmpty(oldData)) {
           this.plot.update({
             data: data,
             ...this.chartConfig,

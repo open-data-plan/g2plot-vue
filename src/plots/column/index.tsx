@@ -5,7 +5,7 @@ import { Writeable } from '../../types'
 import { mergeAttrs } from '../../utils'
 
 export type ColumnChartProps = Writeable<
-  Omit<BaseChartProps<ColumnOptions>, 'chart'> & ColumnOptions
+  Omit<BaseChartProps<ColumnOptions>, 'chart' | 'data'> & ColumnOptions
 >
 
 const ColumnChart = defineComponent<ColumnChartProps>({

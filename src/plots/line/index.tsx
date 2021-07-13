@@ -5,7 +5,7 @@ import { Writeable } from '../../types'
 import { mergeAttrs } from '../../utils'
 
 export type LineChartProps = Writeable<
-  Omit<BaseChartProps<LineOptions>, 'chart'> & LineOptions
+  Omit<BaseChartProps<LineOptions>, 'chart' | 'data'> & LineOptions
 >
 
 const LineChart = defineComponent<LineChartProps>({

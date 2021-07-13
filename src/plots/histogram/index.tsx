@@ -5,7 +5,7 @@ import { Writeable } from '../../types'
 import { mergeAttrs } from '../../utils'
 
 export type HistogramChartProps = Writeable<
-  Omit<BaseChartProps<HistogramOptions>, 'chart'> & HistogramOptions
+  Omit<BaseChartProps<HistogramOptions>, 'chart' | 'data'> & HistogramOptions
 >
 
 const HistogramChart = defineComponent<HistogramChartProps>({

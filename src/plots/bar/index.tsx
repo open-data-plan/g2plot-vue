@@ -5,7 +5,7 @@ import { Writeable } from '../../types'
 import { mergeAttrs } from '../../utils'
 
 export type BarChartProps = Writeable<
-  Omit<BaseChartProps<BarOptions>, 'chart'> & BarOptions
+  Omit<BaseChartProps<BarOptions>, 'chart' | 'data'> & BarOptions
 >
 
 const BarChart = defineComponent<BarChartProps>({

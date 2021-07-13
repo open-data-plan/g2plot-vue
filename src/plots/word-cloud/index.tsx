@@ -5,7 +5,7 @@ import { Writeable } from '../../types'
 import { mergeAttrs } from '../../utils'
 
 export type WordCloudChartProps = Writeable<
-  Omit<BaseChartProps<WordCloudOptions>, 'chart'> & WordCloudOptions
+  Omit<BaseChartProps<WordCloudOptions>, 'chart' | 'data'> & WordCloudOptions
 >
 
 const WordCloudChart = defineComponent<WordCloudChartProps>({

@@ -5,7 +5,7 @@ import { Writeable } from '../../types'
 import { mergeAttrs } from '../../utils'
 
 export type GaugeChartProps = Writeable<
-  Omit<BaseChartProps<GaugeOptions>, 'chart'> & GaugeOptions
+  Omit<BaseChartProps<GaugeOptions>, 'chart' | 'data'> & GaugeOptions
 >
 
 const GaugeChart = defineComponent<GaugeChartProps>({

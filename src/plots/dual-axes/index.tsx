@@ -5,7 +5,7 @@ import { Writeable } from '../../types'
 import { mergeAttrs } from '../../utils'
 
 export type DualAxesChartProps = Writeable<
-  Omit<BaseChartProps<DualAxesOptions>, 'chart'> & DualAxesOptions
+  Omit<BaseChartProps<DualAxesOptions>, 'chart' | 'data'> & DualAxesOptions
 >
 
 const DualAxesChart = defineComponent<DualAxesChartProps>({

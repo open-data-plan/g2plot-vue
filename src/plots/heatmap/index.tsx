@@ -5,7 +5,7 @@ import { Writeable } from '../../types'
 import { mergeAttrs } from '../../utils'
 
 export type HeatmapChartProps = Writeable<
-  Omit<BaseChartProps<HeatmapOptions>, 'chart'> & HeatmapOptions
+  Omit<BaseChartProps<HeatmapOptions>, 'chart' | 'data'> & HeatmapOptions
 >
 
 const HeatmapChart = defineComponent<HeatmapChartProps>({
