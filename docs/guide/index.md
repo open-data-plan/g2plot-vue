@@ -4,12 +4,12 @@ title: Guide
 
 ## What
 
-`G2Plot Vue` is a chart component set powered by [`G2Plot`](https://g2plot.antv.vision/) and developed for `Vue 3`.
+`G2Plot Vue` is a chart component set powered by [`G2Plot`](https://g2plot.antv.vision/).
 
 ## Features
 
 - Fully support `G2Plot` charts, and will support new chart at first time.
-- Developed for `Vue 3`, and easily use.
+- Both `Vue 2&3` support, and easily use.
 - Native support for `TypeScript`.
 - **100%** unit test coverage
 
