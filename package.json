@@ -43,7 +43,7 @@
     "postversion": "npm publish",
     "sync": "ts-node --project tsconfig.sync.json ./scripts/sync.ts",
     "postinstall": "node ./scripts/postinstall.js",
-    "prepare": "husky install"
+    "prepare": "husky install && ln -s ./assets/logo.svg ./docs/public/logo.svg"
   },
   "repository": {
     "type": "git",
