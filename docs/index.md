@@ -1,7 +1,7 @@
 ---
 home: true
 heroText: G2Plot Vue
-heroImage: /logo.png
+heroImage: /logo.svg
 actionText: Get Started
 actionLink: /guide/
 features:

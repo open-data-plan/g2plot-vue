@@ -1,3 +1,7 @@
+<p align="center">
+<img src="./assets/logo.svg">
+</p>
+
 # @opd/g2plot-vue
 
 > [G2Plot](https://g2plot.antv.vision/) for `Vue`, both `v2` and `v3`, see [documentation](https://g2plot-vue.opd.cool) for more
