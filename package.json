@@ -122,8 +122,8 @@
   "peerDependencies": {
     "@antv/g2plot": "^2.3.0",
     "@babel/runtime": "^7.13.0",
-    "@vue/composition-api": "^1.0.0-rc.2",
-    "vue": "^2.0.0 || >=3.0.0-rc.0"
+    "@vue/composition-api": "^1.0.0-rc.1",
+    "vue": "^2.0.0 || >=3.0.0"
   },
   "peerDependenciesMeta": {
     "@vue/composition-api": {
