@@ -1,3 +1,13 @@
+# [3.5.0](https://github.com/open-data-plan/g2plot-vue/compare/v3.4.1...v3.5.0) (2021-09-18)
+
+### Bug Fixes
+
+- fix vue peer version for v3 ([5adeca8](https://github.com/open-data-plan/g2plot-vue/commit/5adeca87ca2ec5baf773520c10893edac3d3a217))
+
+### Features
+
+- introduce VennChart ([bdd9208](https://github.com/open-data-plan/g2plot-vue/commit/bdd9208a82be61bb1b358bd936d2de3820c20d3f))
+
 ## [3.4.1](https://github.com/open-data-plan/g2plot-vue/compare/v3.4.0...v3.4.1) (2021-07-22)
 
 # [3.4.0](https://github.com/open-data-plan/g2plot-vue/compare/v3.3.2...v3.4.0) (2021-07-13)
