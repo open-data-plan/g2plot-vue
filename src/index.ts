@@ -51,6 +51,8 @@ import { FacetChartProps as _FacetChartProps } from './plots/facet'
 
 import { CirclePackingChartProps as _CirclePackingChartProps } from './plots/circle-packing'
 
+import { VennChartProps as _VennChartProps } from './plots/venn'
+
 export { default as AreaChart } from './plots/area'
 export type AreaChartProps = _AreaChartProps
 
@@ -141,3 +143,5 @@ export { default as FacetChart } from './plots/facet'
 export type FacetChartProps = _FacetChartProps
 export { default as CirclePackingChart } from './plots/circle-packing'
 export type CirclePackingChartProps = _CirclePackingChartProps
+export { default as VennChart } from './plots/venn'
+export type VennChartProps = _VennChartProps
