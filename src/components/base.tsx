@@ -21,6 +21,7 @@ export interface BaseChartProps<C extends Options>
   chart: any
   data: Data
   chartRef?: Ref<BasePlot<C> | null>
+  onReady?: (plot: BasePlot<C>) => void
 }
 
 interface ComputedOptions<C extends Options> {
@@ -57,6 +58,7 @@ const BaseChart = defineComponent<
         // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         // @ts-ignore
         style,
+        onReady,
         ...config
       } = this.attrConfig
       return config
@@ -64,7 +66,7 @@ const BaseChart = defineComponent<
   },
   mounted() {
     const chartRef = this.$attrs.chartRef as Ref<BasePlot<any> | null>
-    const { chart: Chart } = this.attrConfig
+    const { chart: Chart, onReady } = this.attrConfig
     const plot = new Chart(this.$el as HTMLElement, {
       data: this.chartData,
       ...this.chartConfig,
@@ -74,6 +76,7 @@ const BaseChart = defineComponent<
       chartRef.value = plot
     }
     this.plot = plot
+    onReady?.(plot)
   },
   beforeUnmount() {
     /* istanbul ignore else */

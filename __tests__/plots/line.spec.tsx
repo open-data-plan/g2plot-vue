@@ -1,11 +1,15 @@
 import { ref } from 'vue'
 import { mount } from '@vue/test-utils'
 import LineChart from '../../src/plots/line'
+import { LineOptions, Plot } from '@antv/g2plot'
 
 describe('LineChart', () => {
   test('render without crashed', () => {
     const chartRef = ref(null)
-    mount(<LineChart data={[]} chartRef={chartRef} />)
+    const onReady = (plot: Plot<LineOptions>) => {
+      expect(plot).toBeDefined()
+    }
+    mount(<LineChart data={[]} chartRef={chartRef} onReady={onReady} />)
 
     expect(chartRef.value).toBeDefined()
   })
