@@ -1,3 +1,9 @@
+# [3.6.0](https://github.com/open-data-plan/g2plot-vue/compare/v3.5.0...v3.6.0) (2021-09-24)
+
+### Features
+
+- add onReady callback support ([a45c27f](https://github.com/open-data-plan/g2plot-vue/commit/a45c27ff06e9e5d26c2263f4bf8e1ee30ee5091a))
+
 # [3.5.0](https://github.com/open-data-plan/g2plot-vue/compare/v3.4.1...v3.5.0) (2021-09-18)
 
 ### Bug Fixes
