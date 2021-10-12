@@ -73,7 +73,7 @@
     "@opd/prettier-config-pangu": "^1.8.7",
     "@types/eslint": "^7.2.4",
     "@types/lodash": "^4.14.162",
-    "@typescript-eslint/eslint-plugin": "^4.6.0",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
     "@typescript-eslint/parser": "^4.6.0",
     "@vue/babel-preset-app": "^4.5.8",
     "@vue/composition-api": "^1.0.0-rc.2",
