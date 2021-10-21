@@ -121,6 +121,16 @@ export default {
 
 All config defined in `G2Plot` [document](https://g2plot.antv.vision/zh/docs/manual/introduction) can be used as `props` or `attrs`
 
+## FYI
+
+- [Throw error: `Failed to mount component: template or render function not defined.` in `vue@2`](https://github.com/open-data-plan/g2plot-vue/issues/483)
+
+  please ensure `composition-api` has been enabled.
+
+- [Build failed with `vite`](https://github.com/open-data-plan/g2plot-vue/issues/505)
+
+  `g2plot-vue` use `babel` to build output files, and transform `@babel/runtime` with dependencies, so `@babel/runtime` is required.
+
 ## Develop
 
 ```
