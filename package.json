@@ -78,7 +78,6 @@
     "@vue/babel-preset-app": "^4.5.8",
     "@vue/composition-api": "^1.0.0-rc.2",
     "@vue/test-utils": "^2.0.0-beta.7",
-    "babel-eslint": "^10.1.0",
     "canvas": "^2.6.1",
     "conventional-changelog-cli": "^2.1.0",
     "cross-env": "^7.0.2",
