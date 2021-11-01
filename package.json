@@ -67,7 +67,7 @@
     "@antv/g2plot": "^2.3.13",
     "@babel/cli": "^7.12.1",
     "@babel/preset-typescript": "^7.12.1",
-    "@commitlint/cli": "^13.1.0",
+    "@commitlint/cli": "^14.1.0",
     "@commitlint/config-conventional": "^13.1.0",
     "@opd/jest-preset-pangu": "^1.11.6",
     "@opd/prettier-config-pangu": "^1.8.7",
