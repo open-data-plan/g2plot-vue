@@ -81,7 +81,6 @@
     "canvas": "^2.6.1",
     "conventional-changelog-cli": "^2.1.0",
     "cross-env": "^7.0.2",
-    "decamelize": "^6.0.0",
     "diff-run": "^1.0.4",
     "eslint": "^8.0.0",
     "eslint-config-prettier": "^8.0.0",

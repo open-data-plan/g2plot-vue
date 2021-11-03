@@ -3,7 +3,7 @@ import path from 'path'
 import fs from 'fs'
 import { promisify } from 'util'
 import { ESLint } from 'eslint'
-import decamelize from 'decamelize'
+import { kebabCase } from 'lodash'
 import eslintConfig from '../.eslintrc.js'
 
 const mkdir = promisify(fs.mkdir)
@@ -29,12 +29,7 @@ Object.entries(g2plot).forEach(([chartName, module]: [string, any]) => {
     if (module.prototype instanceof Plot && chartName !== 'P') {
       if (
         !fs.existsSync(
-          path.resolve(
-            plotDir,
-            `${decamelize(chartName, {
-              separator: '-',
-            })}/index.tsx`
-          )
+          path.resolve(plotDir, `${kebabCase(chartName)}/index.tsx`)
         )
       ) {
         newCharts.push(chartName)
@@ -56,9 +51,7 @@ const lintAndFixFileContent = async (fileContent: string, filePath: string) => {
 const getChartConfig = (chart: string) => {
   return {
     cmpName: `${chart}Chart`,
-    cmpPath: decamelize(chart, {
-      separator: '-',
-    }),
+    cmpPath: kebabCase(chart),
   }
 }
 
