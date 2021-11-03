@@ -121,6 +121,11 @@ export default {
 
 All config defined in `G2Plot` [document](https://g2plot.antv.vision/zh/docs/manual/introduction) can be used as `props` or `attrs`
 
+Notable API in `g2plot-vue`
+
+- `chartRef`: `ref` of rendered `plot`, available after `plot` mounted, **NOT** component mounted
+- `onReady`: `callback` after `plot` mounted, **NOT** component mounted
+
 ## FYI
 
 - [Throw error: `Failed to mount component: template or render function not defined.` in `vue@2`](https://github.com/open-data-plan/g2plot-vue/issues/483)
