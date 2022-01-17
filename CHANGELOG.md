@@ -1,3 +1,9 @@
+## [3.6.3](https://github.com/open-data-plan/g2plot-vue/compare/v3.6.2...v3.6.3) (2022-01-17)
+
+### Bug Fixes
+
+- **types:** fix type error ([3d9e6c6](https://github.com/open-data-plan/g2plot-vue/commit/3d9e6c6f92dc5668f0ed10f7d30fd56a749f7ac2))
+
 ## [3.6.2](https://github.com/open-data-plan/g2plot-vue/compare/v3.6.1...v3.6.2) (2021-11-08)
 
 ## [3.6.1](https://github.com/open-data-plan/g2plot-vue/compare/v3.6.0...v3.6.1) (2021-10-28)
