@@ -65,7 +65,8 @@ const BaseChart = defineComponent<
     },
   },
   mounted() {
-    const chartRef = this.$attrs.chartRef as Ref<BasePlot<any> | null>
+    const chartRef = this.$attrs
+      .chartRef as unknown as Ref<BasePlot<any> | null>
     const { chart: Chart, onReady } = this.attrConfig
     const plot = new Chart(this.$el as HTMLElement, {
       data: this.chartData,
