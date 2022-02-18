@@ -75,7 +75,7 @@
     "@types/lodash": "^4.14.162",
     "@typescript-eslint/eslint-plugin": "^5.0.0",
     "@typescript-eslint/parser": "^5.0.0",
-    "@vue/babel-preset-app": "^4.5.8",
+    "@vue/babel-preset-app": "^5.0.1",
     "@vue/composition-api": "^1.0.0-rc.2",
     "@vue/test-utils": "^2.0.0-beta.7",
     "canvas": "^2.6.1",
