@@ -1,6 +1,6 @@
 {
   "name": "@opd/g2plot-vue",
-  "version": "3.6.3",
+  "version": "3.6.4",
   "description": "G2Plot for vue, both v2 and v3",
   "main": "lib/index.js",
   "module": "es/index.js",
