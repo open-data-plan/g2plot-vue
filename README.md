@@ -11,6 +11,7 @@
 [![npm](https://img.shields.io/npm/dm/@opd/g2plot-vue.svg)](https://www.npmjs.com/package/@opd/g2plot-vue)
 [![npm](https://img.shields.io/npm/l/@opd/g2plot-vue.svg)](https://www.npmjs.com/package/@opd/g2plot-vue)
 [![codecov](https://codecov.io/gh/open-data-plan/g2plot-vue/branch/master/graph/badge.svg)](https://codecov.io/gh/open-data-plan/g2plot-vue)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fopen-data-plan%2Fg2plot-vue.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fopen-data-plan%2Fg2plot-vue?ref=badge_shield)
 
 ## Install
 
@@ -27,7 +28,6 @@ node ./node_modules/@opd/g2plot-vue/scripts/postinstall.js
 ## Usage
 
 [![Edit g2plot-vue-basic-example](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/g2plot-vue-basic-example-uxde9?fontsize=14&hidenavigation=1&theme=dark)
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fopen-data-plan%2Fg2plot-vue.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fopen-data-plan%2Fg2plot-vue?ref=badge_shield)
 
 ### jsx
 
@@ -144,6 +144,6 @@ npm install
 npm run build
 ```
 
-
 ## License
+
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fopen-data-plan%2Fg2plot-vue.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fopen-data-plan%2Fg2plot-vue?ref=badge_large)
