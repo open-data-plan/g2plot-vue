@@ -27,6 +27,7 @@ node ./node_modules/@opd/g2plot-vue/scripts/postinstall.js
 ## Usage
 
 [![Edit g2plot-vue-basic-example](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/g2plot-vue-basic-example-uxde9?fontsize=14&hidenavigation=1&theme=dark)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fopen-data-plan%2Fg2plot-vue.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fopen-data-plan%2Fg2plot-vue?ref=badge_shield)
 
 ### jsx
 
@@ -142,3 +143,7 @@ Notable API in `g2plot-vue`
 npm install
 npm run build
 ```
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fopen-data-plan%2Fg2plot-vue.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fopen-data-plan%2Fg2plot-vue?ref=badge_large)
