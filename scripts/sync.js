@@ -1,10 +1,10 @@
-import * as g2plot from '@antv/g2plot'
-import path from 'path'
-import fs from 'fs'
-import { promisify } from 'util'
-import { ESLint } from 'eslint'
-import { kebabCase } from 'lodash'
-import eslintConfig from '../.eslintrc.js'
+/* eslint-disable @typescript-eslint/no-var-requires */
+const path = require('path')
+const fs = require('fs')
+const { promisify } = require('util')
+const { ESLint } = require('eslint')
+const { kebabCase, camelCase, upperFirst } = require('lodash')
+const eslintConfig = require('../.eslintrc')
 
 const mkdir = promisify(fs.mkdir)
 const writeFile = promisify(fs.writeFile)
@@ -12,33 +12,36 @@ const readFile = promisify(fs.readFile)
 
 const eslint = new ESLint({
   extensions: ['.tsx'],
-  baseConfig: eslintConfig as any,
+  baseConfig: eslintConfig,
   fix: true,
 })
 
+const g2PlotDir = path.resolve(
+  process.cwd(),
+  'node_modules/@antv/g2plot/src/plots'
+)
 const plotDir = path.resolve(process.cwd(), 'src/plots')
 const testDir = path.resolve(process.cwd(), '__tests__/plots')
 const exportPath = path.resolve(process.cwd(), 'src/index.ts')
 
-const { Plot } = g2plot
+const plotNames = fs
+  .readdirSync(g2PlotDir)
+  .filter((dir) => !dir.startsWith('_'))
+  .map((dir) => upperFirst(camelCase(dir)))
 
-const newCharts: string[] = []
+const newCharts = []
 
-Object.entries(g2plot).forEach(([chartName, module]: [string, any]) => {
+plotNames.forEach((chartName) => {
   try {
-    if (module.prototype instanceof Plot && chartName !== 'P') {
-      if (
-        !fs.existsSync(
-          path.resolve(plotDir, `${kebabCase(chartName)}/index.tsx`)
-        )
-      ) {
-        newCharts.push(chartName)
-      }
+    if (
+      !fs.existsSync(path.resolve(plotDir, `${kebabCase(chartName)}/index.tsx`))
+    ) {
+      newCharts.push(chartName)
     }
   } catch (error) {}
 })
 
-const lintAndFixFileContent = async (fileContent: string, filePath: string) => {
+const lintAndFixFileContent = async (fileContent, filePath) => {
   const lintResult = await eslint.lintText(fileContent, {
     filePath,
   })
@@ -48,7 +51,7 @@ const lintAndFixFileContent = async (fileContent: string, filePath: string) => {
   return output || fileContent
 }
 
-const getChartConfig = (chart: string) => {
+const getChartConfig = (chart) => {
   return {
     cmpName: `${chart}Chart`,
     cmpPath: kebabCase(chart),

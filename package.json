@@ -41,7 +41,7 @@
     "preversion": "npm run build",
     "version": "conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md",
     "postversion": "npm publish",
-    "sync": "ts-node --project tsconfig.sync.json ./scripts/sync.ts",
+    "sync": "node ./scripts/sync.js",
     "postinstall": "node ./scripts/postinstall.js",
     "prepare": "husky install"
   },
@@ -92,7 +92,7 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-vue": "^9.0.0",
-    "husky": "8.0.2",
+    "husky": "^8.0.3",
     "jest-canvas-mock": "^2.3.0",
     "lint-staged": "^13.0.0",
     "lodash": "^4.17.20",
