@@ -20,4 +20,9 @@ export default defineConfig({
       copyright: 'Copyright © 2020-present Open Data Plan',
     },
   },
+  vite: {
+    optimizeDeps: {
+      exclude: ['vue-demi'],
+    },
+  },
 })

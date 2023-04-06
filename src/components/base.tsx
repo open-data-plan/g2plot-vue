@@ -2,7 +2,7 @@ import { defineComponent, Ref } from 'vue-demi'
 import { Plot as BasePlot } from '@antv/g2plot'
 import isEqual from 'lodash/isEqual'
 import isEmpty from 'lodash/isEmpty'
-import { HTMLAttributes } from '@vue/runtime-dom'
+import { HTMLAttributes } from 'vue'
 
 interface Options {
   [x: string]: any
@@ -91,7 +91,7 @@ const BaseChart = defineComponent<
       if (this.plot) {
         if (isEmpty(oldData)) {
           this.plot.update({
-            data: data,
+            data,
             ...this.chartConfig,
           })
           this.plot.render()
