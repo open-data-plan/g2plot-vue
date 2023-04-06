@@ -1,3 +1,5 @@
+## [3.6.6](https://github.com/open-data-plan/g2plot-vue/compare/v3.6.5...v3.6.6) (2023-04-06)
+
 ## [3.6.5](https://github.com/open-data-plan/g2plot-vue/compare/v3.6.4...v3.6.5) (2023-01-29)
 
 ## [3.6.4](https://github.com/open-data-plan/g2plot-vue/compare/v3.6.3...v3.6.4) (2022-07-27)
