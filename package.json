@@ -121,7 +121,7 @@
   "prettier": "@opd/prettier-config-pangu",
   "dependencies": {
     "core-js": "^3.12.1",
-    "vue-demi": "^0.13.1"
+    "vue-demi": "^0.14.0"
   },
   "peerDependencies": {
     "@antv/g2plot": "^2.3.0",
