@@ -19,7 +19,7 @@ module.exports = {
     isVue2 && [
       '@vue/babel-preset-jsx',
       {
-        compositionAPI: true,
+        compositionAPI: 'vue-demi',
       },
     ],
   ].filter(Boolean),
@@ -40,7 +40,12 @@ module.exports = {
           },
         ],
         '@babel/preset-typescript',
-        isVue2 && '@vue/babel-preset-jsx',
+        isVue2 && [
+          '@vue/babel-preset-jsx',
+          {
+            compositionAPI: 'vue-demi',
+          },
+        ],
       ].filter(Boolean),
       plugins: [isVue3 && '@vue/babel-plugin-jsx'].filter(Boolean),
     },
