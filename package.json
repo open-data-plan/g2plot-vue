@@ -80,7 +80,7 @@
     "@vue/composition-api": "^1.7.0",
     "@vue/test-utils": "^2.0.0-beta.7",
     "canvas": "^2.6.1",
-    "conventional-changelog-cli": "^3.0.0",
+    "conventional-changelog-cli": "^4.0.0",
     "cross-env": "^7.0.2",
     "diff-run": "^1.0.4",
     "eslint": "^8.0.0",
