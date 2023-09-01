@@ -63,7 +63,7 @@
   },
   "homepage": "https://github.com/open-data-plan/g2plot-vue#readme",
   "devDependencies": {
-    "@antv/g2": "^4.1.18",
+    "@antv/g2": "^5.1.0",
     "@antv/g2plot": "^2.3.13",
     "@babel/cli": "^7.12.1",
     "@babel/preset-typescript": "^7.12.1",
