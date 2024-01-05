@@ -4,9 +4,7 @@ import BaseChart, { BaseChartProps } from '../../components/base'
 import { Writeable } from '../../types'
 import { mergeAttrs } from '../../utils'
 
-export type StockChartProps = Writeable<
-  Omit<BaseChartProps<StockOptions>, 'chart' | 'data'> & StockOptions
->
+export type StockChartProps = Writeable<Omit<BaseChartProps<StockOptions>, 'chart' | 'data'> & StockOptions>
 
 const StockChart = defineComponent<StockChartProps>({
   name: 'StockChart',

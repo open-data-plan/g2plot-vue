@@ -11,9 +11,7 @@ export type TinyColumnChartProps = Writeable<
 const TinyColumnChart = defineComponent<TinyColumnChartProps>({
   name: 'TinyColumnChart',
   setup: (props, ctx) => {
-    return () => (
-      <BaseChart chart={TinyColumn} {...mergeAttrs(props, ctx.attrs)} />
-    )
+    return () => <BaseChart chart={TinyColumn} {...mergeAttrs(props, ctx.attrs)} />
   },
 })
 

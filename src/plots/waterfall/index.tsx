@@ -4,16 +4,12 @@ import BaseChart, { BaseChartProps } from '../../components/base'
 import { Writeable } from '../../types'
 import { mergeAttrs } from '../../utils'
 
-export type WaterfallChartProps = Writeable<
-  Omit<BaseChartProps<WaterfallOptions>, 'chart' | 'data'> & WaterfallOptions
->
+export type WaterfallChartProps = Writeable<Omit<BaseChartProps<WaterfallOptions>, 'chart' | 'data'> & WaterfallOptions>
 
 const WaterfallChart = defineComponent<WaterfallChartProps>({
   name: 'WaterfallChart',
   setup: (props, ctx) => {
-    return () => (
-      <BaseChart chart={Waterfall} {...mergeAttrs(props, ctx.attrs)} />
-    )
+    return () => <BaseChart chart={Waterfall} {...mergeAttrs(props, ctx.attrs)} />
   },
 })
 

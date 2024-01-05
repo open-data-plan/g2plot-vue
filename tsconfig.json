@@ -1,4 +1,5 @@
 {
+  "extends": ["@vue/tsconfig/tsconfig.dom.json", "@vue/tsconfig/tsconfig.lib.json"],
   "compilerOptions": {
     /* Basic Options */
     // "incremental": true,                   /* Enable incremental compilation */
@@ -10,6 +11,7 @@
     "jsx": "preserve" /* Specify JSX code generation: 'preserve', 'react-native', or 'react'. */,
     "declaration": true /* Generates corresponding '.d.ts' file. */,
     "declarationDir": "./lib",
+    "noEmit": false /* Do not emit outputs. */,
     "emitDeclarationOnly": true,
     // "declarationMap": true,                /* Generates a sourcemap for each corresponding '.d.ts' file. */
     // "sourceMap": true,                     /* Generates corresponding '.map' file. */
@@ -62,7 +64,8 @@
     // "experimentalDecorators": true,        /* Enables experimental support for ES7 decorators. */
     // "emitDecoratorMetadata": true,         /* Enables experimental support for emitting type metadata for decorators. */
     "skipLibCheck": true,
-    "types": ["@vue/runtime-dom"]
+    "types": ["@vue/runtime-dom"],
+    "verbatimModuleSyntax": false
   },
   "include": ["src"],
   "exclude": ["lib", "es"]

@@ -5,16 +5,13 @@ import { Writeable } from '../../types'
 import { mergeAttrs } from '../../utils'
 
 export type CirclePackingChartProps = Writeable<
-  Omit<BaseChartProps<CirclePackingOptions>, 'chart' | 'data'> &
-    CirclePackingOptions
+  Omit<BaseChartProps<CirclePackingOptions>, 'chart' | 'data'> & CirclePackingOptions
 >
 
 const CirclePackingChart = defineComponent<CirclePackingChartProps>({
   name: 'CirclePackingChart',
   setup(props, ctx) {
-    return () => (
-      <BaseChart chart={CirclePacking} {...mergeAttrs(props, ctx.attrs)} />
-    )
+    return () => <BaseChart chart={CirclePacking} {...mergeAttrs(props, ctx.attrs)} />
   },
 })
 

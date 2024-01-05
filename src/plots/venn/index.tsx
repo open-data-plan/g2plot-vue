@@ -4,9 +4,7 @@ import BaseChart, { BaseChartProps } from '../../components/base'
 import { Writeable } from '../../types'
 import { mergeAttrs } from '../../utils'
 
-export type VennChartProps = Writeable<
-  Omit<BaseChartProps<VennOptions>, 'chart' | 'data'> & VennOptions
->
+export type VennChartProps = Writeable<Omit<BaseChartProps<VennOptions>, 'chart' | 'data'> & VennOptions>
 
 const VennChart = defineComponent<VennChartProps>({
   name: 'VennChart',

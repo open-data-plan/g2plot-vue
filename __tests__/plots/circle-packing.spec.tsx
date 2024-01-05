@@ -1,7 +1,5 @@
 import { mount } from '@vue/test-utils'
-import CirclePackingChart, {
-  CirclePackingChartProps,
-} from '../../src/plots/circle-packing'
+import CirclePackingChart, { CirclePackingChartProps } from '../../src/plots/circle-packing'
 import data from './circle-packing-data.json'
 
 const config: CirclePackingChartProps = {

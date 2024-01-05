@@ -4,16 +4,12 @@ import BaseChart, { BaseChartProps } from '../../components/base'
 import { Writeable } from '../../types'
 import { mergeAttrs } from '../../utils'
 
-export type HistogramChartProps = Writeable<
-  Omit<BaseChartProps<HistogramOptions>, 'chart' | 'data'> & HistogramOptions
->
+export type HistogramChartProps = Writeable<Omit<BaseChartProps<HistogramOptions>, 'chart' | 'data'> & HistogramOptions>
 
 const HistogramChart = defineComponent<HistogramChartProps>({
   name: 'HistogramChart',
   setup: (props, ctx) => {
-    return () => (
-      <BaseChart chart={Histogram} {...mergeAttrs(props, ctx.attrs)} />
-    )
+    return () => <BaseChart chart={Histogram} {...mergeAttrs(props, ctx.attrs)} />
   },
 })
 

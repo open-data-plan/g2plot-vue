@@ -4,16 +4,12 @@ import BaseChart, { BaseChartProps } from '../../components/base'
 import { Writeable } from '../../types'
 import { mergeAttrs } from '../../utils'
 
-export type RadialBarChartProps = Writeable<
-  Omit<BaseChartProps<RadialBarOptions>, 'chart' | 'data'> & RadialBarOptions
->
+export type RadialBarChartProps = Writeable<Omit<BaseChartProps<RadialBarOptions>, 'chart' | 'data'> & RadialBarOptions>
 
 const RadialBarChart = defineComponent<RadialBarChartProps>({
   name: 'RadialBarChart',
   setup: (props, ctx) => {
-    return () => (
-      <BaseChart chart={RadialBar} {...mergeAttrs(props, ctx.attrs)} />
-    )
+    return () => <BaseChart chart={RadialBar} {...mergeAttrs(props, ctx.attrs)} />
   },
 })
 

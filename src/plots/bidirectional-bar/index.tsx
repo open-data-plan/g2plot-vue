@@ -5,16 +5,13 @@ import { Writeable } from '../../types'
 import { mergeAttrs } from '../../utils'
 
 export type BidirectionalBarChartProps = Writeable<
-  Omit<BaseChartProps<BidirectionalBarOptions>, 'chart' | 'data'> &
-    BidirectionalBarOptions
+  Omit<BaseChartProps<BidirectionalBarOptions>, 'chart' | 'data'> & BidirectionalBarOptions
 >
 
 const BidirectionalBarChart = defineComponent<BidirectionalBarChartProps>({
   name: 'BidirectionalBarChart',
   setup: (props, ctx) => {
-    return () => (
-      <BaseChart chart={BidirectionalBar} {...mergeAttrs(props, ctx.attrs)} />
-    )
+    return () => <BaseChart chart={BidirectionalBar} {...mergeAttrs(props, ctx.attrs)} />
   },
 })
 

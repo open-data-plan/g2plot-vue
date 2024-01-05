@@ -4,9 +4,7 @@ import BaseChart, { BaseChartProps } from '../../components/base'
 import { Writeable } from '../../types'
 import { mergeAttrs } from '../../utils'
 
-export type TreemapChartProps = Writeable<
-  Omit<BaseChartProps<TreemapOptions>, 'chart' | 'data'> & TreemapOptions
->
+export type TreemapChartProps = Writeable<Omit<BaseChartProps<TreemapOptions>, 'chart' | 'data'> & TreemapOptions>
 
 const TreemapChart = defineComponent<TreemapChartProps>({
   name: 'TreemapChart',

@@ -4,9 +4,7 @@ import BaseChart, { BaseChartProps } from '../../components/base'
 import { Writeable } from '../../types'
 import { mergeAttrs } from '../../utils'
 
-export type PieChartProps = Writeable<
-  Omit<BaseChartProps<PieOptions>, 'chart' | 'data'> & PieOptions
->
+export type PieChartProps = Writeable<Omit<BaseChartProps<PieOptions>, 'chart' | 'data'> & PieOptions>
 
 const PieChart = defineComponent<PieChartProps>({
   name: 'PieChart',

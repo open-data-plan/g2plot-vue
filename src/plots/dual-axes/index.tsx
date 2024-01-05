@@ -4,16 +4,12 @@ import BaseChart, { BaseChartProps } from '../../components/base'
 import { Writeable } from '../../types'
 import { mergeAttrs } from '../../utils'
 
-export type DualAxesChartProps = Writeable<
-  Omit<BaseChartProps<DualAxesOptions>, 'chart' | 'data'> & DualAxesOptions
->
+export type DualAxesChartProps = Writeable<Omit<BaseChartProps<DualAxesOptions>, 'chart' | 'data'> & DualAxesOptions>
 
 const DualAxesChart = defineComponent<DualAxesChartProps>({
   name: 'DualAxesChart',
   setup: (props, ctx) => {
-    return () => (
-      <BaseChart chart={DualAxes} {...mergeAttrs(props, ctx.attrs)} />
-    )
+    return () => <BaseChart chart={DualAxes} {...mergeAttrs(props, ctx.attrs)} />
   },
 })
 

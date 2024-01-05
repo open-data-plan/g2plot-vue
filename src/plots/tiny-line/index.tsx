@@ -4,16 +4,12 @@ import BaseChart, { BaseChartProps } from '../../components/base'
 import { Writeable } from '../../types'
 import { mergeAttrs } from '../../utils'
 
-export type TinyLineChartProps = Writeable<
-  Omit<BaseChartProps<TinyLineOptions>, 'chart' | 'data'> & TinyLineOptions
->
+export type TinyLineChartProps = Writeable<Omit<BaseChartProps<TinyLineOptions>, 'chart' | 'data'> & TinyLineOptions>
 
 const TinyLineChart = defineComponent<TinyLineChartProps>({
   name: 'TinyLineChart',
   setup: (props, ctx) => {
-    return () => (
-      <BaseChart chart={TinyLine} {...mergeAttrs(props, ctx.attrs)} />
-    )
+    return () => <BaseChart chart={TinyLine} {...mergeAttrs(props, ctx.attrs)} />
   },
 })
 

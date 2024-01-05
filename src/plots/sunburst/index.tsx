@@ -4,16 +4,12 @@ import BaseChart, { BaseChartProps } from '../../components/base'
 import { Writeable } from '../../types'
 import { mergeAttrs } from '../../utils'
 
-export type SunburstChartProps = Writeable<
-  Omit<BaseChartProps<SunburstOptions>, 'chart' | 'data'> & SunburstOptions
->
+export type SunburstChartProps = Writeable<Omit<BaseChartProps<SunburstOptions>, 'chart' | 'data'> & SunburstOptions>
 
 const SunburstChart = defineComponent<SunburstChartProps>({
   name: 'SunburstChart',
   setup: (props, ctx) => {
-    return () => (
-      <BaseChart chart={Sunburst} {...mergeAttrs(props, ctx.attrs)} />
-    )
+    return () => <BaseChart chart={Sunburst} {...mergeAttrs(props, ctx.attrs)} />
   },
 })
 

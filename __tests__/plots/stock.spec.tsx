@@ -15,7 +15,7 @@ const data = [
 const config = {
   width: 400,
   height: 500,
-  data: data,
+  data,
   xField: 'x',
   yField: ['low', 'q1', 'median', 'q3', 'high'],
   boxStyle: {

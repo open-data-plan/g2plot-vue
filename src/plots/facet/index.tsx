@@ -1,12 +1,10 @@
-import { App, defineComponent } from 'vue-demi'
 import { Facet, FacetOptions } from '@antv/g2plot'
+import { App, defineComponent } from 'vue-demi'
 import BaseChart, { BaseChartProps } from '../../components/base'
 import { Writeable } from '../../types'
 import { mergeAttrs } from '../../utils'
 
-export type FacetChartProps = Writeable<
-  Omit<BaseChartProps<FacetOptions>, 'chart' | 'data'> & FacetOptions
->
+export type FacetChartProps = Writeable<Omit<BaseChartProps<FacetOptions>, 'chart' | 'data'> & FacetOptions>
 
 const FacetChart = defineComponent<FacetChartProps>({
   name: 'FacetChart',

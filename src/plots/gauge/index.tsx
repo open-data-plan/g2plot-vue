@@ -4,9 +4,7 @@ import BaseChart, { BaseChartProps } from '../../components/base'
 import { Writeable } from '../../types'
 import { mergeAttrs } from '../../utils'
 
-export type GaugeChartProps = Writeable<
-  Omit<BaseChartProps<GaugeOptions>, 'chart' | 'data'> & GaugeOptions
->
+export type GaugeChartProps = Writeable<Omit<BaseChartProps<GaugeOptions>, 'chart' | 'data'> & GaugeOptions>
 
 const GaugeChart = defineComponent<GaugeChartProps>({
   name: 'GaugeChart',

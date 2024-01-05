@@ -5,16 +5,13 @@ import { Writeable } from '../../types'
 import { mergeAttrs } from '../../utils'
 
 export type RingProgressChartProps = Writeable<
-  Omit<BaseChartProps<RingProgressOptions>, 'chart' | 'data'> &
-    RingProgressOptions
+  Omit<BaseChartProps<RingProgressOptions>, 'chart' | 'data'> & RingProgressOptions
 >
 
 const RingProgressChart = defineComponent<RingProgressChartProps>({
   name: 'RingProgressChart',
   setup: (props, ctx) => {
-    return () => (
-      <BaseChart chart={RingProgress} {...mergeAttrs(props, ctx.attrs)} />
-    )
+    return () => <BaseChart chart={RingProgress} {...mergeAttrs(props, ctx.attrs)} />
   },
 })
 

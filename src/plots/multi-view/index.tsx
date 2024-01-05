@@ -4,9 +4,7 @@ import BaseChart, { BaseChartProps } from '../../components/base'
 import { Writeable } from '../../types'
 import { mergeAttrs } from '../../utils'
 
-export type MultiViewChartProps = Writeable<
-  Omit<BaseChartProps<MixOptions>, 'chart' | 'data'> & MixOptions
->
+export type MultiViewChartProps = Writeable<Omit<BaseChartProps<MixOptions>, 'chart' | 'data'> & MixOptions>
 
 /**
  * @deprecated use `MixChart` instead

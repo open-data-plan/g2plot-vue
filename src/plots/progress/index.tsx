@@ -4,16 +4,12 @@ import BaseChart, { BaseChartProps } from '../../components/base'
 import { Writeable } from '../../types'
 import { mergeAttrs } from '../../utils'
 
-export type ProgressChartProps = Writeable<
-  Omit<BaseChartProps<ProgressOptions>, 'chart' | 'data'> & ProgressOptions
->
+export type ProgressChartProps = Writeable<Omit<BaseChartProps<ProgressOptions>, 'chart' | 'data'> & ProgressOptions>
 
 const ProgressChart = defineComponent<ProgressChartProps>({
   name: 'ProgressChart',
   setup: (props, ctx) => {
-    return () => (
-      <BaseChart chart={Progress} {...mergeAttrs(props, ctx.attrs)} />
-    )
+    return () => <BaseChart chart={Progress} {...mergeAttrs(props, ctx.attrs)} />
   },
 })
 

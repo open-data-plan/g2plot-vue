@@ -4,9 +4,7 @@ import BaseChart, { BaseChartProps } from '../../components/base'
 import { Writeable } from '../../types'
 import { mergeAttrs } from '../../utils'
 
-export type SankeyChartProps = Writeable<
-  Omit<BaseChartProps<SankeyOptions>, 'chart' | 'data'> & SankeyOptions
->
+export type SankeyChartProps = Writeable<Omit<BaseChartProps<SankeyOptions>, 'chart' | 'data'> & SankeyOptions>
 
 const SankeyChart = defineComponent<SankeyChartProps>({
   name: 'SankeyChart',

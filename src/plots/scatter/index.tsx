@@ -4,9 +4,7 @@ import BaseChart, { BaseChartProps } from '../../components/base'
 import { Writeable } from '../../types'
 import { mergeAttrs } from '../../utils'
 
-export type ScatterChartProps = Writeable<
-  Omit<BaseChartProps<ScatterOptions>, 'chart' | 'data'> & ScatterOptions
->
+export type ScatterChartProps = Writeable<Omit<BaseChartProps<ScatterOptions>, 'chart' | 'data'> & ScatterOptions>
 
 const ScatterChart = defineComponent<ScatterChartProps>({
   name: 'ScatterChart',

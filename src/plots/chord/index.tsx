@@ -4,9 +4,7 @@ import BaseChart, { BaseChartProps } from '../../components/base'
 import { Writeable } from '../../types'
 import { mergeAttrs } from '../../utils'
 
-export type ChordChartProps = Writeable<
-  Omit<BaseChartProps<ChordOptions>, 'chart' | 'data'> & ChordOptions
->
+export type ChordChartProps = Writeable<Omit<BaseChartProps<ChordOptions>, 'chart' | 'data'> & ChordOptions>
 
 const ChordChart = defineComponent<ChordChartProps>({
   name: 'ChordChart',

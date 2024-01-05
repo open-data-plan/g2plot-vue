@@ -4,9 +4,7 @@ import BaseChart, { BaseChartProps } from '../../components/base'
 import { Writeable } from '../../types'
 import { mergeAttrs } from '../../utils'
 
-export type BarChartProps = Writeable<
-  Omit<BaseChartProps<BarOptions>, 'chart' | 'data'> & BarOptions
->
+export type BarChartProps = Writeable<Omit<BaseChartProps<BarOptions>, 'chart' | 'data'> & BarOptions>
 
 const BarChart = defineComponent<BarChartProps>({
   name: 'BarChart',

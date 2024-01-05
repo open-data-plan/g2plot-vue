@@ -1,8 +1,8 @@
-import { defineComponent, Ref } from 'vue-demi'
 import { Plot as BasePlot } from '@antv/g2plot'
-import isEqual from 'lodash/isEqual'
 import isEmpty from 'lodash/isEmpty'
+import isEqual from 'lodash/isEqual'
 import { HTMLAttributes } from 'vue'
+import { defineComponent, Ref } from 'vue-demi'
 
 interface Options {
   [x: string]: any
@@ -16,8 +16,7 @@ type PickedAttrs = 'class' | 'style'
 
 type Data = Record<string, any>[] | Record<string, any>
 
-export interface BaseChartProps<C extends Options>
-  extends Pick<HTMLAttributes, PickedAttrs> {
+export interface BaseChartProps<C extends Options> extends Pick<HTMLAttributes, PickedAttrs> {
   chart: any
   data: Data
   chartRef?: Ref<BasePlot<C> | null>
@@ -34,16 +33,12 @@ export interface BaseChartRawBindings<C extends Options> {
   plot: BasePlot<C>
 }
 
-const BaseChart = defineComponent<
-  BaseChartProps<any>,
-  BaseChartRawBindings<any>,
-  ComputedOptions<any>
->({
+const BaseChart = defineComponent<BaseChartProps<any>, BaseChartRawBindings<any>, ComputedOptions<any>>({
   inheritAttrs: false,
   name: 'BaseChart',
   computed: {
     attrConfig() {
-      return this.$attrs
+      return { ...this.$attrs }
     },
     chartData() {
       const { data } = this.attrConfig
@@ -65,8 +60,7 @@ const BaseChart = defineComponent<
     },
   },
   mounted() {
-    const chartRef = this.$attrs
-      .chartRef as unknown as Ref<BasePlot<any> | null>
+    const chartRef = this.$attrs.chartRef as unknown as Ref<BasePlot<any> | null>
     const { chart: Chart, onReady } = this.attrConfig
     const plot = new Chart(this.$el as HTMLElement, {
       data: this.chartData,
