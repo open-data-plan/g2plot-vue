@@ -1,3 +1,9 @@
+## [3.6.8](https://github.com/open-data-plan/g2plot-vue/compare/v3.6.7...v3.6.8) (2024-01-05)
+
+### Bug Fixes
+
+- attrs update ([bb28e15](https://github.com/open-data-plan/g2plot-vue/commit/bb28e15d2b31db56f2c9aa02c0c958bc848f53c2)), closes [#1392](https://github.com/open-data-plan/g2plot-vue/issues/1392)
+
 ## [3.6.7](https://github.com/open-data-plan/g2plot-vue/compare/v3.6.6...v3.6.7) (2023-07-01)
 
 ## [3.6.6](https://github.com/open-data-plan/g2plot-vue/compare/v3.6.5...v3.6.6) (2023-04-06)
