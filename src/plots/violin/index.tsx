@@ -8,14 +8,14 @@ export type ViolinChartProps = Writeable<Omit<BaseChartProps<ViolinOptions>, 'ch
 
 const ViolinChart = defineComponent<ViolinChartProps>({
   name: 'ViolinChart',
-  setup(props, ctx) {
+  setup: (props, ctx) => {
     return () => <BaseChart chart={Violin} {...mergeAttrs(props, ctx.attrs)} />
   },
 })
 
 /* istanbul ignore next */
 ViolinChart.install = (app: App) => {
-  app.component(ViolinChart.name, ViolinChart)
+  app.component('ViolinChart', ViolinChart)
 }
 
 export default ViolinChart

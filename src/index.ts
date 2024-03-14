@@ -13,8 +13,8 @@ import { PieChartProps as _PieChartProps } from './plots/pie'
 import { RadarChartProps as _RadarChartProps } from './plots/radar'
 import { RoseChartProps as _RoseChartProps } from './plots/rose'
 import { ScatterChartProps as _ScatterChartProps } from './plots/scatter'
-import { WordCloudChartProps as _WordCloudChartProps } from './plots/word-cloud'
 import { WaterfallChartProps as _WaterfallChartProps } from './plots/waterfall'
+import { WordCloudChartProps as _WordCloudChartProps } from './plots/word-cloud'
 
 // mini plots
 import { ProgressChartProps as _ProgressChartProps } from './plots/progress'
@@ -95,9 +95,9 @@ export type RoseChartProps = _RoseChartProps
 export { default as ScatterChart } from './plots/scatter'
 export type ScatterChartProps = _ScatterChartProps
 
+export { default as WaterfallChart } from './plots/waterfall'
 export { default as WordCloudChart } from './plots/word-cloud'
 export type WordCloudChartProps = _WordCloudChartProps
-export { default as WaterfallChart } from './plots/waterfall'
 export type WaterfallChartProps = _WaterfallChartProps
 
 // mini plots
@@ -113,35 +113,35 @@ export type TinyAreaChartProps = _TinyAreaChartProps
 export { default as TinyColumnChart } from './plots/tiny-column'
 export type TinyColumnChartProps = _TinyColumnChartProps
 
-export { default as TinyLineChart } from './plots/tiny-line'
-export type TinyLineChartProps = _TinyLineChartProps
-export { default as DualAxesChart } from './plots/dual-axes'
-export type DualAxesChartProps = _DualAxesChartProps
-export { default as BoxChart } from './plots/box'
-export type BoxChartProps = _BoxChartProps
-export { default as StockChart } from './plots/stock'
-export type StockChartProps = _StockChartProps
-export { default as SunburstChart } from './plots/sunburst'
-export type SunburstChartProps = _SunburstChartProps
-export { default as RadialBarChart } from './plots/radial-bar'
-export type RadialBarChartProps = _RadialBarChartProps
 export { default as BidirectionalBarChart } from './plots/bidirectional-bar'
-export type BidirectionalBarChartProps = _BidirectionalBarChartProps
-export { default as TreemapChart } from './plots/treemap'
-export type TreemapChartProps = _TreemapChartProps
-export { default as SankeyChart } from './plots/sankey'
-export type SankeyChartProps = _SankeyChartProps
+export { default as BoxChart } from './plots/box'
 export { default as ChordChart } from './plots/chord'
-export type ChordChartProps = _ChordChartProps
-export { default as MultiViewChart } from './plots/multi-view'
-export type MultiViewChartProps = _MultiViewChartProps
-export { default as MixChart } from './plots/mix'
-export type MixChartProps = _MixChartProps
-export { default as ViolinChart } from './plots/violin'
-export type ViolinChartProps = _ViolinChartProps
-export { default as FacetChart } from './plots/facet'
-export type FacetChartProps = _FacetChartProps
 export { default as CirclePackingChart } from './plots/circle-packing'
-export type CirclePackingChartProps = _CirclePackingChartProps
+export { default as DualAxesChart } from './plots/dual-axes'
+export { default as FacetChart } from './plots/facet'
+export { default as MixChart } from './plots/mix'
+export { default as MultiViewChart } from './plots/multi-view'
+export { default as RadialBarChart } from './plots/radial-bar'
+export { default as SankeyChart } from './plots/sankey'
+export { default as StockChart } from './plots/stock'
+export { default as SunburstChart } from './plots/sunburst'
+export { default as TinyLineChart } from './plots/tiny-line'
+export { default as TreemapChart } from './plots/treemap'
 export { default as VennChart } from './plots/venn'
+export { default as ViolinChart } from './plots/violin'
+export type TinyLineChartProps = _TinyLineChartProps
+export type DualAxesChartProps = _DualAxesChartProps
+export type BoxChartProps = _BoxChartProps
+export type StockChartProps = _StockChartProps
+export type SunburstChartProps = _SunburstChartProps
+export type RadialBarChartProps = _RadialBarChartProps
+export type BidirectionalBarChartProps = _BidirectionalBarChartProps
+export type TreemapChartProps = _TreemapChartProps
+export type SankeyChartProps = _SankeyChartProps
+export type ChordChartProps = _ChordChartProps
+export type MultiViewChartProps = _MultiViewChartProps
+export type MixChartProps = _MixChartProps
+export type ViolinChartProps = _ViolinChartProps
+export type FacetChartProps = _FacetChartProps
+export type CirclePackingChartProps = _CirclePackingChartProps
 export type VennChartProps = _VennChartProps

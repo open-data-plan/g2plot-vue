@@ -1,4 +1,4 @@
-import { defineComponent, App } from 'vue-demi'
+import { App, defineComponent } from 'vue-demi'
 import { Radar, RadarOptions } from '@antv/g2plot'
 import BaseChart, { BaseChartProps } from '../../components/base'
 import { Writeable } from '../../types'
@@ -15,7 +15,7 @@ const RadarChart = defineComponent<RadarChartProps>({
 
 /* istanbul ignore next */
 RadarChart.install = (app: App) => {
-  app.component(RadarChart.name, RadarChart)
+  app.component('RadarChart', RadarChart)
 }
 
 export default RadarChart

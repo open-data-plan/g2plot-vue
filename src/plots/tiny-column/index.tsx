@@ -1,4 +1,4 @@
-import { defineComponent, App } from 'vue-demi'
+import { App, defineComponent } from 'vue-demi'
 import { TinyColumn, TinyColumnOptions } from '@antv/g2plot'
 import BaseChart, { BaseChartProps } from '../../components/base'
 import { Writeable } from '../../types'
@@ -17,7 +17,7 @@ const TinyColumnChart = defineComponent<TinyColumnChartProps>({
 
 /* istanbul ignore next */
 TinyColumnChart.install = (app: App) => {
-  app.component(TinyColumnChart.name, TinyColumnChart)
+  app.component('TinyColumnChart', TinyColumnChart)
 }
 
 export default TinyColumnChart

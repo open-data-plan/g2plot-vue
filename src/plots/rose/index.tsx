@@ -1,4 +1,4 @@
-import { defineComponent, App } from 'vue-demi'
+import { App, defineComponent } from 'vue-demi'
 import { Rose, RoseOptions } from '@antv/g2plot'
 import BaseChart, { BaseChartProps } from '../../components/base'
 import { Writeable } from '../../types'
@@ -15,7 +15,7 @@ const RoseChart = defineComponent<RoseChartProps>({
 
 /* istanbul ignore next */
 RoseChart.install = (app: App) => {
-  app.component(RoseChart.name, RoseChart)
+  app.component('RoseChart', RoseChart)
 }
 
 export default RoseChart

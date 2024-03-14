@@ -1,4 +1,4 @@
-import { defineComponent, App } from 'vue-demi'
+import { App, defineComponent } from 'vue-demi'
 import { Liquid, LiquidOptions } from '@antv/g2plot'
 import BaseChart, { BaseChartProps } from '../../components/base'
 import { Writeable } from '../../types'
@@ -15,7 +15,7 @@ const LiquidChart = defineComponent<LiquidChartProps>({
 
 /* istanbul ignore next */
 LiquidChart.install = (app: App) => {
-  app.component(LiquidChart.name, LiquidChart)
+  app.component('LiquidChart', LiquidChart)
 }
 
 export default LiquidChart

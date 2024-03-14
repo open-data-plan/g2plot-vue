@@ -15,7 +15,7 @@ const DualAxesChart = defineComponent<DualAxesChartProps>({
 
 /* istanbul ignore next */
 DualAxesChart.install = (app: App) => {
-  app.component(DualAxesChart.name, DualAxesChart)
+  app.component('DualAxesChart', DualAxesChart)
 }
 
 export default DualAxesChart

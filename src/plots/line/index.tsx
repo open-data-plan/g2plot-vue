@@ -1,4 +1,4 @@
-import { defineComponent, App } from 'vue-demi'
+import { App, defineComponent } from 'vue-demi'
 import { Line, LineOptions } from '@antv/g2plot'
 import BaseChart, { BaseChartProps } from '../../components/base'
 import { Writeable } from '../../types'
@@ -15,7 +15,7 @@ const LineChart = defineComponent<LineChartProps>({
 
 /* istanbul ignore next */
 LineChart.install = (app: App) => {
-  app.component(LineChart.name, LineChart)
+  app.component('LineChart', LineChart)
 }
 
 export default LineChart

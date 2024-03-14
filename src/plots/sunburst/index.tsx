@@ -15,7 +15,7 @@ const SunburstChart = defineComponent<SunburstChartProps>({
 
 /* istanbul ignore next */
 SunburstChart.install = (app: App) => {
-  app.component(SunburstChart.name, SunburstChart)
+  app.component('SunburstChart', SunburstChart)
 }
 
 export default SunburstChart

@@ -15,7 +15,7 @@ const StockChart = defineComponent<StockChartProps>({
 
 /* istanbul ignore next */
 StockChart.install = (app: App) => {
-  app.component(StockChart.name, StockChart)
+  app.component('StockChart', StockChart)
 }
 
 export default StockChart

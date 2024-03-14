@@ -15,7 +15,7 @@ const TreemapChart = defineComponent<TreemapChartProps>({
 
 /* istanbul ignore next */
 TreemapChart.install = (app: App) => {
-  app.component(TreemapChart.name, TreemapChart)
+  app.component('TreemapChart', TreemapChart)
 }
 
 export default TreemapChart

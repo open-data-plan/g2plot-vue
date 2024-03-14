@@ -1,4 +1,4 @@
-import { defineComponent, App } from 'vue-demi'
+import { App, defineComponent } from 'vue-demi'
 import { Heatmap, HeatmapOptions } from '@antv/g2plot'
 import BaseChart, { BaseChartProps } from '../../components/base'
 import { Writeable } from '../../types'
@@ -15,7 +15,7 @@ const HeatmapChart = defineComponent<HeatmapChartProps>({
 
 /* istanbul ignore next */
 HeatmapChart.install = (app: App) => {
-  app.component(HeatmapChart.name, HeatmapChart)
+  app.component('HeatmapChart', HeatmapChart)
 }
 
 export default HeatmapChart

@@ -1,4 +1,4 @@
-import { defineComponent, App } from 'vue-demi'
+import { App, defineComponent } from 'vue-demi'
 import { Waterfall, WaterfallOptions } from '@antv/g2plot'
 import BaseChart, { BaseChartProps } from '../../components/base'
 import { Writeable } from '../../types'
@@ -15,7 +15,7 @@ const WaterfallChart = defineComponent<WaterfallChartProps>({
 
 /* istanbul ignore next */
 WaterfallChart.install = (app: App) => {
-  app.component(WaterfallChart.name, WaterfallChart)
+  app.component('WaterfallChart', WaterfallChart)
 }
 
 export default WaterfallChart

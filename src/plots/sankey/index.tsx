@@ -15,7 +15,7 @@ const SankeyChart = defineComponent<SankeyChartProps>({
 
 /* istanbul ignore next */
 SankeyChart.install = (app: App) => {
-  app.component(SankeyChart.name, SankeyChart)
+  app.component('SankeyChart', SankeyChart)
 }
 
 export default SankeyChart

@@ -10,14 +10,14 @@ export type CirclePackingChartProps = Writeable<
 
 const CirclePackingChart = defineComponent<CirclePackingChartProps>({
   name: 'CirclePackingChart',
-  setup(props, ctx) {
+  setup: (props, ctx) => {
     return () => <BaseChart chart={CirclePacking} {...mergeAttrs(props, ctx.attrs)} />
   },
 })
 
 /* istanbul ignore next */
 CirclePackingChart.install = (app: App) => {
-  app.component(CirclePackingChart.name, CirclePackingChart)
+  app.component('CirclePackingChart', CirclePackingChart)
 }
 
 export default CirclePackingChart

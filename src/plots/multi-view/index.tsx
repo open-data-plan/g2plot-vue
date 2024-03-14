@@ -1,5 +1,5 @@
-import { App, defineComponent } from 'vue-demi'
 import { Mix, MixOptions } from '@antv/g2plot'
+import { App, defineComponent } from 'vue-demi'
 import BaseChart, { BaseChartProps } from '../../components/base'
 import { Writeable } from '../../types'
 import { mergeAttrs } from '../../utils'
@@ -18,7 +18,7 @@ const MultiViewChart = defineComponent<MultiViewChartProps>({
 
 /* istanbul ignore next */
 MultiViewChart.install = (app: App) => {
-  app.component(MultiViewChart.name, MultiViewChart)
+  app.component('MultiViewChart', MultiViewChart)
 }
 
 export default MultiViewChart

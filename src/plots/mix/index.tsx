@@ -8,14 +8,14 @@ export type MixChartProps = Writeable<Omit<BaseChartProps<MixOptions>, 'chart' |
 
 const MixChart = defineComponent<MixChartProps>({
   name: 'MixChart',
-  setup(props, ctx) {
+  setup: (props, ctx) => {
     return () => <BaseChart chart={Mix} {...mergeAttrs(props, ctx.attrs)} />
   },
 })
 
 /* istanbul ignore next */
 MixChart.install = (app: App) => {
-  app.component(MixChart.name, MixChart)
+  app.component('MixChart', MixChart)
 }
 
 export default MixChart

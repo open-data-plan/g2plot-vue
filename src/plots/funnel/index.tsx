@@ -1,4 +1,4 @@
-import { defineComponent, App } from 'vue-demi'
+import { App, defineComponent } from 'vue-demi'
 import { Funnel, FunnelOptions } from '@antv/g2plot'
 import BaseChart, { BaseChartProps } from '../../components/base'
 import { Writeable } from '../../types'
@@ -15,7 +15,7 @@ const FunnelChart = defineComponent<FunnelChartProps>({
 
 /* istanbul ignore next */
 FunnelChart.install = (app: App) => {
-  app.component(FunnelChart.name, FunnelChart)
+  app.component('FunnelChart', FunnelChart)
 }
 
 export default FunnelChart

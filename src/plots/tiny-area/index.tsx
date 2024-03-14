@@ -1,4 +1,4 @@
-import { defineComponent, App } from 'vue-demi'
+import { App, defineComponent } from 'vue-demi'
 import { TinyArea, TinyAreaOptions } from '@antv/g2plot'
 import BaseChart, { BaseChartProps } from '../../components/base'
 import { Writeable } from '../../types'
@@ -15,7 +15,7 @@ const TinyAreaChart = defineComponent<TinyAreaChartProps>({
 
 /* istanbul ignore next */
 TinyAreaChart.install = (app: App) => {
-  app.component(TinyAreaChart.name, TinyAreaChart)
+  app.component('TinyAreaChart', TinyAreaChart)
 }
 
 export default TinyAreaChart

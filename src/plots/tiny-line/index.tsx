@@ -1,4 +1,4 @@
-import { defineComponent, App } from 'vue-demi'
+import { App, defineComponent } from 'vue-demi'
 import { TinyLine, TinyLineOptions } from '@antv/g2plot'
 import BaseChart, { BaseChartProps } from '../../components/base'
 import { Writeable } from '../../types'
@@ -15,7 +15,7 @@ const TinyLineChart = defineComponent<TinyLineChartProps>({
 
 /* istanbul ignore next */
 TinyLineChart.install = (app: App) => {
-  app.component(TinyLineChart.name, TinyLineChart)
+  app.component('TinyLineChart', TinyLineChart)
 }
 
 export default TinyLineChart

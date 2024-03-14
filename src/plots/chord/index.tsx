@@ -15,7 +15,7 @@ const ChordChart = defineComponent<ChordChartProps>({
 
 /* istanbul ignore next */
 ChordChart.install = (app: App) => {
-  app.component(ChordChart.name, ChordChart)
+  app.component('ChordChart', ChordChart)
 }
 
 export default ChordChart

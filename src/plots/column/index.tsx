@@ -1,4 +1,4 @@
-import { defineComponent, App } from 'vue-demi'
+import { App, defineComponent } from 'vue-demi'
 import { Column, ColumnOptions } from '@antv/g2plot'
 import BaseChart, { BaseChartProps } from '../../components/base'
 import { Writeable } from '../../types'
@@ -15,7 +15,7 @@ const ColumnChart = defineComponent<ColumnChartProps>({
 
 /* istanbul ignore next */
 ColumnChart.install = (app: App) => {
-  app.component(ColumnChart.name, ColumnChart)
+  app.component('ColumnChart', ColumnChart)
 }
 
 export default ColumnChart

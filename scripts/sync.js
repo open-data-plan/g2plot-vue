@@ -16,10 +16,7 @@ const eslint = new ESLint({
   fix: true,
 })
 
-const g2PlotDir = path.resolve(
-  process.cwd(),
-  'node_modules/@antv/g2plot/src/plots'
-)
+const g2PlotDir = path.resolve(process.cwd(), 'node_modules/@antv/g2plot/src/plots')
 const plotDir = path.resolve(process.cwd(), 'src/plots')
 const testDir = path.resolve(process.cwd(), '__tests__/plots')
 const exportPath = path.resolve(process.cwd(), 'src/index.ts')
@@ -33,9 +30,7 @@ const newCharts = []
 
 plotNames.forEach((chartName) => {
   try {
-    if (
-      !fs.existsSync(path.resolve(plotDir, `${kebabCase(chartName)}/index.tsx`))
-    ) {
+    if (!fs.existsSync(path.resolve(plotDir, `${kebabCase(chartName)}/index.tsx`))) {
       newCharts.push(chartName)
     }
   } catch (error) {}
@@ -72,14 +67,14 @@ export type ${chart}ChartProps = Writeable<Omit<BaseChartProps<${chart}Options>,
 
 const ${chart}Chart = defineComponent<${chart}ChartProps>({
   name: '${chart}Chart',
-  setup(props, ctx) {
+  setup: (props, ctx) => {
     return () => <BaseChart chart={${chart}} {...mergeAttrs(props, ctx.attrs)} />
   },
 })
 
 /* istanbul ignore next */
 ${chart}Chart.install = (app: App) => {
-  app.component(${chart}Chart.name, ${chart}Chart)
+  app.component('${chart}Chart', ${chart}Chart)
 }
 
 export default ${chart}Chart
@@ -118,10 +113,7 @@ const addExport = async () => {
     exportFileContent += content
   })
 
-  const fixedContent = await lintAndFixFileContent(
-    exportFileContent,
-    exportPath
-  )
+  const fixedContent = await lintAndFixFileContent(exportFileContent, exportPath)
 
   writeFile(exportPath, fixedContent, {
     encoding: 'utf8',

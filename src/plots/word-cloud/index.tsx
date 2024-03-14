@@ -1,4 +1,4 @@
-import { defineComponent, App } from 'vue-demi'
+import { App, defineComponent } from 'vue-demi'
 import { WordCloud, WordCloudOptions } from '@antv/g2plot'
 import BaseChart, { BaseChartProps } from '../../components/base'
 import { Writeable } from '../../types'
@@ -15,7 +15,7 @@ const WordCloudChart = defineComponent<WordCloudChartProps>({
 
 /* istanbul ignore next */
 WordCloudChart.install = (app: App) => {
-  app.component(WordCloudChart.name, WordCloudChart)
+  app.component('WordCloudChart', WordCloudChart)
 }
 
 export default WordCloudChart

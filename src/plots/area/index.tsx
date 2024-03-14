@@ -15,7 +15,7 @@ const AreaChart = defineComponent<AreaChartProps>({
 
 /* istanbul ignore next */
 AreaChart.install = (app: App) => {
-  app.component(AreaChart.name, AreaChart)
+  app.component('AreaChart', AreaChart)
 }
 
 export default AreaChart

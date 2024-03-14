@@ -1,4 +1,4 @@
-import { defineComponent, App } from 'vue-demi'
+import { App, defineComponent } from 'vue-demi'
 import { Pie, PieOptions } from '@antv/g2plot'
 import BaseChart, { BaseChartProps } from '../../components/base'
 import { Writeable } from '../../types'
@@ -15,7 +15,7 @@ const PieChart = defineComponent<PieChartProps>({
 
 /* istanbul ignore next */
 PieChart.install = (app: App) => {
-  app.component(PieChart.name, PieChart)
+  app.component('PieChart', PieChart)
 }
 
 export default PieChart

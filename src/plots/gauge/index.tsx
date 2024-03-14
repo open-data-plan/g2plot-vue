@@ -1,4 +1,4 @@
-import { defineComponent, App } from 'vue-demi'
+import { App, defineComponent } from 'vue-demi'
 import { Gauge, GaugeOptions } from '@antv/g2plot'
 import BaseChart, { BaseChartProps } from '../../components/base'
 import { Writeable } from '../../types'
@@ -15,7 +15,7 @@ const GaugeChart = defineComponent<GaugeChartProps>({
 
 /* istanbul ignore next */
 GaugeChart.install = (app: App) => {
-  app.component(GaugeChart.name, GaugeChart)
+  app.component('GaugeChart', GaugeChart)
 }
 
 export default GaugeChart

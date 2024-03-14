@@ -17,7 +17,7 @@ const BidirectionalBarChart = defineComponent<BidirectionalBarChartProps>({
 
 /* istanbul ignore next */
 BidirectionalBarChart.install = (app: App) => {
-  app.component(BidirectionalBarChart.name, BidirectionalBarChart)
+  app.component('BidirectionalBarChart', BidirectionalBarChart)
 }
 
 export default BidirectionalBarChart

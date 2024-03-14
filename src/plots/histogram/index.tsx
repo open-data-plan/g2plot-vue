@@ -1,4 +1,4 @@
-import { defineComponent, App } from 'vue-demi'
+import { App, defineComponent } from 'vue-demi'
 import { Histogram, HistogramOptions } from '@antv/g2plot'
 import BaseChart, { BaseChartProps } from '../../components/base'
 import { Writeable } from '../../types'
@@ -15,7 +15,7 @@ const HistogramChart = defineComponent<HistogramChartProps>({
 
 /* istanbul ignore next */
 HistogramChart.install = (app: App) => {
-  app.component(HistogramChart.name, HistogramChart)
+  app.component('HistogramChart', HistogramChart)
 }
 
 export default HistogramChart

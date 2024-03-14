@@ -15,7 +15,7 @@ const RadialBarChart = defineComponent<RadialBarChartProps>({
 
 /* istanbul ignore next */
 RadialBarChart.install = (app: App) => {
-  app.component(RadialBarChart.name, RadialBarChart)
+  app.component('RadialBarChart', RadialBarChart)
 }
 
 export default RadialBarChart

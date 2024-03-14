@@ -15,7 +15,7 @@ const BoxChart = defineComponent<BoxChartProps>({
 
 /* istanbul ignore next */
 BoxChart.install = (app: App) => {
-  app.component(BoxChart.name, BoxChart)
+  app.component('BoxChart', BoxChart)
 }
 
 export default BoxChart

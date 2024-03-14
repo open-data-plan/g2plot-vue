@@ -8,14 +8,14 @@ export type VennChartProps = Writeable<Omit<BaseChartProps<VennOptions>, 'chart'
 
 const VennChart = defineComponent<VennChartProps>({
   name: 'VennChart',
-  setup(props, ctx) {
+  setup: (props, ctx) => {
     return () => <BaseChart chart={Venn} {...mergeAttrs(props, ctx.attrs)} />
   },
 })
 
 /* istanbul ignore next */
 VennChart.install = (app: App) => {
-  app.component(VennChart.name, VennChart)
+  app.component('VennChart', VennChart)
 }
 
 export default VennChart

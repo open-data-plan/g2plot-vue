@@ -1,4 +1,4 @@
-import { defineComponent, App } from 'vue-demi'
+import { App, defineComponent } from 'vue-demi'
 import { Scatter, ScatterOptions } from '@antv/g2plot'
 import BaseChart, { BaseChartProps } from '../../components/base'
 import { Writeable } from '../../types'
@@ -11,11 +11,11 @@ const ScatterChart = defineComponent<ScatterChartProps>({
   setup: (props, ctx) => {
     return () => <BaseChart chart={Scatter} {...mergeAttrs(props, ctx.attrs)} />
   },
-}) as any
+})
 
 /* istanbul ignore next */
 ScatterChart.install = (app: App) => {
-  app.component(ScatterChart.name, ScatterChart)
+  app.component('ScatterChart', ScatterChart)
 }
 
 export default ScatterChart

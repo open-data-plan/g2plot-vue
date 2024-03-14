@@ -1,4 +1,4 @@
-import { defineComponent, App } from 'vue-demi'
+import { App, defineComponent } from 'vue-demi'
 import { Progress, ProgressOptions } from '@antv/g2plot'
 import BaseChart, { BaseChartProps } from '../../components/base'
 import { Writeable } from '../../types'
@@ -15,7 +15,7 @@ const ProgressChart = defineComponent<ProgressChartProps>({
 
 /* istanbul ignore next */
 ProgressChart.install = (app: App) => {
-  app.component(ProgressChart.name, ProgressChart)
+  app.component('ProgressChart', ProgressChart)
 }
 
 export default ProgressChart

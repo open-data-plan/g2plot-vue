@@ -15,7 +15,7 @@ const BarChart = defineComponent<BarChartProps>({
 
 /* istanbul ignore next */
 BarChart.install = (app: App) => {
-  app.component(BarChart.name, BarChart)
+  app.component('BarChart', BarChart)
 }
 
 export default BarChart
