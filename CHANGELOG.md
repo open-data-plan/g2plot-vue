@@ -1,3 +1,9 @@
+## [3.6.9](https://github.com/open-data-plan/g2plot-vue/compare/v3.6.8...v3.6.9) (2024-03-14)
+
+### Bug Fixes
+
+- fix ts type error ([063d91b](https://github.com/open-data-plan/g2plot-vue/commit/063d91b38314adb0a1d080138b93c36c56a81c28))
+
 ## [3.6.8](https://github.com/open-data-plan/g2plot-vue/compare/v3.6.7...v3.6.8) (2024-01-05)
 
 ### Bug Fixes
