@@ -43,7 +43,7 @@
     "postversion": "npm publish",
     "sync": "node ./scripts/sync.js",
     "postinstall": "node ./scripts/postinstall.js",
-    "prepare": "husky install"
+    "prepare": "husky"
   },
   "repository": {
     "type": "git",
@@ -83,7 +83,7 @@
     "conventional-changelog-cli": "^5.0.0",
     "cross-env": "^7.0.2",
     "diff-run": "^1.0.4",
-    "eslint": "^9.0.0",
+    "eslint": "8.57.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-config-standard": "^17.0.0",
     "eslint-plugin-import": "^2.22.1",
