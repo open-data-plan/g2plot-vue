@@ -1,7 +1,7 @@
-import { ref } from 'vue'
-import { mount } from '@vue/test-utils'
-import LineChart from '../../src/plots/line'
 import { LineOptions, Plot } from '@antv/g2plot'
+import { mount } from '@vue/test-utils'
+import { ref } from 'vue'
+import LineChart from '../../src/plots/line'
 
 describe('LineChart', () => {
   test('render without crashed', () => {
@@ -21,7 +21,7 @@ describe('LineChart', () => {
     const handleLineClick2 = () => {
       console.log(2)
     }
-    const wrapper = mount(<LineChart data={null} />)
+    const wrapper = mount(<LineChart data={[]} />)
 
     await wrapper.setProps({
       autoFit: true,
