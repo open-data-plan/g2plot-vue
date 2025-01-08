@@ -4,7 +4,7 @@
 
 # @opd/g2plot-vue
 
-> [G2Plot](https://g2plot.antv.vision/) for `Vue`, both `v2` and `v3`, see [documentation](https://g2plot-vue.opd.cool) for more
+> [G2Plot](https://g2plot.antv.vision/) for `Vue`, see [documentation](https://g2plot-vue.opd.cool) for more
 
 [![build](https://github.com/open-data-plan/g2plot-vue/workflows/build/badge.svg)](https://github.com/open-data-plan/g2plot-vue/actions?query=workflow%3Abuild)
 [![npm](https://img.shields.io/npm/v/@opd/g2plot-vue.svg)](https://www.npmjs.com/package/@opd/g2plot-vue)
@@ -17,12 +17,6 @@
 
 ```
 npm install @opd/g2plot-vue
-```
-
-`g2plot-vue` will auto switch export version based on your installed `vue` version, if not work, you can switch by follow:
-
-```bash
-node ./node_modules/@opd/g2plot-vue/scripts/postinstall.js
 ```
 
 ## Usage
@@ -114,9 +108,6 @@ export default {
 - Vue 3
   - [github](https://github.com/open-data-plan/g2plot-vue-demo)
   - [online](http://g2plot-vue-demo-opd.vercel.app/)
-- Vue 2
-  - [github](https://github.com/open-data-plan/g2plot-vue2-demo)
-  - [online](http://g2plot-vue2-demo-opd.vercel.app/)
 
 ## API
 
@@ -128,10 +119,6 @@ Notable API in `g2plot-vue`
 - `onReady`: `callback` after `plot` mounted, **NOT** component mounted
 
 ## FYI
-
-- [Throw error: `Failed to mount component: template or render function not defined.` in `vue@2`](https://github.com/open-data-plan/g2plot-vue/issues/483)
-
-  please ensure `composition-api` has been enabled.
 
 - [Build failed with `vite`](https://github.com/open-data-plan/g2plot-vue/issues/505)
 

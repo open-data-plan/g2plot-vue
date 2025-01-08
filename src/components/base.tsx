@@ -1,8 +1,7 @@
 import { Plot as BasePlot } from '@antv/g2plot'
 import isEmpty from 'lodash/isEmpty'
 import isEqual from 'lodash/isEqual'
-import { HTMLAttributes } from 'vue'
-import { defineComponent, Ref } from 'vue-demi'
+import { computed, defineComponent, HTMLAttributes, onBeforeUnmount, onMounted, ref, Ref, useAttrs, watch } from 'vue'
 
 interface Options {
   [x: string]: any
@@ -23,28 +22,26 @@ export interface BaseChartProps<C extends Options> extends Pick<HTMLAttributes, 
   onReady?: (plot: BasePlot<C>) => void
 }
 
-interface ComputedOptions<C extends Options> {
-  attrConfig: BaseChartProps<C>
-  chartData: any[]
-  chartConfig: C
-}
-
 export interface BaseChartRawBindings<C extends Options> {
   plot: BasePlot<C>
 }
 
-const BaseChart = defineComponent<BaseChartProps<any>, BaseChartRawBindings<any>, ComputedOptions<any>>({
+const BaseChart = defineComponent<BaseChartProps<any>>({
   inheritAttrs: false,
   name: 'BaseChart',
-  computed: {
-    attrConfig() {
-      return { ...this.$attrs }
-    },
-    chartData() {
-      const { data } = this.attrConfig
-      return data || []
-    },
-    chartConfig() {
+  setup(props, ctx) {
+    const plotRef = ref<BasePlot<any> | null>(null)
+    const containerRef = ref<HTMLElement | null>(null)
+    const attrs = useAttrs()
+    const attrConfig = computed(() => ({
+      ...attrs,
+      ...props,
+    }))
+    const chartData = computed(() => {
+      return attrConfig.value.data || []
+    })
+
+    const chartConfig = computed(() => {
       const {
         chart,
         chartRef,
@@ -55,59 +52,62 @@ const BaseChart = defineComponent<BaseChartProps<any>, BaseChartRawBindings<any>
         style,
         onReady,
         ...config
-      } = this.attrConfig
+      } = attrConfig.value
       return config
-    },
-  },
-  mounted() {
-    const chartRef = this.$attrs.chartRef as unknown as Ref<BasePlot<any> | null>
-    const { chart: Chart, onReady } = this.attrConfig
-    const plot = new Chart(this.$el as HTMLElement, {
-      data: this.chartData,
-      ...this.chartConfig,
     })
-    plot.render()
-    if (chartRef) {
-      chartRef.value = plot
-    }
-    this.plot = plot
-    onReady?.(plot)
-  },
-  beforeUnmount() {
-    /* istanbul ignore else */
-    if (this.plot) {
-      this.plot.destroy()
-    }
-  },
-  watch: {
-    chartData(data: Data, oldData: Data) {
+
+    onMounted(() => {
       /* istanbul ignore else */
-      if (this.plot) {
+      if (containerRef.value) {
+        const { chart: Chart, onReady, chartRef } = attrConfig.value
+        const plot = new Chart(containerRef.value, {
+          data: chartData.value,
+          ...chartConfig.value,
+        })
+        plot.render()
+        if (chartRef) {
+          chartRef.value = plot
+        }
+        plotRef.value = plot
+        onReady?.(plot)
+      }
+    })
+    onBeforeUnmount(() => {
+      /* istanbul ignore else */
+      if (plotRef.value) {
+        plotRef.value.destroy()
+      }
+    })
+
+    watch(chartData, (data, oldData) => {
+      /* istanbul ignore else */
+      if (plotRef.value) {
         if (isEmpty(oldData)) {
-          this.plot.update({
+          plotRef.value.update({
             data,
-            ...this.chartConfig,
+            ...chartConfig.value,
           })
-          this.plot.render()
+          plotRef.value.render()
         } else {
-          this.plot.changeData(data)
+          plotRef.value.changeData(data)
         }
       }
-    },
-    chartConfig(config: any, oldConfig: any) {
+    })
+
+    watch(chartConfig, (config, oldConfig) => {
       /* istanbul ignore else */
-      if (this.plot) {
+      if (plotRef.value) {
         if (!isEqual(config, oldConfig)) {
-          this.plot.update({
-            data: this.chartData,
+          plotRef.value.update({
+            data: chartData.value,
             ...config,
           })
         }
       }
-    },
-  },
-  render() {
-    return <div class={this.attrConfig.class} style={this.attrConfig.style} />
+    })
+    return () => {
+      return <div ref={containerRef} class={props.class} style={props.style} />
+    }
   },
 })
 

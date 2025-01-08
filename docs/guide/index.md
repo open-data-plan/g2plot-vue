@@ -9,20 +9,15 @@ title: Guide
 ## Features
 
 - Fully support `G2Plot` charts, and will support new chart at first time.
-- Both `Vue 2&3` support, and easily use.
 - Native support for `TypeScript`.
 - **100%** unit test coverage
+
+> Vue 2 has reached EOL and is no longer actively maintained, so we dropped support for Vue 2 and only support Vue 3.
 
 ## Install
 
 ```
 npm install @opd/g2plot-vue
-```
-
-`g2plot-vue` will auto switch export version based on your installed `vue` version, if not work, you can switch by follow:
-
-```bash
-node ./node_modules/@opd/g2plot-vue/scripts/postinstall.js
 ```
 
 ## Usage
