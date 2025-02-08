@@ -1,3 +1,26 @@
+## <small>4.0.1 (2025-02-08)</small>
+
+- fix: remove vue-demi ([da0857c](https://github.com/open-data-plan/g2plot-vue/commit/da0857c))
+- chore(deps-dev): bump @commitlint/cli from 19.6.1 to 19.7.1 (#1743) ([d31069b](https://github.com/open-data-plan/g2plot-vue/commit/d31069b)), closes [#1743](https://github.com/open-data-plan/g2plot-vue/issues/1743)
+- chore(deps-dev): bump @commitlint/config-conventional from 19.6.0 to 19.7.1 (#1741) ([4edb413](https://github.com/open-data-plan/g2plot-vue/commit/4edb413)), closes [#1741](https://github.com/open-data-plan/g2plot-vue/issues/1741)
+- chore(deps-dev): bump @types/lodash from 4.17.14 to 4.17.15 (#1740) ([47aed55](https://github.com/open-data-plan/g2plot-vue/commit/47aed55)), closes [#1740](https://github.com/open-data-plan/g2plot-vue/issues/1740)
+- chore(deps-dev): bump @typescript-eslint/eslint-plugin from 8.19.0 to 8.19.1 (#1728) ([a4a5ab8](https://github.com/open-data-plan/g2plot-vue/commit/a4a5ab8)), closes [#1728](https://github.com/open-data-plan/g2plot-vue/issues/1728)
+- chore(deps-dev): bump @typescript-eslint/eslint-plugin from 8.19.1 to 8.20.0 (#1731) ([38d3053](https://github.com/open-data-plan/g2plot-vue/commit/38d3053)), closes [#1731](https://github.com/open-data-plan/g2plot-vue/issues/1731)
+- chore(deps-dev): bump @typescript-eslint/eslint-plugin from 8.20.0 to 8.21.0 (#1736) ([77e3d54](https://github.com/open-data-plan/g2plot-vue/commit/77e3d54)), closes [#1736](https://github.com/open-data-plan/g2plot-vue/issues/1736)
+- chore(deps-dev): bump @typescript-eslint/eslint-plugin from 8.21.0 to 8.22.0 (#1742) ([1d0a5fd](https://github.com/open-data-plan/g2plot-vue/commit/1d0a5fd)), closes [#1742](https://github.com/open-data-plan/g2plot-vue/issues/1742)
+- chore(deps-dev): bump @typescript-eslint/parser from 8.19.0 to 8.19.1 (#1727) ([dd9cc7c](https://github.com/open-data-plan/g2plot-vue/commit/dd9cc7c)), closes [#1727](https://github.com/open-data-plan/g2plot-vue/issues/1727)
+- chore(deps-dev): bump @typescript-eslint/parser from 8.19.1 to 8.20.0 (#1729) ([0095217](https://github.com/open-data-plan/g2plot-vue/commit/0095217)), closes [#1729](https://github.com/open-data-plan/g2plot-vue/issues/1729)
+- chore(deps-dev): bump @typescript-eslint/parser from 8.20.0 to 8.21.0 (#1734) ([72bc4de](https://github.com/open-data-plan/g2plot-vue/commit/72bc4de)), closes [#1734](https://github.com/open-data-plan/g2plot-vue/issues/1734)
+- chore(deps-dev): bump @typescript-eslint/parser from 8.21.0 to 8.22.0 (#1739) ([e170f11](https://github.com/open-data-plan/g2plot-vue/commit/e170f11)), closes [#1739](https://github.com/open-data-plan/g2plot-vue/issues/1739)
+- chore(deps-dev): bump canvas from 3.0.1 to 3.1.0 (#1738) ([82081a6](https://github.com/open-data-plan/g2plot-vue/commit/82081a6)), closes [#1738](https://github.com/open-data-plan/g2plot-vue/issues/1738)
+- chore(deps-dev): bump eslint-config-prettier from 9.1.0 to 10.0.1 (#1725) ([791cb08](https://github.com/open-data-plan/g2plot-vue/commit/791cb08)), closes [#1725](https://github.com/open-data-plan/g2plot-vue/issues/1725)
+- chore(deps-dev): bump eslint-plugin-prettier from 5.2.1 to 5.2.3 (#1730) ([9c6272c](https://github.com/open-data-plan/g2plot-vue/commit/9c6272c)), closes [#1730](https://github.com/open-data-plan/g2plot-vue/issues/1730)
+- chore(deps-dev): bump lint-staged from 15.3.0 to 15.4.1 (#1733) ([c353fab](https://github.com/open-data-plan/g2plot-vue/commit/c353fab)), closes [#1733](https://github.com/open-data-plan/g2plot-vue/issues/1733)
+- chore(deps-dev): bump lint-staged from 15.4.1 to 15.4.3 (#1735) ([d72e37b](https://github.com/open-data-plan/g2plot-vue/commit/d72e37b)), closes [#1735](https://github.com/open-data-plan/g2plot-vue/issues/1735)
+- chore(deps-dev): bump typescript from 5.7.2 to 5.7.3 (#1726) ([20de1eb](https://github.com/open-data-plan/g2plot-vue/commit/20de1eb)), closes [#1726](https://github.com/open-data-plan/g2plot-vue/issues/1726)
+- chore(deps-dev): bump vitepress from 1.5.0 to 1.6.0 (#1732) ([6a632d9](https://github.com/open-data-plan/g2plot-vue/commit/6a632d9)), closes [#1732](https://github.com/open-data-plan/g2plot-vue/issues/1732)
+- chore(deps-dev): bump vitepress from 1.6.0 to 1.6.3 (#1737) ([1719a30](https://github.com/open-data-plan/g2plot-vue/commit/1719a30)), closes [#1737](https://github.com/open-data-plan/g2plot-vue/issues/1737)
+
 ## 4.0.0 (2025-01-08)
 
 - feat: drop vue v2 support ([45c3076](https://github.com/open-data-plan/g2plot-vue/commit/45c3076))
