@@ -1,5 +1,4 @@
 // eslint-disable-next-line
-const { isVue2, isVue3 } = require('vue-demi')
 
 module.exports = {
   presets: [
@@ -16,14 +15,8 @@ module.exports = {
       },
     ],
     '@babel/preset-typescript',
-    isVue2 && [
-      '@vue/babel-preset-jsx',
-      {
-        compositionAPI: 'vue-demi',
-      },
-    ],
-  ].filter(Boolean),
-  plugins: [isVue3 && '@vue/babel-plugin-jsx'].filter(Boolean),
+  ],
+  plugins: ['@vue/babel-plugin-jsx'],
   env: {
     commonjs: {
       presets: [
@@ -40,14 +33,8 @@ module.exports = {
           },
         ],
         '@babel/preset-typescript',
-        isVue2 && [
-          '@vue/babel-preset-jsx',
-          {
-            compositionAPI: 'vue-demi',
-          },
-        ],
-      ].filter(Boolean),
-      plugins: [isVue3 && '@vue/babel-plugin-jsx'].filter(Boolean),
+      ],
+      plugins: ['@vue/babel-plugin-jsx'],
     },
   },
 }

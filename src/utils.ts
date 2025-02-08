@@ -1,5 +1,3 @@
-import { isVue3 } from 'vue-demi'
-
 /**
  * compatible merge attrs
  * @param props props
@@ -7,18 +5,8 @@ import { isVue3 } from 'vue-demi'
  * @returns merged attrs
  */
 export const mergeAttrs = (props: any, attrs: Record<string, any>) => {
-  /* istanbul ignore else */
-  if (isVue3) {
-    return {
-      ...attrs,
-      ...props,
-    }
-  } else {
-    return {
-      attrs: {
-        ...attrs,
-        ...props,
-      },
-    }
+  return {
+    ...attrs,
+    ...props,
   }
 }

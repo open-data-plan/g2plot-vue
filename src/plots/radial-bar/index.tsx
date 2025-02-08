@@ -1,5 +1,5 @@
-import { App, defineComponent } from 'vue-demi'
 import { RadialBar, RadialBarOptions } from '@antv/g2plot'
+import { App, defineComponent } from 'vue'
 import BaseChart, { BaseChartProps } from '../../components/base'
 import { Writeable } from '../../types'
 import { mergeAttrs } from '../../utils'
